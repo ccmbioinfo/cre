@@ -116,9 +116,9 @@ then
     mom=`gemini query -q "select name from samples where phenotype=1 and sex=2" $file`
     dad=`gemini query -q "select name from samples where phenotype=1 and sex=1" $file`
     
-    s_gt_filter="gt_types."$proband" == HET and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF"
-    #(gt_types."$proband" == HOM_ALT and gt_types."$dad" == HOM_REF and gt_types."$mom" == HET)"
-    # otherwise a lot of trash variants
+		s_gt_filter="gt_types."$proband" == 1 and (gt_types."$dad" == 0 or gt_types."$dad" == 3) and (gt_types."$mom" == 0 or gt_types."$mom" == 3)"
+    
+		# otherwise a lot of trash variants
     sQuery=$sQuery" and qual>=500"
     gemini query -q "$sQuery" --gt-filter "$s_gt_filter" --header $file
 else

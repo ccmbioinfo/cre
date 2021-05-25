@@ -70,6 +70,7 @@ def get_explanations(report1_var, report2_var):
         report1_var[variant]["alt_depths"] = max(report1_var[variant]["alt_depths"])
         report1_var[variant]["depths"] = min(report1_var[variant]["depths"])
         impact_severity = report1_var[variant]["impact_severity"]
+        gnomad = float(report1_var[variant]["gnomad_af_popmax"])
 
         if variant not in report2_var:
             explanation[variant] = "Variant not present in comparison database"
@@ -77,11 +78,12 @@ def get_explanations(report1_var, report2_var):
         elif (
             report1_var[variant]["impact_severity"] != "LOW"
             and report2_var[variant]["impact_severity"] == "LOW"
+            and gnomad < 0.01
         ):
             impact_severity = report1_var[variant]["impact_severity"]
             explanation[
                 variant
-            ] = f"Change in impact_severity from {impact_severity} to LOW"
+            ] = f"Change in impact_severity from {impact_severity} to LOW and gnomad_af_popmax < 0.01"
         # change in alt depth
         elif (
             report1_var[variant]["alt_depths"] >= 3
@@ -99,7 +101,7 @@ def get_explanations(report1_var, report2_var):
         ) and (not "gatk" in report1_var[variant]["callers"]):
             explanation[variant] = "Alt depths -1 and called by non-GATK callers"
         # change in clinvar annotation
-        elif float(report1_var[variant]["gnomad_af_popmax"]) < 0.01:
+        elif gnomad < 0.01:
             if (
                 report1_var[variant]["clinvar_pathogenic"] != "None"
                 and report2_var[variant]["clinvar_pathogenic"] == "None"
@@ -110,7 +112,7 @@ def get_explanations(report1_var, report2_var):
                 ] = f"Change in clinvar_pathogenic from {clin_path} to None for variant with gnomad_af_popmax < 0.01 and impact_severity {impact_severity}"
             else:
                 explanation[variant] = "Cannot explain"
-        elif float(report1_var[variant]["gnomad_af_popmax"]) >= 0.01:
+        elif gnomad >= 0.01:
             if (
                 report1_var[variant]["clinvar_pathogenic"] != "None"
                 and report2_var[variant]["clinvar_pathogenic"] == "None"

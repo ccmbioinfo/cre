@@ -69,38 +69,10 @@ def get_explanations(report1_var, report2_var):
     for variant in report1_var:
         report1_var[variant]["alt_depths"] = max(report1_var[variant]["alt_depths"])
         report1_var[variant]["depths"] = min(report1_var[variant]["depths"])
+        impact_severity = report1_var[variant]["impact_severity"]
 
         if variant not in report2_var:
             explanation[variant] = "Variant not present in comparison database"
-        # change in clinvar annotation
-        elif (
-            report1_var[variant]["clinvar_sig"] != "None"
-            and report2_var[variant]["clinvar_sig"] == "None"
-        ):
-            clin_sig = report1_var[variant]["clinvar_sig"]
-            explanation[variant] = f"Change in clinvar_sig from {clin_sig} to None"
-        elif (
-            report1_var[variant]["clinvar_pathogenic"] != "None"
-            and report2_var[variant]["clinvar_pathogenic"] == "None"
-        ):
-            clin_path = report1_var[variant]["clinvar_pathogenic"]
-            explanation[
-                variant
-            ] = f"Change in clinvar_pathogenic from {clin_path} to None"
-        elif report1_var[variant]["clinvar_pathogenic"] in [
-            "Pathogenic",
-            "Likely_pathogenic",
-            "Conflicting_interpretations_of_pathogenicity",
-        ] and report2_var[variant]["clinvar_pathogenic"] not in [
-            "Pathogenic",
-            "Likely_pathogenic",
-            "Conflicting_interpretations_of_pathogenicity",
-        ]:
-            clin_path_1 = report1_var[variant]["clinvar_pathogenic"]
-            clin_path_2 = report2_var[variant]["clinvar_pathogenic"]
-            explanation[
-                variant
-            ] = f"Change in clinvar_pathogenic from {clin_path_1} to {clin_path_2}"
         # change in impact severity (vep)
         elif (
             report1_var[variant]["impact_severity"] != "LOW"
@@ -126,9 +98,44 @@ def get_explanations(report1_var, report2_var):
             or max(report2_var[variant]["alt_depths"]) == -1
         ) and (not "gatk" in report1_var[variant]["callers"]):
             explanation[variant] = "Alt depths -1 and called by non-GATK callers"
-        # unknown reason
-        else:
-            explanation[variant] = "Cannot explain"
+        # change in clinvar annotation
+        elif float(report1_var[variant]["gnomad_af_popmax"]) < 0.01:
+            if (
+                report1_var[variant]["clinvar_pathogenic"] != "None"
+                and report2_var[variant]["clinvar_pathogenic"] == "None"
+            ):
+                clin_path = report1_var[variant]["clinvar_pathogenic"]
+                explanation[
+                    variant
+                ] = f"Change in clinvar_pathogenic from {clin_path} to None for variant with gnomad_af_popmax < 0.01 and impact_severity {impact_severity}"
+            else:
+                explanation[variant] = "Cannot explain"
+        elif float(report1_var[variant]["gnomad_af_popmax"]) >= 0.01:
+            if (
+                report1_var[variant]["clinvar_pathogenic"] != "None"
+                and report2_var[variant]["clinvar_pathogenic"] == "None"
+            ):
+                clin_path = report1_var[variant]["clinvar_pathogenic"]
+                explanation[
+                    variant
+                ] = f"Change in clinvar_pathogenic from {clin_path} to None for variant with gnomad_af_popmax >= 0.01 and impact_severity {impact_severity}"
+            elif report1_var[variant]["clinvar_pathogenic"] in [
+                "Pathogenic",
+                "Likely_pathogenic",
+                "Conflicting_interpretations_of_pathogenicity",
+            ] and report2_var[variant]["clinvar_pathogenic"] not in [
+                "Pathogenic",
+                "Likely_pathogenic",
+                "Conflicting_interpretations_of_pathogenicity",
+            ]:
+                clin_path_1 = report1_var[variant]["clinvar_pathogenic"]
+                clin_path_2 = report2_var[variant]["clinvar_pathogenic"]
+                explanation[
+                    variant
+                ] = f"Change in clinvar_pathogenic from {clin_path_1} to {clin_path_2} for variant with gnomad_af_popmax >= 0.01 and impact_severity {impact_severity}"
+            else:
+                explanation[variant] = "Cannot explain"
+
     return explanation
 
 

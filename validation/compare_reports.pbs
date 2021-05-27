@@ -6,6 +6,7 @@
 #PBS -l walltime=15:00:00
 #PBS -j oe
 
+module load python/3.8.0
 
 #usage: qsub compare_reports.pbs -F "<first csv> <second csv> <first db> <second db>"
 
@@ -39,4 +40,4 @@ sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $right gene impact en
 wait
 
 #evaluate differences
-python ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt -prefix1 ${prefix1} -db_output2 ${prefix2}.uniq.db.txt -prefix2 ${prefix2}
+python3 ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt -prefix1 ${prefix1} -db_output2 ${prefix2}.uniq.db.txt -prefix2 ${prefix2}

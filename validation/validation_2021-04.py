@@ -67,6 +67,7 @@ def db_output_to_dict(db_output):
 def get_explanations(report1_var, report2_var):
     explanation = {}
     for variant in report1_var:
+        print(variant)
         report1_var[variant]["alt_depths"] = max(report1_var[variant]["alt_depths"])
         report1_var[variant]["depths"] = min(report1_var[variant]["depths"])
         impact_severity = report1_var[variant]["impact_severity"]
@@ -74,6 +75,10 @@ def get_explanations(report1_var, report2_var):
 
         if variant not in report2_var:
             explanation[variant] = "Variant not present in comparison database"
+        elif report2_var[variant]["callers"] in ["samtools", "freebayes", "platypus"]:
+            explanation[
+                variant
+            ] = "Variant only called by one non-GATK caller in comparison database"
         # change in impact severity (vep)
         elif (
             report1_var[variant]["impact_severity"] != "LOW"

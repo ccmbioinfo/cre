@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#PBS -l walltime=20:00:00,nodes=1:ppn=1
+#PBS -joe .
+#PBS -d .
+#PBS -l vmem=30g,mem=30g
+
+
+# usage: qsub cram2fastq.pbs -v cram=/path/to/cram,old_ref=reference path in cram file header,sample=familyid_sampleid,dir=output directory
+# example: qsub cram2fastq.pbs -v cram=/hpf/largeprojects/ccm_dccforge/dccforge/uploads/ACH/2245_CA0678/1830981.cram,old_ref=UR:/mnt/hnas/reference/hg19/hg19.fa,sample=2245_CA0678,dir=/hpf/largeprojects/ccmbio/mcouse/tools/scripts
+
+ref=/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/hg19/seq/hg19.fa
+
+#if reference in header is not local, samtools will try to download it even if --reference flag is specified
+#so, replace reference location with local hg19 reference
+cp $cram $dir 
+cd $dir
+cram_name=`basename $cram`
+cram=${dir}/${cram_name}
+samtools view -H $cram > header.sam
+sed -i "s+${old_ref}+UR:${ref}+g" header.sam
+samtools reheader -i header.sam $cram
+
+samtools sort -n  $cram | samtools fastq  - --reference $ref -1 ${sample}_1.fq.gz -2 ${sample}_2.fq.gz 
+
+rm -rf $dir/header.sam
+rm -rf $dir/*.cram

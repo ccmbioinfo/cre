@@ -78,7 +78,7 @@ we can discover a useful non-coding variant. No sense to filter them out during 
 
 ## 3c. Input is cram file.
 * Run [cram2fastq_samtools.pbs](../master/cram2fastq_samtools.pbs) for each cram file.
-* Usage: run `samtools view -H <cram_file>` to find the reference path as `old_ref`, then do `qsub cram2fastq_samtools.pbs -v cram=/path/to/cram,old_ref=reference path in cram file header,sample=familyid_sampleid,dir=output directory`
+* Usage: run `samtools view -H <cram_file>` to find the reference path as `old_ref`, then do `qsub cram2fastq_samtools.pbs -v cram=/path/to/cram,old_ref=reference path in cram file header,sample=familyid_sampleid,dir=output directory`. This script switches the reference used in cram to using our local reference, and then it generates fastq files.
 * For eg. `qsub cram2fastq_samtools.pbs -v cram=/hpf/largeprojects/ccm_dccforge/dccforge/uploads/CHEO/2248_CH2188/2211891.cram,old_ref=UR:/mnt/hnas/reference/hg19/hg19.fa,sample=2248_CH2188,dir=/hpf/largeprojects/ccmbio/ccmmarvin_shared/exomes/in_progress/2248/input`  
 * I would suggest to avoid crams when possible. A damaged bam file could be recovered with [cre.bam_recovery.sh](../master/cre.bam_recovery.sh), but nothing could be done for cram.
 

@@ -21,7 +21,8 @@ samtools view -H $cram > header.sam
 sed -i "s+${old_ref}+UR:${ref}+g" header.sam
 samtools reheader -i header.sam $cram
 
-samtools sort -n  $cram | samtools fastq  - --reference $ref -1 ${sample}_1.fq.gz -2 ${sample}_2.fq.gz 
+samtools sort -n  $cram | samtools fastq  - --reference $ref -1 ${sample}_1.fq.gz -2 ${sample}_2.fq.gz -s ${sample}_singleton.fq.gz 
 
 rm -rf $dir/header.sam
 rm -rf $dir/*.cram
+rm -rf $dir/${sample}_singleton.fq.gz

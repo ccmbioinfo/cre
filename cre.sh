@@ -10,6 +10,7 @@
 # 	type = [ wes.regular (default) | wes.synonymous | wes.fast | rnaseq | wgs | annotate (only for cleaning) | 
 # 	    denovo (all rare variants in wgs, proband should have phenotype=2, parents=phenotype1 also sex for parents in gemini.db) ]
 #	max_af = af filter, default = 0.01
+#	database = path to folder where c4r count files and hgmd.csv are found.
 #   ped = pedigree file, used to amend gemini db with sample information to generate de novo report
 ####################################################################################################
 
@@ -248,7 +249,7 @@ function f_make_report
     fi
 
     echo GENERATING REPORT WITH TYPE: "${type}"
-    Rscript ~/cre/cre.vcf2db.R $family "${type}"
+    Rscript ~/cre/cre.vcf2db.R $family "${type}" "${database}"
     
     cd $family
     #rm $family.create_report.csv $family.merge_reports.csv
@@ -313,4 +314,11 @@ if [ $cleanup -eq 1 ] && [ "$type" == "wes.regular" ]
 then
     type="wes.synonymous"
     f_make_report
+fi
+
+#submit database path as argument
+if [ -z $database ]
+then
+    echo "Error - missing c4r database path. Script usage: cre.sh family=<family>, type=<report type>, database=<path to c4r database>"
+    exit 1
 fi

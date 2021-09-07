@@ -5,7 +5,8 @@
 
 family=$1
 report_type=$2
-ped=$3
+database=$3
+ped=$4
 curr_date=$(date +"%Y-%m-%d")
 
 rerun_folder="${family}_${curr_date}"
@@ -50,21 +51,21 @@ fi
 
 # generate wes.regular and wes.synonymous reports only for exomes
 if [ "$report_type" = "wes.both" ]; then
-	first_report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wes.regular)"
+	first_report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wes.regular,database="${database}")"
 	echo "Regular WES Report Job ID: ${first_report_job}"
-	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${first_report_job}" -v family=${family},type=wes.synonymous)"
+	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${first_report_job}" -v family=${family},type=wes.synonymous,database="${database}")"
 	echo "Synonymous WES Report Job ID: ${report_job}"
 # generate wes.regular report for genomes
 elif [ "$report_type" = "wes" ]; then
-	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wes.regular)"
+	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wes.regular,database="${database}")"
 	echo "Regular WES Report Job ID: ${report_job}"
 # generate wgs report for genomes (i.e. panel, panel-flank)
 elif [ "$report_type" = "wgs" ]; then
-	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wgs)"
+	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=wgs,database="${database}")"
   echo "WGS Report Job ID: ${report_job}"
 # generate denovo report
 elif [ "$report_type" = "denovo" ]; then
-	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=denovo)"
+	report_job="$(qsub ~/cre/cre.sh -W depend=afterany:"${vcf2cre_job}" -v family=${family},type=denovo,database="${database}")"
   echo "WGS Report Job ID: ${report_job}"
 fi
 

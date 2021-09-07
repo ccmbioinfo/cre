@@ -4,7 +4,7 @@
 #datetime <- format(Sys.time(),"%Y-%m-%d_%H-%M") # can use to get timestamp for testing
 datetime <- format(Sys.time(),"%Y-%m-%d")
 
-# Rscript ~/cre/cre.vcf2.db.R <family> noncoding|default=NULL,coding
+# Rscript ~/cre/cre.vcf2.db.R <family> noncoding|default=NULL,coding <database path>
 add_placeholder <- function(variants, column_name, placeholder){
     variants[,column_name] <- with(variants, placeholder)
     return(variants)
@@ -847,7 +847,6 @@ library(data.table)
 library(plyr)
 library(dplyr)
 default_tables_path <- "~/cre/data"
-c4r_database_path <- "/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
 
 # R substitutes "-" with "." in sample names in columns so fix this in samples.txt
 # sample names starting with letters should be prefixed by X in *.table
@@ -861,6 +860,8 @@ coding <- if(is.null(args[2])) T else F
 coding <- F
 
 type <- if(is.na(args[2])) '' else args[2]
+
+c4r_database_path <- args[3] 
 
 debug <- F
 

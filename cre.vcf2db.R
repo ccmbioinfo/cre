@@ -434,7 +434,7 @@ select_and_write2 <- function(variants, samples, prefix)
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
                             "Conserved_in_20_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score", "Gerp_score",
-                            "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
+                            "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
                             "Number_of_callers", "Old_multiallelic"))]
   
     variants <- variants[order(variants$Position),]
@@ -808,7 +808,7 @@ clinical_report <- function(project,samples,type){
                         "Orphanet", "Clinvar", "Frequency_in_C4R",
                         "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
-                        "Imprinting_status", "Pseudoautosomal")
+                        "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac")
                )
     
     # recalculate burden using the filtered report
@@ -834,7 +834,7 @@ clinical_report <- function(project,samples,type){
       "Orphanet", "Clinvar", "Frequency_in_C4R",
       "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
-      "Imprinting_status", "Pseudoautosomal")]
+      "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac")]
 
     write.csv(filtered_report, paste0(project, ".clinical.", type, ".", datetime, ".csv"), row.names = F)
 }

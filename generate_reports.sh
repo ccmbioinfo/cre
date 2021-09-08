@@ -1,7 +1,7 @@
 #!/bin/bash
 # generate both the regular and synonymous reports for a family
 # pass in the family id as the first positional parameter, use -email to recieve an email when both jobs are done
-# usage: generate_reports.sh <family id> <report_type> [optional -email] 
+# usage: generate_reports.sh <family id> <report_type> <c4r database path> [optional -email] 
 
 family=$1
 report_type=$2

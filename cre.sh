@@ -316,9 +316,8 @@ then
     f_make_report
 fi
 
-#submit database path as argument
+#default database path
 if [ -z $database ]
 then
-    echo "Error - missing c4r database path. Script usage: cre.sh family=<family>, type=<report type>, database=<path to c4r database>"
-    exit 1
+    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
 fi

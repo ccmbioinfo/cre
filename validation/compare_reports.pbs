@@ -32,8 +32,8 @@ right="${prefix2}.uniq.pos";
 
 #extract db entries
 script=/hpf/largeprojects/ccmbio/ccmmarvin_shared/validation/scripts;
-sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $left gene impact ensembl_gene_id callers clinvar_status > ${prefix1}.uniq.db.txt&
-sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $right gene impact ensembl_gene_id callers clinvar_status > ${prefix2}.uniq.db.txt
+sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $left gene impact ensembl_gene_id callers clinvar_status gnomad_af_popmax > ${prefix1}.uniq.db.txt&
+sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $right gene impact ensembl_gene_id callers clinvar_status gnomad_af_popmax > ${prefix2}.uniq.db.txt
 ##sh ~/cre/validation/gemini_compare.sh $3 $4 $common gene impact ensembl_gene_id callers > ${prefix1}.${prefix2}.common.db.txt
 
 wait

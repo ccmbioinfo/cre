@@ -92,7 +92,7 @@ Current directory should have a list of projects in projects.txt.
 
 # 5. Clean result dir and create project.csv report: 
 
-`qsub ~/cre/cre.sh -v family=[family],cleanup=1`
+`qsub ~/cre/cre.sh -v family=[family],cleanup=1,database="path/to/c4r/counts/database"`
  * moves project results and sample bam files to family dir
  * removes work and final dirs from bcbio project
  * removes gemini databases for individual callers (we need only ensemble gemini database)

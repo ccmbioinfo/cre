@@ -286,6 +286,12 @@ then
     type="wes.regular"
 fi
 
+#default database path
+if [ -z $database ]
+then
+    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
+fi
+
 #no cleanup by default
 if [ -z $cleanup ]
 then
@@ -314,10 +320,4 @@ if [ $cleanup -eq 1 ] && [ "$type" == "wes.regular" ]
 then
     type="wes.synonymous"
     f_make_report
-fi
-
-#default database path
-if [ -z $database ]
-then
-    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
 fi

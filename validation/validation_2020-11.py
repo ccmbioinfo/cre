@@ -65,7 +65,7 @@ def get_explanations(report1_var, report2_var):
         elif report1_var[variant]['alt_depths'] >= 3 and max(report2_var[variant]['depths']) < 10 :
              explanation[variant] = 'Max depth less than 10 in both reports but alt depth >3 in this report'
         #gnomad af popmax may have changed between reports
-        elif report1_var[variant]['gnomad_af_popmax'] < 0.01 and report2_var[variant]['gnomad_af_popmax'] >= 0.01 :
+        elif float(report1_var[variant]['gnomad_af_popmax']) < 0.01 and float(report2_var[variant]['gnomad_af_popmax']) >= 0.01 :
             explanation[variant] = 'GnomAD AF popmax now greater than 0.01'
         else:
             explanation[variant] = 'Cannot explain'

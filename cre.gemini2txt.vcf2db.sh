@@ -73,8 +73,9 @@ sQuery="select \
         hgvsc as Codon_change,\
         "$callers" as Callers,\
         phylop20way_mammalian as Conserved_in_20_mammals,\
-        COALESCE(spliceai_score, '') as SpliceAI_score,
-        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
+        COALESCE(spliceai_score, '') as SpliceAI_score, \
+        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
+        tf_binding_sites as TF_binding_sites, \
         gts,"
 
 while read sample

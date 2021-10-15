@@ -110,6 +110,12 @@ def get_explanations(report1_var, report2_var):
                 explanation[
                     variant
                 ] = f"Change in clinvar_pathogenic from {clin_path} to None for variant with gnomad_af_popmax < 0.01 and impact_severity {impact_severity}"
+            if (
+                float(report2_var[variant]["gnomad_af_popmax"]) >= 0.01
+            ):
+                explanation[
+                    variant
+                ] = f"GnomAD AF popmax greater than 0.01 in the other report"
             else:
                 explanation[variant] = "Cannot explain"
         elif gnomad >= 0.01:

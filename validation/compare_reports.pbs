@@ -7,16 +7,18 @@
 #PBS -j oe
 
 
-#usage: qsub compare_reports.pbs -F "<first csv> <second csv> <first db> <second db>"
+#usage: qsub compare_reports.pbs -F "<first csv> <second csv> <first db> <second db> </path/to/tables/first report> </path/to/tables/second report>"
 
 ###
 #example run here: /hpf/largeprojects/ccmbio/aarthi/benchmark-runs/report_comparison
-#qsub validation/compare_reports.pbs -F "crg/HG001.clinical.wes.regular.2020-09-26.csv crg2/NA12878.clinical.wes.regular.2020-09-24.csv crg/HG001-ensemble.db crg2/NA12878-ensemble.db"
+#qsub validation/compare_reports.pbs -F "crg/HG001.clinical.wes.regular.2020-09-26.csv crg2/NA12878.clinical.wes.regular.2020-09-24.csv crg/HG001-ensemble.db crg2/NA12878-ensemble.db crg/ crg2/"
 ###
 
 report_type=`basename $1 .csv | cut -d "." -f2`;
 prefix1=`basename $1 .csv`;
 prefix2=`basename $2 .csv`;
+dir1=$5;
+dir2=$6;
 
 if [ "${report_type}" != "$(basename $2 .csv | cut -d "." -f2)" ]; then
 	echo "report type (clinical or regular) should be same for both files. exiting!";
@@ -40,4 +42,9 @@ wait
 
 module load python/3.7.1
 #evaluate differences
-python3 ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt -prefix1 ${prefix1} -db_output2 ${prefix2}.uniq.db.txt -prefix2 ${prefix2}
+python3 ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt \
+	-prefix1 ${prefix1} \
+	-db_output2 ${prefix2}.uniq.db.txt \
+	-prefix2 ${prefix2} \
+	-dir1 $dir1
+	-dir2 $dir2

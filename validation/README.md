@@ -39,7 +39,7 @@ We will make updates to cre every six months, and we will perform validation at 
 
   1. Determine explanations for inclusion/exclusion of variants in first and second reports. Because the the updates to report generation will be different in each validation (for instance, we may update ClinVar annotations and VEP version in one validation, and then six months later update OMIM annotations and alt depth threshold), the validation script will change. For the October 2021 validation, run the validation_2021-10.py script as follows using python3 (first load python3 with `module load python/3.7.1`):
      ```python3
-     python ~/cre/validation/validation_2021-10.py \
+     python3 ~/cre/validation/validation_2021-10.py \
         -db_output1 <first_csv>.uniq.db.txt \
         -db_output2 <second_csv>.uniq.db.txt \
         -prefix1 <first_csv> \

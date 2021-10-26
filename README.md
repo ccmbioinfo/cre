@@ -77,7 +77,9 @@ we can discover a useful non-coding variant. No sense to filter them out during 
 * create a sample sheet and run [bcl2fq.sh](../master/bcl2fq.sh).
 
 ## 3c. Input is cram file.
-* Run [cram2fq.sh](../master/cram2.fq). 
+* Run [cram2fastq_samtools.pbs](../master/cram2fastq_samtools.pbs) for each cram file.
+* Usage: run `samtools view -H <cram_file>` to find the reference path as `old_ref`, then do `qsub cram2fastq_samtools.pbs -v cram=/path/to/cram,old_ref=reference path in cram file header,sample=familyid_sampleid,dir=output directory`. This script switches the reference used in cram to using our local reference, and then it generates fastq files.
+* For eg. `qsub cram2fastq_samtools.pbs -v cram=/hpf/largeprojects/ccm_dccforge/dccforge/uploads/CHEO/2248_CH2188/2211891.cram,old_ref=UR:/mnt/hnas/reference/hg19/hg19.fa,sample=2248_CH2188,dir=/hpf/largeprojects/ccmbio/ccmmarvin_shared/exomes/in_progress/2248/input`  
 * I would suggest to avoid crams when possible. A damaged bam file could be recovered with [cre.bam_recovery.sh](../master/cre.bam_recovery.sh), but nothing could be done for cram.
 
 # 4. Run bcbio
@@ -90,7 +92,7 @@ Current directory should have a list of projects in projects.txt.
 
 # 5. Clean result dir and create project.csv report: 
 
-`qsub ~/cre/cre.sh -v family=[family],cleanup=1`
+`qsub ~/cre/cre.sh -v family=[family],cleanup=1,database="path/to/c4r/counts/database"`
  * moves project results and sample bam files to family dir
  * removes work and final dirs from bcbio project
  * removes gemini databases for individual callers (we need only ensemble gemini database)
@@ -104,7 +106,7 @@ Current directory should have a list of projects in projects.txt.
 
 # 6. Step 5 in detail
 
-6.1 [Report description](https://docs.google.com/document/d/1ZNiFIrhDrkOwqh950LmInhUuWeG3Rqrydc9amN3GCT0/edit?usp=sharing).\
+6.1 [Report description](https://sickkidsca-my.sharepoint.com/:w:/r/personal/arun_ramani_sickkids_ca/_layouts/15/Doc.aspx?sourcedoc=%7B24220052-BF91-4B96-989E-E3143F964A39%7D&file=SNV_FilterColumnDescription.May.2021.docx&action=default&mobileredirect=true).\
 6.2 [Report example for Ashkenazim trio from NIST](https://drive.google.com/open?id=0B_bLL10GwDnsN29vY3RRdGlXMWM). \
 6.3 [gemini.gemini2txt.sh](../master/gemini.gemini2txt.sh) [project-ensembl.db] - dumps a gemini database into text file. \
 6.4 [gemini.variant_impacts.sh](../master/gemini.variant_impacts.sh) [project-ensembl.db] dumps variant impacts from gemini. \

@@ -75,7 +75,10 @@ sQuery="select \
         "$callers" as Callers,\
         phylop20way_mammalian as Conserved_in_20_mammals,\
         COALESCE(spliceai_score, '') as SpliceAI_score,
-        gts,"
+        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
+	dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
+ 	ctcf_binding_site as CTCF_binding_site,       
+	gts,"
 
 while read sample
 do
@@ -114,13 +117,16 @@ if [ -n "$denovo" ] && [ "$denovo" == 1 ]
 then
     # https://www.biostars.org/p/359117/
     proband=`gemini query -q "select name from samples where phenotype=2" $file`
-    mom=`gemini query -q "select name from samples where phenotype=1 and sex=2" $file`
-    dad=`gemini query -q "select name from samples where phenotype=1 and sex=1" $file`
+    mom=`gemini query -q "select name from samples where phenotype=-9 and sex=2" $file`
+    dad=`gemini query -q "select name from samples where phenotype=-9 and sex=1" $file`
     
-    s_gt_filter="gt_types."$proband" == HET and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF"
+    s_gt_filter="((gt_types."$proband" == HET or gt_types."$proband" == HOM_ALT) and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF) \
+    and (gt_alt_depths."$proband" >="${alt_depth}" or (gt_alt_depths).(*).(==-1).(all)) \
+    and ((gt_alt_depths."$dad" < 10 and gt_alt_depths."$mom" < 10)  or (gt_alt_depths).(*).(==-1).(all))"
+    echo $s_gt_filter
     #(gt_types."$proband" == HOM_ALT and gt_types."$dad" == HOM_REF and gt_types."$mom" == HET)"
     # otherwise a lot of trash variants
-    sQuery=$sQuery" and qual>=500"
+    sQuery=$sQuery" and qual>=400 and Old_multiallelic is null"
     gemini query -q "$sQuery" --gt-filter "$s_gt_filter" --header $file
 else
     # keep variant where the alt depth is >=3 in any one of the samples or they're all -1 (sometimes happens for freebayes called variants?)

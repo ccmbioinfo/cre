@@ -10,6 +10,8 @@
 # 	type = [ wes.regular (default) | wes.synonymous | wes.fast | rnaseq | wgs | annotate (only for cleaning) | 
 # 	    denovo (all rare variants in wgs, proband should have phenotype=2, parents=phenotype1 also sex for parents in gemini.db) ]
 #	max_af = af filter, default = 0.01
+#	database = path to folder where c4r count files and hgmd.csv are found.
+#   ped = pedigree file, used to amend gemini db with sample information to generate de novo report
 ####################################################################################################
 
 #PBS -l walltime=23:00:00,nodes=1:ppn=1
@@ -19,7 +21,6 @@
 
 # default settings:
 # max af > 0.1, ad > 3, plus and any variants with a clinvar entry and ad > 1
-
 # cleanup is different for wes.fast template - don't remove gatk db
 function f_cleanup
 {
@@ -151,7 +152,12 @@ function f_make_report
     
     if [ "$type" == "denovo" ]
     then
-			export denovo=1
+        export denovo=1
+        if [ ! -z "$ped" ]
+        then
+            echo "Amending gemini db with pedigree information"
+            gemini amend --sample $ped ${family}-ensemble.db 
+        fi
     fi
 
     ~/cre/cre.gemini2txt.vcf2db.sh ${family}-ensemble.db $depth_threshold $severity_filter $max_af > $family.variants.all.txt
@@ -161,6 +167,12 @@ function f_make_report
     awk '!a[$0]++' $family.variants.all.txt > $family.variants.txt
     awk '!a[$0]++' $family.variant_impacts.all.txt > $family.variant_impacts.txt
 
+    if [ "$type" == "denovo" ]
+    then
+		#gemini prints the genotype filter to the first line of the file, need to remove
+        tail -n +2 $family.variants.txt > $family.variants.trim.txt
+        mv $family.variants.trim.txt $family.variants.txt
+    fi 
 
     # report filtered vcf for import in phenotips
     # note that if there is a multiallelic SNP, with one rare allele and one frequent one, both will be reported in the VCF,
@@ -237,7 +249,7 @@ function f_make_report
     fi
 
     echo GENERATING REPORT WITH TYPE: "${type}"
-    Rscript ~/cre/cre.vcf2db.R $family "${type}"
+    Rscript ~/cre/cre.vcf2db.R $family "${type}" "${database}"
     
     cd $family
     #rm $family.create_report.csv $family.merge_reports.csv
@@ -272,6 +284,12 @@ fi
 if [ -z $type ]
 then
     type="wes.regular"
+fi
+
+#default database path
+if [ -z $database ]
+then
+    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
 fi
 
 #no cleanup by default

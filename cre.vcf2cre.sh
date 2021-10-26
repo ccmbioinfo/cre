@@ -1,8 +1,8 @@
 #!/bin/bash
-#PBS -l walltime=100:00:00,nodes=1:ppn=5
+#PBS -l walltime=100:00:00,nodes=1:ppn=14
 #PBS -joe .
 #PBS -d .
-#PBS -l vmem=50g,mem=50g
+#PBS -l vmem=70g,mem=70g
 
 # 50g is crucial -20,30 crashes sometimes
 

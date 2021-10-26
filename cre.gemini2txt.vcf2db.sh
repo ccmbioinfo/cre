@@ -75,9 +75,10 @@ sQuery="select \
         phylop20way_mammalian as Conserved_in_20_mammals,\
         COALESCE(spliceai_score, '') as SpliceAI_score,
         uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
-	dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
- 	ctcf_binding_site as CTCF_binding_site,       
-	gts,"
+	    dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
+ 	    ctcf_binding_site as CTCF_binding_site, 
+        enh_cellline_tissue as ENH_cellline_tissue,      
+	    gts,"
 
 while read sample
 do

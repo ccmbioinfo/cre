@@ -8,9 +8,9 @@ We will make updates to cre every six months, and we will perform validation at 
 
 ## Report validation
 1. Compare report generated prior to updates (first csv) to report generated post-updates (second csv): 
-2. `qsub -F ~/cre/validation/compare_reports.pbs "<first_csv> <second_csv> <first_db> <second_db>"`
+2. `qsub -F ~/cre/validation/compare_reports.pbs "<first_csv> <second_csv> <first_db> <second_db> </path/to/tables/first report> </path/to/tables/second report>"`
    
-   where <first_db> refers to the gemini database associated with the first report, and <second_db> refers to the gemini database associated with the second report. 
+   where `<first_db>` refers to the gemini database associated with the first report, and `<second_db>` refers to the gemini database associated with the second report. `</path/to/tables/[first|second] report>` refers to the family/project directory within which the report was generated, where the *table files corresponding to GATK, freebayes, and platypus are found.
    To retrieve the updated/newly added column names from the db for comparison, you must manually add these column names as last arguments in the lines calling "gemini_compare.sh" inside the `compare_reports.pbs`
    
    Outputs:
@@ -37,23 +37,27 @@ We will make updates to cre every six months, and we will perform validation at 
 
            gemini database entries associated with both reports for variants unique to first report, and vice-versa
 
-  1. Determine explanations for inclusion/exclusion of variants in first and second reports. Because the the updates to report generation will be different in each validation (for instance, we may update ClinVar annotations and VEP version in one validation, and then six months later update OMIM annotations and alt depth threshold), the validation script will change. For the November 2020 validation, run the validation_2020-11.py script as follows using /hpf/largeprojects/ccmbio/naumenko/tools/bcbio/anaconda/bin/python:
-     ```python
-     python ~/cre/validation/validation_2020-11.py \
+  1. Determine explanations for inclusion/exclusion of variants in first and second reports. Because the the updates to report generation will be different in each validation (for instance, we may update ClinVar annotations and VEP version in one validation, and then six months later update OMIM annotations and alt depth threshold), the validation script will change. For the October 2021 validation, run the validation_2021-10.py script as follows using python3 (first load python3 with `module load python/3.7.1`):
+     ```python3
+     python3 ~/cre/validation/validation_2021-10.py \
         -db_output1 <first_csv>.uniq.db.txt \
         -db_output2 <second_csv>.uniq.db.txt \
         -prefix1 <first_csv> \
-        -prefix2 <second_csv>
+        -prefix2 <second_csv> \
+        -dir1 </path/to/tables/first report> \
+        -dir2 /path/to/tables/first report
      ```
 
      Outputs:
       * validation_summary_unique_in_<first_csv>.<date_generated>.csv, validation_summary_unique_in_<second_csv>.<date_generated>.csv:
           
           These are tables that look like this:
-          Variant | Explanation
-          --- | ---
-          15:38641773:38641774:A:T |Change in clinvar_sig from uncertain to None
-          19:633528:633529:G:GGCGCCGCCGCCGCCGCCGCC | Change in impact_severity from HIGH to LOW
+          | Variant                                  | Explanation                                  |
+          | ---------------------------------------- | -------------------------------------------- |
+          | 15:38641773:38641774:A:T                 | Change in clinvar_sig from uncertain to None |
+          | 19:633528:633529:G:GGCGCCGCCGCCGCCGCCGCC | Change in impact_severity from HIGH to LOW   |
+
+   1. Some variants unique to one report may have the following explanation for their exclusion from the other report: "Alt depth less than 3 in other report tables". These variants have an apparent depth of >=3, and yet are not present in a report. The explanation is convoluted. When cre.sh is run, it creates [tables of the alt depths](https://github.com/ccmbioinfo/cre/blob/master/cre.sh#L209) for each variant from GATK, freebayes, and platypus. It doesn't create a table for samtools, because samtools doesn't always include the alt depth for a variant. When we query the gemini db, we select variants with alt depth >= 3 OR missing. The purpose of the alt depth tables seems to be to populate the alt depths in the report for variants where it is missing (-1) in the gemini database, i.e. for variants called by samtools and freebayes/platypus, so that the alt depth filter can be applied at the end of report generation to catch variants for which the AD was missing in the gemini db, but is actually <3. So, a variant may have AD missing in the gemini db if called by samtools and platypus, but we then [pull the AD from the platypus table](https://github.com/ccmbioinfo/cre/blob/master/cre.vcf2db.R#L455). If that AD is >=3, the variant will be included in the report. Note, however, that some samtools variants do have alt depth listed, which I believe is where we run into issues when doing the report validations. A variant may have an AD of >=3 in the gemini db which has been pulled from the samtools vcf, but is then filtered out in the report generation step if the AD is <3 in the other caller (e.g. platypus or freebayes) because cre does not generate a samtools table. So, we incorporated these tables into the validation_2021-10.py script to explain why a small number of variants with an apparent depth of >=3 in the gemini db from a run are not included in that report, as the AD was <3 in another caller.  
 
 ## VCF validation 
 

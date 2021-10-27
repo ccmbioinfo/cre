@@ -38,5 +38,6 @@ sh ${script}/gemini_compare.sh $3 ${prefix1} $4 ${prefix2} $right gene impact en
 
 wait
 
+module load python/3.7.1
 #evaluate differences
-python ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt -prefix1 ${prefix1} -db_output2 ${prefix2}.uniq.db.txt -prefix2 ${prefix2}
+python3 ~/cre/validation/validation_2021-04.py -db_output1 ${prefix1}.uniq.db.txt -prefix1 ${prefix1} -db_output2 ${prefix2}.uniq.db.txt -prefix2 ${prefix2}

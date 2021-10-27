@@ -211,7 +211,7 @@ create_report <- function(family, samples){
     # Column19 - Omim_phenotype
     # Column20 - Omim_inheritance 
     # Column20 - Omim_inheritance 
-    omim_map_file <- paste0(default_tables_path,"/OMIM_hgnc_join_omim_phenos_2021-04-27.tsv")
+    omim_map_file <- paste0(default_tables_path,"/OMIM_remaining_unmapped_omim_with_info_2021-10-19.tsv")
     if(file.exists(omim_map_file)){
     # read in tsv
     hgnc_join_omim_phenos <- read.delim(omim_map_file, stringsAsFactors=FALSE)
@@ -405,6 +405,9 @@ create_report <- function(family, samples){
 
     # Column 53: UCE_100bp 
     # Column 54: UCE_200bp
+    # Column 55: DNaseI_hypersensitive_site  
+    # Column 56: CTCF_binding_site
+    # Column 57: ENH_cellline_tissue
         
     # replace -1 with 0
     for (field in c("Trio_coverage", "Gnomad_af", "Gnomad_af_popmax")){
@@ -437,8 +440,9 @@ select_and_write2 <- function(variants, samples, prefix)
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
                             "Conserved_in_20_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score", "Gerp_score",
-                            "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
-                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp","TF_binding_sites"))]
+                            "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
+                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp", 
+                            "DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites"))]
   
     variants <- variants[order(variants$Position),]
     
@@ -811,7 +815,8 @@ clinical_report <- function(project,samples,type){
                         "Orphanet", "Clinvar", "Frequency_in_C4R",
                         "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
-                        "Imprinting_status", "Pseudoautosomal", "UCE_100bp", "UCE_200bp","TF_binding_sites")
+                        "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp",
+                        "DNaseI_hypersensitive_site", "CTCF_binding_site","ENH_cellline_tissue","TF_binding_sites")
                )
     
     # recalculate burden using the filtered report
@@ -837,7 +842,8 @@ clinical_report <- function(project,samples,type){
       "Orphanet", "Clinvar", "Frequency_in_C4R",
       "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
-      "Imprinting_status", "Pseudoautosomal","UCE_100bp", "UCE_200bp", "TF_binding_sites")]
+      "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp", 
+      "DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue","TF_binding_sites")]
 
     write.csv(filtered_report, paste0(project, ".clinical.", type, ".", datetime, ".csv"), row.names = F)
 }

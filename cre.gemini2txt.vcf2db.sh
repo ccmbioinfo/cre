@@ -63,7 +63,7 @@ sQuery="select \
         gnomad_af_popmax as Gnomad_af_popmax,\
         gnomad_ac as Gnomad_ac,\
         gnomad_hom as Gnomad_hom,\
-	gnomad_male_ac as Gnomad_male_ac, \
+	      gnomad_male_ac as Gnomad_male_ac, \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\
@@ -74,12 +74,13 @@ sQuery="select \
         hgvsc as Codon_change,\
         "$callers" as Callers,\
         phylop20way_mammalian as Conserved_in_20_mammals,\
-        COALESCE(spliceai_score, '') as SpliceAI_score,
-        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
-	    dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
- 	    ctcf_binding_site as CTCF_binding_site, 
-        enh_cellline_tissue as ENH_cellline_tissue,      
-	    gts,"
+        COALESCE(spliceai_score, '') as SpliceAI_score, \
+        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
+        dnasei_hypersensitive_site as DNaseI_hypersensitive_site, \
+ 	      ctcf_binding_site as CTCF_binding_site, \ 
+        enh_cellline_tissue as ENH_cellline_tissue, \
+        tf_binding_sites as TF_binding_sites, \
+        gts,"
 
 while read sample
 do

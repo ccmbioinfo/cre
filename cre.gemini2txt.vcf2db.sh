@@ -25,6 +25,8 @@ severity_threshold=$3
 
 max_af=$4
 
+type=$5
+
 alt_depth=3
 
 gemini query -q "select name from samples order by name" $file > samples.txt
@@ -40,7 +42,7 @@ else
 	caller_filter=""
 fi
 
-if [[ "$severity_threshold" == 'ALL' ]]
+if [[ "$type" == 'wgs' || "$type" == 'denovo' ]]
 then
     noncoding_anno="uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
             dnasei_hypersensitive_site as DNaseI_hypersensitive_site,

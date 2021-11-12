@@ -256,9 +256,9 @@ create_report <- function(family, samples, type){
     
     # Column 26 - Protein_domains
     
-    # Column 27, 28 = Frequency_in_C4R, Seen_in_C4R_samples
-    variants <- add_placeholder(variants, "Frequency_in_C4R", "Frequency_in_C4R")
-    variants <- add_placeholder(variants, "Seen_in_C4R_samples", "Seen_in_C4R_samples")
+    # Column 27, 28 = C4R_WES_counts, C4R_WES_samples
+    variants <- add_placeholder(variants, "C4R_WES_counts", "C4R_WES_counts")
+    variants <- add_placeholder(variants, "C4R_WES_samples", "C4R_WES_samples")
     
     # Columns 29,30,31,32: HGMD
     for(hgmd_field in c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref")){
@@ -429,9 +429,13 @@ select_and_write2 <- function(variants, samples, prefix, type)
     print(colnames(variants))
     if (type == 'wgs' || type == 'denovo'){
         noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
+        wgs_counts <- c("C4R_WGS_counts", "C4R_WGS_samples")
+        variants$C4R_WGS_counts[variants$C4R_WGS_counts == "None"] <- 0 
+        variants$C4R_WGS_samples[variants$C4R_WGS_samples == "None"] <- 0
         }
     else {
         noncoding_cols <- c()
+        wgs_counts <- c()
         }
     variants <- variants[c(c("Position", "UCSC_Link", "GNOMAD_Link", "Ref", "Alt"),
                           paste0("Zygosity.", samples),
@@ -441,7 +445,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                           paste0("Alt_depths.", samples),
                           c("Trio_coverage", "Ensembl_gene_id", "Gene_description", "omim_phenotype", "omim_inheritance",
                             "Orphanet", "Clinvar",
-                            "Frequency_in_C4R", "Seen_in_C4R_samples", "HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
+                            "C4R_WES_counts", "C4R_WES_samples"), wgs_counts, c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
                             "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
@@ -722,21 +726,21 @@ annotate_w_care4rare <- function(family,samples,type){
     if(exists("seen_in_c4r_counts")){
         variants <- merge(variants, seen_in_c4r_counts, by.x = "superindex", 
                           by.y = "Position.Ref.Alt", all.x = T)
-        variants$Frequency_in_C4R <- variants$Frequency
+        variants$C4R_WES_counts <- variants$Frequency
         variants$Frequency <- NULL
     }
     
-    variants$Frequency_in_C4R[is.na(variants$Frequency_in_C4R)] <- 0
+    variants$C4R_WES_counts[is.na(variants$C4R_WES_counts)] <- 0
     
     if(exists("seen_in_c4r_samples")){
         variants <- merge(variants,seen_in_c4r_samples,by.x = "superindex", 
                           by.y = "Position.Ref.Alt", all.x = T)
-        variants$Seen_in_C4R_samples <- variants$Samples
+        variants$C4R_WES_samples <- variants$Samples
     }
     
-    variants$Seen_in_C4R_samples[is.na(variants$Seen_in_C4R_samples)] <- 0        
+    variants$C4R_WES_samples[is.na(variants$C4R_WES_samples)] <- 0        
 		# truncate column if it has more than 30000 variants
-		variants$Seen_in_C4R_samples <- strtrim(variants$Seen_in_C4R_samples, 30000)
+		variants$C4R_WES_samples <- strtrim(variants$C4R_WES_samples, 30000)
 		    
     if (exists("hgmd")){
         variants$HGMD_gene <- NULL
@@ -812,12 +816,12 @@ clinical_report <- function(project,samples,type){
     # for clinical, only keep variants where one of the alt depths was >= 20
     full_report <- dplyr::filter_at(full_report, paste0("Alt_depths.",samples), any_vars(as.integer(.) >= 20))    
     filtered_report <- subset(full_report, 
-               Quality > 1000 & Gnomad_af_popmax < 0.005 & Frequency_in_C4R < 6,
+               Quality > 1000 & Gnomad_af_popmax < 0.005 & C4R_WES_counts < 6,
                select = c("Position", "GNOMAD_Link", "Ref", "Alt", "Gene", paste0("Zygosity.", samples), 
                           paste0("Burden.",samples),
                           paste0("Alt_depths.",samples),
                         "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
-                        "Orphanet", "Clinvar", "Frequency_in_C4R",
+                        "Orphanet", "Clinvar", "C4R_WES_counts",
                         "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
                         "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp")
@@ -843,7 +847,7 @@ clinical_report <- function(project,samples,type){
     filtered_report <- filtered_report[c("Position", "GNOMAD_Link", "Ref", "Alt", "Gene", paste0("Zygosity.", samples), 
       paste0("Burden.", samples),
       "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
-      "Orphanet", "Clinvar", "Frequency_in_C4R",
+      "Orphanet", "Clinvar", "C4R_WES_counts",
       "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
       "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp")]

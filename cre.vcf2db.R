@@ -431,6 +431,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
         noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
         wgs_counts <- c("C4R_WGS_counts", "C4R_WGS_samples")
         variants$C4R_WGS_counts[variants$C4R_WGS_counts == "None"] <- 0 
+        variants$C4R_WGS_counts <- as.integer(variants$C4R_WGS_counts)
         variants$C4R_WGS_samples[variants$C4R_WGS_samples == "None"] <- 0
         }
     else {
@@ -454,6 +455,10 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
   
     variants <- variants[order(variants$Position),]
+
+    if (type == 'denovo'){
+        variants <- variants[variants$C4R_WGS_counts < 10,]
+    }
     
     write.csv(variants, paste0(prefix,".csv"), row.names = F)
 }

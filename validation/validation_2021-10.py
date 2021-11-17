@@ -88,6 +88,8 @@ def get_explanations(report1_var, report2_var, report2_dir):
     # platypus  alt depth cols
     if platypus is not None:
         platypus_ad_cols = get_platypus_nv_cols(platypus.columns)
+        for col in platypus_ad_cols:
+            platypus[col] = platypus.apply(lambda row: parse_ad(row[col]), axis=1)
         platypus["AD_max"] = platypus.apply(
             lambda row: get_max_ad([row[col] for col in platypus_ad_cols]), axis=1
         )

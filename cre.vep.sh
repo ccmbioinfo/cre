@@ -57,7 +57,5 @@ unset PERL5LIB && vep --vcf -o stdout \
     --canonical --gene_phenotype --ccds --uniprot --domains --regulatory --protein --tsl --appris --af --max_af --af_1kg --af_esp --af_gnomad --pubmed --variant_class \
     --allele_number \
     --fasta ${reference}/seq/GRCh37.fa.gz \
-    --plugin LoF,human_ancestor_fa:${reference}/variation/human_ancestor.fa.gz,loftee_path:$vep_reference \
-    --plugin MaxEntScan,/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/anaconda/share/maxentscan-0_2004.04.21-1 \
     --plugin SpliceRegion --sift b --polyphen b --hgvs --shift_hgvs 1 --merged \
     | sed '/^#/! s/;;/;/g' | bgzip -c > $bname.vepeffects.vcf.gz

@@ -129,18 +129,24 @@ s_gt_filter=''
 if [ -n "$denovo" ] && [ "$denovo" == 1 ]
 then
     # https://www.biostars.org/p/359117/
-    proband=`gemini query -q "select name from samples where phenotype=2" $file`
-    mom=`gemini query -q "select name from samples where phenotype=-9 and sex=2" $file`
-    dad=`gemini query -q "select name from samples where phenotype=-9 and sex=1" $file`
-    
-    s_gt_filter="((gt_types."$proband" == HET or gt_types."$proband" == HOM_ALT) and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF) \
-    and (gt_alt_depths."$proband" >="${alt_depth}" or (gt_alt_depths).(*).(==-1).(all)) \
-    and ((gt_alt_depths."$dad" < 10 and gt_alt_depths."$mom" < 10)  or (gt_alt_depths).(*).(==-1).(all))"
-    echo $s_gt_filter
-    #(gt_types."$proband" == HOM_ALT and gt_types."$dad" == HOM_REF and gt_types."$mom" == HET)"
-    # otherwise a lot of trash variants
-    sQuery=$sQuery" and qual>=400 and Old_multiallelic is null"
-    gemini query -q "$sQuery" --gt-filter "$s_gt_filter" --header $file
+    proband=`gemini query -q "select name from samples where paternal_id != -9 and maternal_id != -9" $file`
+
+    # print header
+    header=$sQuery" limit 0"
+    gemini query -q "$header" --header $file
+
+    # get de novo variants for each affected proband
+    for p in $proband
+    do
+        mom=`gemini query -q "select maternal_id from samples where name == '$p'" $file`
+        dad=`gemini query -q "select paternal_id from samples where name == '$p'" $file`
+        s_gt_filter="((gt_types."$p" == HET or gt_types."$p" == HOM_ALT) and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF) \
+        and (gt_alt_depths."$p" >="${alt_depth}" or (gt_alt_depths).(*).(==-1).(all)) \
+        and ((gt_alt_depths."$dad" < 10 and gt_alt_depths."$mom" < 10)  or (gt_alt_depths).(*).(==-1).(all))"
+        # otherwise a lot of trash variants
+        sQuery=$sQuery" and qual>=400 and Old_multiallelic is null"
+        gemini query -q "$sQuery" --gt-filter "$s_gt_filter" $file
+    done
 else
     # keep variant where the alt depth is >=3 in any one of the samples or they're all -1 (sometimes happens for freebayes called variants?)
     s_gt_filter="(gt_alt_depths).(*).(>="${alt_depth}").(any) or (gt_alt_depths).(*).(==-1).(all)"

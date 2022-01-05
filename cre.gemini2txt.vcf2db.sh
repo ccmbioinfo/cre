@@ -129,7 +129,7 @@ s_gt_filter=''
 if [ -n "$denovo" ] && [ "$denovo" == 1 ]
 then
     # https://www.biostars.org/p/359117/
-    proband=`gemini query -q "select name from samples where paternal_id != -9 and maternal_id != -9" $file`
+    proband=`gemini query -q "select name from samples where paternal_id != -9 and paternal_id != 0 and maternal_id != -9 and maternal_id != 0" $file`
 
     # print header
     header=$sQuery" limit 0"

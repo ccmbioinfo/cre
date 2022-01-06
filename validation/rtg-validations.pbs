@@ -32,7 +32,7 @@ fi;
 
 export _JAVA_OPTIONS="-Xmx30g"
 RTG=/hpf/largeprojects/ccmbio/arun/Tools/rtg-tools/rtg-tools-3.10.1/RTG.jar;
-SDF=/hpf/largeprojects/ccmbio/nhanafi/c4r/genomes/validation/hg38_SDF;
+SDF=/hpf/largeprojects/ccmbio/nhanafi/c4r/genomes/illumina/hg38_SDF;
 
 java -jar $RTG vcfeval -b $truth -c $test -o $out -t $SDF $extra
 

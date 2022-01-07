@@ -8,7 +8,7 @@ We will make updates to cre every six months, and we will perform validation at 
 
 ## Report validation
 1. Compare report generated prior to updates (first csv) to report generated post-updates (second csv): 
-2. `qsub -F ~/cre/validation/compare_reports.pbs "<first_csv> <second_csv> <first_db> <second_db> </path/to/tables/first report> </path/to/tables/second report>"`
+2. `qsub ~/cre/validation/compare_reports.pbs -F "<first_csv> <second_csv> <first_db> <second_db> </path/to/tables/first report> </path/to/tables/second report>"`
    
    where `<first_db>` refers to the gemini database associated with the first report, and `<second_db>` refers to the gemini database associated with the second report. `</path/to/tables/[first|second] report>` refers to the family/project directory within which the report was generated, where the *table files corresponding to GATK, freebayes, and platypus are found.
    To retrieve the updated/newly added column names from the db for comparison, you must manually add these column names as last arguments in the lines calling "gemini_compare.sh" inside the `compare_reports.pbs`

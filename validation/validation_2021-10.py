@@ -66,30 +66,35 @@ def db_output_to_dict(db_output):
 
 
 def get_explanations(report1_var, report2_var, report2_dir):
-    # load tables of alt allele counts for each caller
+    # load tables of alt allele counts for each caller; parse AD if necessary; add max AD of samples
     tables = load_tables(report2_dir)
     gatk, freebayes, platypus = tables["gatk"], tables["freebayes"], tables["platypus"]
     # gatk alt depth cols
-    gatk_ad_cols = get_gatk_ad_cols(gatk.columns)
+    if gatk is not None:
+        gatk_ad_cols = get_gatk_ad_cols(gatk.columns)
+        for col in gatk_ad_cols:
+            gatk[col] = gatk.apply(lambda row: parse_ad(row[col]), axis=1)
+        gatk["AD_max"] = gatk.apply(
+            lambda row: get_max_ad([row[col] for col in gatk_ad_cols]), axis=1
+        )
     # freebayes alt depth cols
-    freebayes_ad_cols = get_freebayes_ao_cols(freebayes.columns)
+    if freebayes is not None:
+        freebayes_ad_cols = get_freebayes_ao_cols(freebayes.columns)
+        for col in freebayes_ad_cols:
+            freebayes[col] = freebayes.apply(lambda row: parse_ad(row[col]), axis=1)
+        freebayes["AD_max"] = freebayes.apply(
+            lambda row: get_max_ad([row[col] for col in freebayes_ad_cols]), axis=1
+        )
     # platypus  alt depth cols
-    platypus_ad_cols = get_platypus_nv_cols(platypus.columns)
-    # parse alt depth cols for freebayes, gatk
-    for col in freebayes_ad_cols:
-        freebayes[col] = freebayes.apply(lambda row: parse_ad(row[col]), axis=1)
-    for col in gatk_ad_cols:
-        gatk[col] = gatk.apply(lambda row: parse_ad(row[col]), axis=1)
-    # add max of alt depths as a new column
-    gatk["AD_max"] = gatk.apply(
-        lambda row: get_max_ad([row[col] for col in gatk_ad_cols]), axis=1
-    )
-    freebayes["AD_max"] = freebayes.apply(
-        lambda row: get_max_ad([row[col] for col in freebayes_ad_cols]), axis=1
-    )
-    platypus["AD_max"] = platypus.apply(
-        lambda row: get_max_ad([row[col] for col in platypus_ad_cols]), axis=1
-    )
+    if platypus is not None:
+        platypus_ad_cols = get_platypus_nv_cols(platypus.columns)
+        for col in platypus_ad_cols:
+            platypus[col] = platypus.apply(lambda row: parse_ad(row[col]), axis=1)
+        platypus["AD_max"] = platypus.apply(
+            lambda row: get_max_ad([row[col] for col in platypus_ad_cols]), axis=1
+        )
+
+    tables = [table for table in [gatk, freebayes, platypus] if table is not None]
 
     explanation = {}
     for variant in report1_var:
@@ -143,7 +148,7 @@ def get_explanations(report1_var, report2_var, report2_dir):
                     variant
                 ] = f"Change in clinvar_pathogenic from {clin_path} to None for variant with gnomad_af_popmax < 0.01 and impact_severity {impact_severity}"
             else:
-                max_table_ad = get_variant_ad(variant, [gatk, freebayes, platypus])
+                max_table_ad = get_variant_ad(variant, tables)
                 if not max_table_ad or max_table_ad < 3:
                     explanation[
                         variant
@@ -174,7 +179,7 @@ def get_explanations(report1_var, report2_var, report2_dir):
                     variant
                 ] = f"Change in clinvar_pathogenic from {clin_path_1} to {clin_path_2} for variant with gnomad_af_popmax >= 0.01 and impact_severity {impact_severity}"
             else:
-                max_table_ad = get_variant_ad(variant, [gatk, freebayes, platypus])
+                max_table_ad = get_variant_ad(variant, tables)
                 if not max_table_ad or max_table_ad < 3:
                     explanation[
                         variant
@@ -201,15 +206,20 @@ def load_tables(report_dir):
     # this is used by cre to populate alt depth counts for variants called by samtools and another caller (e.g. platypus)
     # because often the alt depth count for these variants is '-1' in the gemini db as samtools doesn't always have an alt depth field
     tables = list(Path(report_dir).glob("*table"))
+    callers = ("gatk", "freebayes", "platypus")
+    table_dict = dict.fromkeys(callers)
     for table in tables:
         filename = table.name
         if "gatk" in filename:
             gatk = pd.read_csv(table, sep="\t")
+            table_dict["gatk"] = gatk
         elif "freebayes" in filename:
             freebayes = pd.read_csv(table, sep="\t")
+            table_dict["freebayes"] = freebayes
         elif "platypus" in filename:
             platypus = pd.read_csv(table, sep="\t")
-    return {"gatk": gatk, "freebayes": freebayes, "platypus": platypus}
+            table_dict["platypus"] = platypus
+    return table_dict
 
 
 def get_max_ad(ad_list):

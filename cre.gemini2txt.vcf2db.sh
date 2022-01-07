@@ -25,6 +25,8 @@ severity_threshold=$3
 
 max_af=$4
 
+type=$5
+
 alt_depth=3
 
 gemini query -q "select name from samples order by name" $file > samples.txt
@@ -40,6 +42,18 @@ else
 	caller_filter=""
 fi
 
+if [[ "$type" == 'wgs' || "$type" == 'denovo' ]]
+then
+    noncoding_anno="uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
+            dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
+            ctcf_binding_site as CTCF_binding_site, 
+            enh_cellline_tissue as ENH_cellline_tissue,
+            tf_binding_sites as TF_binding_sites,
+            c4r_wgs_counts as C4R_WGS_counts,
+            c4r_wgs_samples as C4R_WGS_samples"
+else
+    noncoding_anno="00 as noncoding"
+fi
 
 sQuery="select \
         chrom as Chrom,\
@@ -63,6 +77,7 @@ sQuery="select \
         gnomad_af_popmax as Gnomad_af_popmax,\
         gnomad_ac as Gnomad_ac,\
         gnomad_hom as Gnomad_hom,\
+	      gnomad_male_ac as Gnomad_male_ac, \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\
@@ -73,8 +88,9 @@ sQuery="select \
         hgvsc as Codon_change,\
         "$callers" as Callers,\
         phylop20way_mammalian as Conserved_in_20_mammals,\
-        COALESCE(spliceai_score, '') as SpliceAI_score,
-        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
+        COALESCE(spliceai_score, '') as SpliceAI_score, \
+        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
+        $noncoding_anno, \
         gts,"
 
 while read sample

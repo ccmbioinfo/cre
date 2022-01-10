@@ -167,13 +167,6 @@ function f_make_report
     awk '!a[$0]++' $family.variants.all.txt > $family.variants.txt
     awk '!a[$0]++' $family.variant_impacts.all.txt > $family.variant_impacts.txt
 
-    if [ "$type" == "denovo" ]
-    then
-		#gemini prints the genotype filter to the first line of the file, need to remove
-        tail -n +2 $family.variants.txt > $family.variants.trim.txt
-        mv $family.variants.trim.txt $family.variants.txt
-    fi 
-
     # report filtered vcf for import in phenotips
     # note that if there is a multiallelic SNP, with one rare allele and one frequent one, both will be reported in the VCF,
     # and just a rare one in the excel report

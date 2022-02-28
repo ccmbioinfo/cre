@@ -80,15 +80,16 @@ create_report <- function(family, samples, type){
     variants$Position <- with(variants, paste(Chrom, Pos, sep = ':'))
     
     #Column2 - UCSC link
-    sUCSC1 <- "=HYPERLINK(\"http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&hgt.out3=10x&position="
+    sUCSC1 <- "=HYPERLINK(\"http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&hgt.out3=10x&position="
     sUCSC2 <- "\",\"UCSC_link\")"
     variants$UCSC_Link <- with(variants, paste(sUCSC1, Position, sUCSC2, sep = ''))
 
     # Column3 = GNOMAD_Link
     variants$GNOMAD_POS <- with(variants, paste(Chrom,Pos,Ref,Alt, sep='-'))
     sGNOMAD1 <- "=HYPERLINK(\"http://gnomad.broadinstitute.org/variant/"
-    sGNOMAD2 <- "\",\"GNOMAD_link\")"
-    variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sep = ''))
+    sGNOMAD2 <- "?dataset=gnomad_r3"
+    sGNOMAD3 <- "\",\"GNOMAD_link\")"
+    variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sGNOMAD3, sep = ''))
 
     # Columns 4,5: Ref,Alt
 

@@ -47,7 +47,7 @@ We will make updates to cre every six months, and we will perform validation at 
         -dir1 </path/to/tables/first report> \
         -dir2 /path/to/tables/second report
      ```
-     Note that the /path/to/table refers to the report path where the .table files (i.e. 428-<caller>-annotated-decomposed.table) can be found.
+     Note that the /path/to/table refers to the report path where the .table files (i.e. [family]-[caller]-annotated-decomposed.table) can be found.
      Outputs:
       * validation_summary_unique_in_<first_csv>.<date_generated>.csv, validation_summary_unique_in_<second_csv>.<date_generated>.csv:
           

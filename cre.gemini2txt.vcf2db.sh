@@ -33,10 +33,14 @@ gemini query -q "select name from samples order by name" $file > samples.txt
 
 #if pipeline is cre, filter out variants only called by one of freebayes, samtools, platypus
 callers=`gemini db_info $file | grep -w "variants" | grep -w "callers"` 
-if [ ! -z "$callers" ]
+if [ ! -z "$callers" ] && [ "$type" != "wes.mosaic" ]
 then
 	callers="callers"
 	caller_filter="and Callers not in ('freebayes', 'samtools', 'platypus')"
+elif [ ! -z "$callers" ] && [ "$type" == "wes.mosaic" ]
+then
+    callers="00"
+	caller_filter=""
 else	
 	callers="00"
 	caller_filter=""

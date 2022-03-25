@@ -286,7 +286,7 @@ create_report <- function(family, samples, type){
         variants[,field] <- with(variants,gsub("None", "0", get(field), fixed = T))
     }
     
-    # Column41 - Conserved_in_20_mammals
+    # Column41 - Conserved_in_30_mammals
     # Column 42? - SpliceAI (actually 47, these column indexes are no longer accurate)
     variants <- add_placeholder(variants, "SpliceAI_impact", "")
     for (i in 1:nrow(variants)){
@@ -451,7 +451,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
-                            "Conserved_in_20_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score", "Gerp_score",
+                            "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score", "Gerp_score",
                             "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
   

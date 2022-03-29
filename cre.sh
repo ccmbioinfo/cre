@@ -172,7 +172,7 @@ function f_make_report
     # report filtered vcf for import in phenotips
     # note that if there is a multiallelic SNP, with one rare allele and one frequent one, both will be reported in the VCF,
     # and just a rare one in the excel report
-    cat $family.variants.txt | cut -f 1,2 | sed 1d | sed s/chr// | sort -k1,1 -k2,2n > ${family}-ensemble.db.txt.positions
+    cat $family.variants.txt | cut -f 1,2 | sed 1d | sort -k1,1 -k2,2n > ${family}-ensemble.db.txt.positions
     
 
     # this may produce duplicate records if two positions from positions file overlap with a variant 
@@ -187,9 +187,9 @@ function f_make_report
 
     if [ -z $reference ]
     then
-        reference=/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/seq/GRCh37.fa
+        reference=/hpf/largeprojects/ccmbio/nhanafi/c4r/genomes/Homo_sapiens_assembly38.fasta
     fi
-
+    
     echo $reference
 
     $cre/vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference

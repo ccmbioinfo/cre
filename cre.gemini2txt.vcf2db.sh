@@ -79,7 +79,7 @@ sQuery="select \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\
-        vest3_score as Vest3_score,\
+        vest4_score as Vest4_score,\
         revel_score as Revel_score,\
         gerp_score as Gerp_score,\
         aa_change as AA_change,\

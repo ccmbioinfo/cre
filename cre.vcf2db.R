@@ -345,10 +345,10 @@ create_report <- function(family, samples, type){
     # Column42 = sift
     # Column43 = polyphen
     # Column44 = cadd
-    # Column45 = vest3
+    # Column45 = vest4
     for (i in 1:nrow(variants)){
-        v_vest <- strsplit(variants[i,"Vest3_score"], ",", fixed = T)[[1]]
-        variants[i, "Vest3_score"] <- max(v_vest)
+        v_vest <- strsplit(variants[i,"Vest4_score"], ",", fixed = T)[[1]]
+        variants[i, "Vest4_score"] <- max(v_vest)
     }
     
     # Column45 = revel
@@ -451,7 +451,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
-                            "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score", "Gerp_score",
+                            "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score",
                             "Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
   
@@ -829,7 +829,7 @@ clinical_report <- function(project,samples,type){
                         "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
                         "Orphanet", "Clinvar", "C4R_WES_counts",
                         "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
-                        "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
+                        "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
                         "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp")
                )
     
@@ -855,7 +855,7 @@ clinical_report <- function(project,samples,type){
       "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
       "Orphanet", "Clinvar", "C4R_WES_counts",
       "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
-      "Sift_score", "Polyphen_score", "Cadd_score", "Vest3_score", "Revel_score",
+      "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
       "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp")]
 
     write.csv(filtered_report, paste0(project, ".clinical.", type, ".", datetime, ".csv"), row.names = F)

@@ -773,11 +773,11 @@ load_tables <- function(debug = F){
     if (debug == T){
         seen_in_c4r_counts.txt <- "seen_in_c4r_counts.txt"
         seen_in_c4r_samples.txt <- "seen_in_c4r_samples.txt"
-        hgmd.csv <- "hgmd_38.csv"
+        hgmd.csv <- "hgmd_hg38.csv"
     }else{
         seen_in_c4r_counts.txt <- paste0(c4r_database_path,"/seen_in_c4r_counts.txt")    
         seen_in_c4r_samples.txt <- paste0(c4r_database_path,"/seen_in_c4r_samples.txt")
-        hgmd.csv <- paste0(c4r_database_path,"/hgmd_38.csv")
+        hgmd.csv <- paste0(c4r_database_path,"/hgmd_hg38.csv")
     }
     
     if (file.exists(seen_in_c4r_counts.txt)){

@@ -75,7 +75,12 @@ sQuery="select \
         gnomad_af_popmax as Gnomad_af_popmax,\
         gnomad_ac as Gnomad_ac,\
         gnomad_hom as Gnomad_hom,\
-	      gnomad_male_ac as Gnomad_male_ac, \
+	gnomad_male_ac as Gnomad_male_ac, \
+        hprc_af as HPRC_af, \
+        hprc_ac as HPRC_ac, \
+        hprc_hom as HPRC_hom, \
+        cmh_af as CMH_af, \
+        cmh_ac as CMH_ac, \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\

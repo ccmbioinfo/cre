@@ -281,7 +281,7 @@ create_report <- function(family, samples, type){
 
     # Column38 = Gnomad_ac
     # Column39 = Gnomad_hom
-    for (field in c("Gnomad_ac","Gnomad_hom")){
+    for (field in c("Gnomad_ac","Gnomad_hom","CMH_af","CMH_ac","HPRC_af","HPRC_hom")){
         variants[,field] <- with(variants,gsub("-1", "0", get(field), fixed = T))
         variants[,field] <- with(variants,gsub("None", "0", get(field), fixed = T))
     }

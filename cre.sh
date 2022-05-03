@@ -12,6 +12,7 @@
 #	max_af = af filter, default = 0.01
 #	database = path to folder where c4r count files and hgmd.csv are found.
 #   ped = pedigree file, used to amend gemini db with sample information to generate de novo report
+#   reference = path to reference fasta; default is /hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/seq/GRCh37.fa
 ####################################################################################################
 
 #PBS -l walltime=23:00:00,nodes=1:ppn=1
@@ -183,9 +184,11 @@ function f_make_report
     #individual vcfs for uploading to phenome central
     ~/cre/vcf.split_multi.sh $family.vcf.gz
 
-    reference=$(readlink -f `which bcbio_nextgen.py`)
-    reference=`echo $reference | sed s/"anaconda\/bin\/bcbio_nextgen.py"/"genomes\/Hsapiens\/GRCh37\/seq\/GRCh37.fa"/`
-    
+    [ if -z $reference ]
+    then
+        reference=/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/seq/GRCh37.fa
+    fi
+
     echo $reference
 
     ~/cre/vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference

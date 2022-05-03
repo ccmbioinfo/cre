@@ -85,7 +85,7 @@ function f_cleanup
             for f in *.bam;do md5sum $f > $f.md5;done;
 
 	       #validate bam files
-            for f in *.bam;do cre.bam.validate.sh $f;done;
+            for f in *.bam;do  ~/cre/cre.bam.validate.sh $f;done;
     
             if [ "$type" == "wes.fast" ] || [ "$type" == "wgs" ]
             then
@@ -181,14 +181,14 @@ function f_make_report
     rm $family.tmp.vcf.gz $family.tmp.vcf.gz.tbi
 
     #individual vcfs for uploading to phenome central
-    vcf.split_multi.sh $family.vcf.gz
+    ~/cre/vcf.split_multi.sh $family.vcf.gz
 
     reference=$(readlink -f `which bcbio_nextgen.py`)
     reference=`echo $reference | sed s/"anaconda\/bin\/bcbio_nextgen.py"/"genomes\/Hsapiens\/GRCh37\/seq\/GRCh37.fa"/`
     
     echo $reference
 
-    vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference
+    ~/cre/vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference
 
     for f in *.vcf.gz
     do
@@ -207,7 +207,7 @@ function f_make_report
         tabix $fprefix.subset.vcf.gz
 	
         f_fix_sample_names $fprefix
-        vcf.freebayes.getAO.sh $fprefix.subset.vcf.gz $reference
+         ~/cre/vcf.freebayes.getAO.sh $fprefix.subset.vcf.gz $reference
     fi
 
     #gemini.decompose.sh ${family}-gatk-haplotype.vcf.gz
@@ -218,7 +218,7 @@ function f_make_report
         tabix $fprefix.subset.vcf.gz
 	
         f_fix_sample_names $fprefix
-        vcf.gatk.get_depth.sh $fprefix.subset.vcf.gz $reference
+         ~/cre/vcf.gatk.get_depth.sh $fprefix.subset.vcf.gz $reference
     fi
 
     #gemini.decompose.sh ${family}-platypus.vcf.gz
@@ -228,7 +228,7 @@ function f_make_report
         bcftools view -R ${family}-ensemble.db.txt.positions $fprefix.vcf.gz | bcftools sort | vt decompose -s - | vt uniq - -o $fprefix.subset.vcf.gz
         tabix $fprefix.subset.vcf.gz
         f_fix_sample_names $fprefix
-        vcf.platypus.getNV.gatk3.sh $fprefix.subset.vcf.gz $reference
+         ~/cre/vcf.platypus.getNV.gatk3.sh $fprefix.subset.vcf.gz $reference
     fi
 
     cd ..

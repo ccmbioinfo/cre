@@ -184,7 +184,7 @@ function f_make_report
     #individual vcfs for uploading to phenome central
     ~/cre/vcf.split_multi.sh $family.vcf.gz
 
-    [ if -z $reference ]
+    if [ -z $reference ]
     then
         reference=/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/seq/GRCh37.fa
     fi

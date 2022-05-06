@@ -13,6 +13,7 @@
 #	database = path to folder where c4r count files and hgmd.csv are found.
 #   ped = pedigree file, used to amend gemini db with sample information to generate de novo report
 #   reference = path to reference fasta; default is /hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/seq/GRCh37.fa
+#   cre_path = path to cre repo; default is 
 ####################################################################################################
 
 #PBS -l walltime=23:00:00,nodes=1:ppn=1
@@ -86,7 +87,7 @@ function f_cleanup
             for f in *.bam;do md5sum $f > $f.md5;done;
 
 	       #validate bam files
-            for f in *.bam;do  ~/cre/cre.bam.validate.sh $f;done;
+            for f in *.bam;do  $cre/cre.bam.validate.sh $f;done;
     
             if [ "$type" == "wes.fast" ] || [ "$type" == "wgs" ]
             then
@@ -161,8 +162,8 @@ function f_make_report
         fi
     fi
 
-    ~/cre/cre.gemini2txt.vcf2db.sh ${family}-ensemble.db $depth_threshold $severity_filter $max_af $type > $family.variants.all.txt
-    ~/cre/cre.gemini.variant_impacts.vcf2db.sh ${family}-ensemble.db $depth_threshold $severity_filter $max_af > $family.variant_impacts.all.txt
+    $cre/cre.gemini2txt.vcf2db.sh ${family}-ensemble.db $depth_threshold $severity_filter $max_af $type > $family.variants.all.txt
+    $cre/cre.gemini.variant_impacts.vcf2db.sh ${family}-ensemble.db $depth_threshold $severity_filter $max_af > $family.variant_impacts.all.txt
 
     # remove duplicate lines from results of gemini query
     awk '!a[$0]++' $family.variants.all.txt > $family.variants.txt
@@ -182,7 +183,7 @@ function f_make_report
     rm $family.tmp.vcf.gz $family.tmp.vcf.gz.tbi
 
     #individual vcfs for uploading to phenome central
-    ~/cre/vcf.split_multi.sh $family.vcf.gz
+    $cre/vcf.split_multi.sh $family.vcf.gz
 
     if [ -z $reference ]
     then
@@ -191,7 +192,7 @@ function f_make_report
 
     echo $reference
 
-    ~/cre/vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference
+    $cre/vcf.ensemble.getCALLERS.sh $family.vcf.gz $reference
 
     for f in *.vcf.gz
     do
@@ -210,7 +211,7 @@ function f_make_report
         tabix $fprefix.subset.vcf.gz
 	
         f_fix_sample_names $fprefix
-         ~/cre/vcf.freebayes.getAO.sh $fprefix.subset.vcf.gz $reference
+         $cre/vcf.freebayes.getAO.sh $fprefix.subset.vcf.gz $reference
     fi
 
     #gemini.decompose.sh ${family}-gatk-haplotype.vcf.gz
@@ -221,7 +222,7 @@ function f_make_report
         tabix $fprefix.subset.vcf.gz
 	
         f_fix_sample_names $fprefix
-         ~/cre/vcf.gatk.get_depth.sh $fprefix.subset.vcf.gz $reference
+         $cre/vcf.gatk.get_depth.sh $fprefix.subset.vcf.gz $reference
     fi
 
     #gemini.decompose.sh ${family}-platypus.vcf.gz
@@ -231,7 +232,7 @@ function f_make_report
         bcftools view -R ${family}-ensemble.db.txt.positions $fprefix.vcf.gz | bcftools sort | vt decompose -s - | vt uniq - -o $fprefix.subset.vcf.gz
         tabix $fprefix.subset.vcf.gz
         f_fix_sample_names $fprefix
-         ~/cre/vcf.platypus.getNV.gatk3.sh $fprefix.subset.vcf.gz $reference
+         $cre/vcf.platypus.getNV.gatk3.sh $fprefix.subset.vcf.gz $reference
     fi
 
     cd ..
@@ -245,7 +246,7 @@ function f_make_report
     fi
 
     echo GENERATING REPORT WITH TYPE: "${type}"
-    Rscript ~/cre/cre.vcf2db.R $family "${type}" "${database}"
+    Rscript $cre/cre.vcf2db.R $family "${type}" "${database}"
     
     cd $family
     #rm $family.create_report.csv $family.merge_reports.csv
@@ -292,6 +293,12 @@ fi
 if [ -z $cleanup ]
 then
     cleanup=0
+fi
+
+# set path to cre
+if [ -z $cre ]
+then
+    cre="~/cre"
 fi
 
 if [ $cleanup -eq 1 ]

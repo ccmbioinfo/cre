@@ -32,8 +32,9 @@ alt_depth=3
 gemini query -q "select name from samples order by name" $file > samples.txt
 
 #if pipeline is cre, filter out variants only called by one of freebayes, samtools, platypus
+#else pipeline is mosaic/crg (uses one caller), do not filter by caller, i.e. no "callers" in the gemini db
 callers=`gemini db_info $file | grep -w "variants" | grep -w "callers"` 
-if [ ! -z "$callers" ] && [ "$type" != "wes.mosaic" ]
+if [ ! -z "$callers" ] #variable $callers is not an empty string, i.e. it exists in the gemini db
 then
 	callers="callers"
 	caller_filter="and Callers not in ('freebayes', 'samtools', 'platypus')"

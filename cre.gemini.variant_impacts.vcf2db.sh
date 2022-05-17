@@ -30,9 +30,9 @@ else
 fi
 
 #if pipeline is cre, filter out variants only called by one of freebayes, samtools, platypus
-#else pipeline (mosaic or crg) uses one caller (ie. no "callers" information in gemini database)
+#else pipeline is mosaic/crg (uses one caller), do not filter by caller, i.e. no "callers" in the gemini db
 callers=`gemini db_info $file | grep -w "variants" | grep -w "callers"` 
-if [ ! -z "$callers" ]
+if [ ! -z "$callers" ] #variable $callers is not an empty string, i.e. it exists in the gemini db
 then
 	callers="v.callers"
 	caller_filter="and v.callers not in ('freebayes', 'samtools', 'platypus')"

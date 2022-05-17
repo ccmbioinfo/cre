@@ -37,10 +37,6 @@ if [ ! -z "$callers" ] && [ "$type" != "wes.mosaic" ]
 then
 	callers="callers"
 	caller_filter="and Callers not in ('freebayes', 'samtools', 'platypus')"
-elif [ ! -z "$callers" ] && [ "$type" == "wes.mosaic" ]
-then
-    callers="00"
-	caller_filter=""
 else	
 	callers="00"
 	caller_filter=""

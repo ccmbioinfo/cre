@@ -97,9 +97,6 @@ function f_cleanup
 	           ln -s ${family}-precalled.db ${family}-ensemble.db
 	           ln -s ${family}-precalled-annotated-decomposed.vcf.gz ${family}-ensemble-annotated-decomposed.vcf.gz
 	           ln -s ${family}-precalled-annotated-decomposed.vcf.gz.tbi ${family}-ensemble-annotated-decomposed.vcf.gz.tbi
-            #elif [ "$type" == "wes.mosaic"]
-            #then
-               #break # skip the rest of loop 
             else
 	           # we don't need gemini databases for individual variant callers
 	           rm ${family}-freebayes.db

@@ -298,7 +298,7 @@ fi
 # set path to cre
 if [ -z $cre ]
 then
-    cre="~/cre"
+    cre=~/cre
 fi
 
 if [ $cleanup -eq 1 ]

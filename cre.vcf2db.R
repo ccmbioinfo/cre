@@ -25,10 +25,10 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth){
     # genotype_str = "A/A"
     # greedy
     genotype_str <- gsub("|", "/", genotype_str, fixed = T)
-    genotype_str <- gsub("./.", "Insufficient_coverage", genotype_str, fixed = T)
+    genotype_str <- gsub("./.", "Missing", genotype_str, fixed = T)
     #genotype_str <- gsub("/.","NO_CALL",genotype_str,fixed=T)
       
-    if(grepl("Insufficient_coverage", genotype_str)){
+    if(grepl("Missing", genotype_str)){
       result <- genotype_str
     }else if(alt_depth == 0){
       result <- '-'
@@ -440,6 +440,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                           paste0("Burden.", samples),
                           c("gts", "Variation", "Info", "Refseq_change", "Depth", "Quality"),
                           paste0("Alt_depths.", samples),
+                          paste0("gt_quals.", samples),
                           c("Trio_coverage", "Ensembl_gene_id", "Gene_description", "omim_phenotype", "omim_inheritance",
                             "Orphanet", "Clinvar",
                             "Frequency_in_C4R", "Seen_in_C4R_samples", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac","HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",

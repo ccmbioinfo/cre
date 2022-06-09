@@ -864,7 +864,7 @@ library(stringr)
 library(data.table)
 library(plyr)
 library(dplyr)
-default_tables_path <- "~/cre/data"
+
 
 # R substitutes "-" with "." in sample names in columns so fix this in samples.txt
 # sample names starting with letters should be prefixed by X in *.table
@@ -873,6 +873,7 @@ default_tables_path <- "~/cre/data"
 args <- commandArgs(trailingOnly = T)
 print(args)
 family <- args[1]
+default_tables_path <- args[4]
 
 coding <- if(is.null(args[2])) T else F
 coding <- F

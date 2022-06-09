@@ -101,6 +101,7 @@ do
 	sQuery=$sQuery"gts."$sample","
 	sQuery=$sQuery"gt_alt_depths."$sample","
 	sQuery=$sQuery"gt_depths."$sample","
+    sQuery=$sQuery"gt_quals."$sample","
 done < samples.txt
 
 # gene_detailed may contain 2 records per single transcript - because of synonymous gene names, and some genes may have None in the name,for example TSRM

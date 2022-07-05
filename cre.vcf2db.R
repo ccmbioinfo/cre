@@ -628,7 +628,7 @@ merge_reports <- function(family, samples, type){
                 }
           }
       }
-    
+
       for (sample in samples){
           ensemble[c("TC", paste0(fix_column_name(sample), ".NV"), paste0(fix_column_name(sample),".NR"))] <-  NULL
       }
@@ -694,6 +694,12 @@ merge_reports <- function(family, samples, type){
             sample_index <- sample_index + 1
         }
     }
+
+    # if vcf is not from GATK HC, samtools, platypus, or samtools, need to run below to remove / in Trio_coverage column
+    for (i in 1:nrow(ensemble)){
+        cov <-  ensemble[i, "Trio_coverage"]
+        ensemble[i, "Trio_coverage"] <- str_replace_all(cov, '/', '_')
+      }
 
     # after the alt depths columns are fixed, remove all variants that don't pass the alt depth >= 3 filter
     filtered_ensemble <- dplyr::filter_at(ensemble, paste0("Alt_depths.",samples), any_vars(as.integer(.) >= 3))

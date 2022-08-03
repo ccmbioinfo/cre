@@ -290,7 +290,7 @@ create_report <- function(family, samples, type){
     variants <- add_placeholder(variants, "SpliceAI_impact", "")
     for (i in 1:nrow(variants)){
         print(i)
-        if (variants[i,"SpliceAI_score"] == ""){
+        if (is.na(variants[i,"SpliceAI_score"])){
             variants[i, "SpliceAI_impact"] <- "NA|NA|NA"
             variants[i, "SpliceAI_score"] <- 0
         } else {
@@ -346,7 +346,7 @@ create_report <- function(family, samples, type){
     # Column44 = cadd
     # Column45 = vest3
     for (i in 1:nrow(variants)){
-        v_vest <- strsplit(variants[i,"Vest3_score"], ",", fixed = T)[[1]]
+        v_vest <- strsplit(as.character(variants[i,"Vest3_score"]), ",", fixed = T)[[1]]
         variants[i, "Vest3_score"] <- max(v_vest)
     }
     

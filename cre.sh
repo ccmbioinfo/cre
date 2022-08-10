@@ -286,7 +286,7 @@ fi
 #default database path
 if [ -z $database ]
 then
-    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
+    database="/hpf/largeprojects/ccmbio/nhanafi/c4r/downloads/databases"
 fi
 
 #no cleanup by default

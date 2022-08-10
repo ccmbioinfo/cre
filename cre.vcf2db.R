@@ -258,8 +258,8 @@ create_report <- function(family, samples, type){
     # Column 26 - Protein_domains
     
     # Column 27, 28 = C4R_WES_counts, C4R_WES_samples
-    variants <- add_placeholder(variants, "C4R_WES_counts", "C4R_WES_counts")
-    variants <- add_placeholder(variants, "C4R_WES_samples", "C4R_WES_samples")
+#    variants <- add_placeholder(variants, "C4R_WES_counts", "C4R_WES_counts")
+#    variants <- add_placeholder(variants, "C4R_WES_samples", "C4R_WES_samples")
     
     # Columns 29,30,31,32: HGMD
     for(hgmd_field in c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref")){
@@ -729,24 +729,24 @@ annotate_w_care4rare <- function(family,samples,type){
   
     variants$superindex <- with(variants, paste(Position, Ref, Alt, sep='-'))
     
-    if(exists("seen_in_c4r_counts")){
-        variants <- merge(variants, seen_in_c4r_counts, by.x = "superindex", 
-                          by.y = "Position.Ref.Alt", all.x = T)
-        variants$C4R_WES_counts <- variants$Frequency
-        variants$Frequency <- NULL
-    }
+#    if(exists("seen_in_c4r_counts")){
+#        variants <- merge(variants, seen_in_c4r_counts, by.x = "superindex", 
+#                          by.y = "Position.Ref.Alt", all.x = T)
+#        variants$C4R_WES_counts <- variants$Frequency
+#        variants$Frequency <- NULL
+#    }
     
-    variants$C4R_WES_counts[is.na(variants$C4R_WES_counts)] <- 0
+#    variants$C4R_WES_counts[is.na(variants$C4R_WES_counts)] <- 0
     
-    if(exists("seen_in_c4r_samples")){
-        variants <- merge(variants,seen_in_c4r_samples,by.x = "superindex", 
-                          by.y = "Position.Ref.Alt", all.x = T)
-        variants$C4R_WES_samples <- variants$Samples
-    }
+#    if(exists("seen_in_c4r_samples")){
+#        variants <- merge(variants,seen_in_c4r_samples,by.x = "superindex", 
+#                          by.y = "Position.Ref.Alt", all.x = T)
+#        variants$C4R_WES_samples <- variants$Samples
+#    }
     
-    variants$C4R_WES_samples[is.na(variants$C4R_WES_samples)] <- 0        
+#    variants$C4R_WES_samples[is.na(variants$C4R_WES_samples)] <- 0        
 		# truncate column if it has more than 30000 variants
-		variants$C4R_WES_samples <- strtrim(variants$C4R_WES_samples, 30000)
+#		variants$C4R_WES_samples <- strtrim(variants$C4R_WES_samples, 30000)
 		    
     if (exists("hgmd")){
         variants$HGMD_gene <- NULL
@@ -780,17 +780,17 @@ load_tables <- function(debug = F){
         hgmd.csv <- paste0(c4r_database_path,"/hgmd_hg38.csv")
     }
     
-    if (file.exists(seen_in_c4r_counts.txt)){
-        seen_in_c4r_counts <<- read.delim(seen_in_c4r_counts.txt, stringsAsFactors=F)
-    }else{
-        print("No C4R counts found")
-    }
+    #if (file.exists(seen_in_c4r_counts.txt)){
+    #    seen_in_c4r_counts <<- read.delim(seen_in_c4r_counts.txt, stringsAsFactors=F)
+    #}else{
+    #    print("No C4R counts found")
+    #}
     
-    if (file.exists(seen_in_c4r_samples.txt)){
-        seen_in_c4r_samples <<- read.delim(seen_in_c4r_samples.txt, stringsAsFactors=F)
-    }else{
-        print("No C4R samples found")
-    }
+    #if (file.exists(seen_in_c4r_samples.txt)){
+    #    seen_in_c4r_samples <<- read.delim(seen_in_c4r_samples.txt, stringsAsFactors=F)
+    #}else{
+    #    print("No C4R samples found")
+    #}
     
     if (file.exists(hgmd.csv)){
         hgmd <- read.csv(hgmd.csv,stringsAsFactors = F,header = F)

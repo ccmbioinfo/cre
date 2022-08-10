@@ -286,7 +286,7 @@ fi
 #default database path
 if [ -z $database ]
 then
-    database="/hpf/largeprojects/ccm_dccforge/dccforge/results/database"
+    database="/hpf/largeprojects/ccmbio/naumenko/tools/bcbio/genomes/Hsapiens/GRCh37/variation"
 fi
 
 #no cleanup by default

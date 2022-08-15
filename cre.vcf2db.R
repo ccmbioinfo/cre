@@ -47,6 +47,26 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth){
     return(result)
 }
 
+# when no variants are made into report when running WES mosaic-panel pipeline
+check_empty <- function(family, type){
+    file <- paste0(family, ".variants.txt")
+    variants <- get_variants_from_file(file)
+    
+    if (nrow(variants) == 0){
+        variants = data.frame()
+        variants[1,1] = paste0("No variants are reported for ", family)
+    
+    write.csv(variants, paste0(family,".wes.regular.", datetime, ".csv"), row.names = F)
+    write.csv(variants, paste0(family,".wes.mosaic.", datetime, ".csv"), row.names = F)
+    write.csv(variants, paste0(family,".clinical.wes.regular.", datetime, ".csv"), row.names = F)
+    write.csv(variants, paste0(family,".clinical.wes.mosaic.", datetime, ".csv"), row.names = F)
+
+    }else{
+        message("Create report ...")
+    }
+        
+}
+
 # output : family.ensemble.txt
 create_report <- function(family, samples, type){
     file <- paste0(family, ".variants.txt")
@@ -891,6 +911,8 @@ samples <- gsub("-", ".", samples)
 
 print("Loading tables")
 load_tables(debug)
+print("Check empty tables")
+check_empty(family)
 print("Creating report")
 create_report(family,samples,type)
 print("Merging reports")

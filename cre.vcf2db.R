@@ -11,7 +11,8 @@ add_placeholder <- function(variants, column_name, placeholder){
 }
 
 get_variants_from_file <- function (filename){
-    variants <- read.delim(filename, stringsAsFactors = F)
+    variants <- read.delim(filename, stringsAsFactors=FALSE, 
+                      colClasses = c( "character" ))
     return(variants)
 }
 
@@ -56,13 +57,13 @@ check_empty <- function(family, type){
         variants = data.frame()
         variants[1,1] = paste0("No variants are reported for ", family)
     
-    write.csv(variants, paste0(family,".wes.regular.", datetime, ".csv"), row.names = F)
-    write.csv(variants, paste0(family,".wes.mosaic.", datetime, ".csv"), row.names = F)
-    write.csv(variants, paste0(family,".clinical.wes.regular.", datetime, ".csv"), row.names = F)
-    write.csv(variants, paste0(family,".clinical.wes.mosaic.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".wes.regular.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".wes.mosaic.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".clinical.wes.regular.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".clinical.wes.mosaic.", datetime, ".csv"), row.names = F)
 
-    }else{
-        message("Create report ...")
+    } else{
+        message("Go ahead to create report with at least 1 variant")
     }
         
 }
@@ -71,6 +72,7 @@ check_empty <- function(family, type){
 create_report <- function(family, samples, type){
     file <- paste0(family, ".variants.txt")
     variants <- get_variants_from_file(file)
+    #print(paste0("In create_report function, Alt is ", variants$Alt))
     
     impact_file <- paste0(family, ".variant_impacts.txt")
     impacts <- get_variants_from_file(impact_file)
@@ -475,6 +477,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
   
     variants <- variants[order(variants$Position),]
+    #print(paste0("In select_and_write2, Alt is ", variants$Alt))
 
     if (type == 'denovo'){
         variants <- variants[variants$C4R_WGS_counts < 10,]
@@ -493,7 +496,8 @@ fix_column_name <- function(column_name){
 # merges ensembl, gatk-haplotype reports
 merge_reports <- function(family, samples, type){
     ensemble_file <- paste0(family, ".create_report.csv")
-    ensemble <- read.csv(ensemble_file, stringsAsFactors = F)
+    ensemble <- read.csv(ensemble_file, stringsAsFactors = F, colClasses = c("character"))
+    #print(paste0("In select_and_write2 from merge_reports function, Alt is ", ensemble$Alt))
     ensemble$superindex <- with(ensemble, paste(Position, Ref, Alt, sep = '-'))
     
     for (i in 1:nrow(ensemble)){
@@ -509,7 +513,8 @@ merge_reports <- function(family, samples, type){
     
     ensemble_table_file <- paste0(family, ".table")
     if (file.exists(ensemble_table_file)){
-        ensemble_table <- read.delim(ensemble_table_file, stringsAsFactors = F)
+        ensemble_table <- read.delim(ensemble_table_file, stringsAsFactors = F, colClasses = c("character"))
+        #print(paste0("In select_and_write2 ens_table_file from merge_reports function, Alt is ", ensemble$Alt))
         ensemble_table$superindex <- with(ensemble_table, paste(paste0(CHROM,":",POS), REF, ALT, sep = '-'))
         ensemble_table[c("CHROM", "POS", "REF", "ALT")] <- NULL
         for (i in 1:nrow(ensemble_table)){
@@ -744,7 +749,7 @@ parse_ad <- function(ad_cell) {
 }
 
 annotate_w_care4rare <- function(family,samples,type){
-    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F)
+    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F, colClasses = c( "character" ))
   
     variants$superindex <- with(variants, paste(Position, Ref, Alt, sep='-'))
     

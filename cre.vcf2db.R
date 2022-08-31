@@ -11,8 +11,7 @@ add_placeholder <- function(variants, column_name, placeholder){
 }
 
 get_variants_from_file <- function (filename){
-    variants <- read.delim(filename, stringsAsFactors=FALSE, 
-                      colClasses = c( "character" ))
+    variants <- read.delim(filename, stringsAsFactors=FALSE, colClasses = c("character"))
     return(variants)
 }
 
@@ -72,7 +71,6 @@ check_empty <- function(family, type){
 create_report <- function(family, samples, type){
     file <- paste0(family, ".variants.txt")
     variants <- get_variants_from_file(file)
-    #print(paste0("In create_report function, Alt is ", variants$Alt))
     
     impact_file <- paste0(family, ".variant_impacts.txt")
     impacts <- get_variants_from_file(impact_file)
@@ -497,7 +495,6 @@ fix_column_name <- function(column_name){
 merge_reports <- function(family, samples, type){
     ensemble_file <- paste0(family, ".create_report.csv")
     ensemble <- read.csv(ensemble_file, stringsAsFactors = F, colClasses = c("character"))
-    #print(paste0("In select_and_write2 from merge_reports function, Alt is ", ensemble$Alt))
     ensemble$superindex <- with(ensemble, paste(Position, Ref, Alt, sep = '-'))
     
     for (i in 1:nrow(ensemble)){
@@ -514,7 +511,6 @@ merge_reports <- function(family, samples, type){
     ensemble_table_file <- paste0(family, ".table")
     if (file.exists(ensemble_table_file)){
         ensemble_table <- read.delim(ensemble_table_file, stringsAsFactors = F, colClasses = c("character"))
-        #print(paste0("In select_and_write2 ens_table_file from merge_reports function, Alt is ", ensemble$Alt))
         ensemble_table$superindex <- with(ensemble_table, paste(paste0(CHROM,":",POS), REF, ALT, sep = '-'))
         ensemble_table[c("CHROM", "POS", "REF", "ALT")] <- NULL
         for (i in 1:nrow(ensemble_table)){
@@ -749,8 +745,7 @@ parse_ad <- function(ad_cell) {
 }
 
 annotate_w_care4rare <- function(family,samples,type){
-    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F, colClasses = c( "character" ))
-  
+    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F, colClasses = c("character"))
     variants$superindex <- with(variants, paste(Position, Ref, Alt, sep='-'))
     
     if(exists("seen_in_c4r_counts")){

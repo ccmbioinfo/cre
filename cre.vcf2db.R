@@ -16,7 +16,7 @@ get_variants_from_file <- function (filename){
 }
 
 # returns Hom / Het / - (for HOM reference)
-genotype2zygocity <- function (genotype_str, ref, alt_depth){
+genotype2zygocity <- function (genotype_str, ref, alt_depth, type){
     # test
     # genotype_str = "A|A|B"
     # genotype_str = "./." - call not possible
@@ -25,7 +25,12 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth){
     # genotype_str = "A/A"
     # greedy
     genotype_str <- gsub("|", "/", genotype_str, fixed = T)
-    genotype_str <- gsub("./.", "Insufficient_coverage", genotype_str, fixed = T)
+    if(type == "wes.mosaic"){
+        # because Mutect2 doesn't perform joint-genotyping, assume missing gts are hom ref
+        genotype_str <- gsub("./.", "-", genotype_str, fixed = T)
+    }
+    else
+        genotype_str <- gsub("./.", "Insufficient_coverage", genotype_str, fixed = T)
     #genotype_str <- gsub("/.","NO_CALL",genotype_str,fixed=T)
       
     if(grepl("Insufficient_coverage", genotype_str)){
@@ -110,7 +115,7 @@ create_report <- function(family, samples, type){
         #t = lapply(variants[,paste0("gts.",sample),"Ref"],genotype2zygocity)
         #t = lapply(variants[,paste0("gts.",sample),"Ref"],genotype2zygocity)
         t <- unlist(mapply(genotype2zygocity, variants[,paste0("gts.",sample)], 
-                           variants[,"Ref"], variants[,paste0("gt_alt_depths.",sample)]))
+                           variants[,"Ref"], variants[,paste0("gt_alt_depths.",sample)], type))
         variants[,zygocity_column_name] <- unlist(t)
     
         burden_column_name <- paste0("Burden.", sample)
@@ -470,6 +475,20 @@ fix_column_name <- function(column_name){
     return(column_name)
 }
 
+replace_zero_cov <- function(trio_coverage) {
+    coverage_fixed <- c()
+    cov_split <- as.list(unlist(strsplit(trio_coverage, "/")))
+    for (coverage in cov_split){
+      if (coverage == '0'){
+        cov <- str_replace(coverage, '0', '-')
+        coverage_fixed <- append(coverage_fixed, cov)
+      }
+      else
+        coverage_fixed <- append(coverage_fixed, coverage)
+    }
+    return(str_c(coverage_fixed, collapse="_"))
+}
+
 # merges ensembl, gatk-haplotype reports
 merge_reports <- function(family, samples, type){
     ensemble_file <- paste0(family, ".create_report.csv")
@@ -694,13 +713,23 @@ merge_reports <- function(family, samples, type){
             #print("gt")
             gts <- unlist(strsplit(ensemble[i,"gts"],","))
             #print(gts[sample_index])
-            fixed_zygosity <- genotype2zygocity(gts[sample_index],ensemble[i,"Ref"],ensemble[i,field_depth])
+            fixed_zygosity <- genotype2zygocity(gts[sample_index],ensemble[i,"Ref"],ensemble[i,field_depth], type)
             #print("after")
             #print(fixed_zygosity)
             ensemble[i,zygocity_column_name] <- fixed_zygosity
             sample_index <- sample_index + 1
         }
     }
+    
+    # if vcf is not from GATK HC, samtools, platypus, or samtools, need to run below to remove / in Trio_coverage column
+    for (i in 1:nrow(ensemble)){
+        cov <-  ensemble[i, "Trio_coverage"]
+        if(type == "wes.mosaic"){
+            # replace 0 with - for mosaic report to reflect lack of joint genotyping by Mutect2
+            cov <- replace_zero_cov(cov)
+        }
+        ensemble[i, "Trio_coverage"] <- str_replace_all(cov, '/', '_')
+      }
 
     # after the alt depths columns are fixed, remove all variants that don't pass the alt depth >= 3 filter
     filtered_ensemble <- dplyr::filter_at(ensemble, paste0("Alt_depths.",samples), any_vars(as.integer(.) >= 3))

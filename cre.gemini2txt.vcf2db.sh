@@ -53,6 +53,15 @@ else
     noncoding_anno="00 as noncoding"
 fi
 
+if [[ "$type" == "aORF" ]]
+then
+    aORF_anno="aORF as aORF"
+    aORF_filter="and aORF == 1"
+else
+    aORF_anno="00,"
+    aORF_filter=""
+fi
+
 sQuery="select \
         chrom as Chrom,\
         start+1 as Pos,\
@@ -94,7 +103,8 @@ sQuery="select \
         COALESCE(spliceai_score, '') as SpliceAI_score, \
         uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
         $noncoding_anno, \
-        gts,"
+        gts, \
+        $aORF_anno, "
 
 while read sample
 do
@@ -126,8 +136,8 @@ initialQuery=$sQuery # keep the field selection part for later use
 
 #max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequencing, gnomad WES only
 #gnomad_af includes gnomad WGS
-sQuery=$sQuery" where gnomad_af_popmax <= "${max_af}" "$caller_filter""${severity_filter}""
-
+sQuery=$sQuery" where gnomad_af_popmax <= "${max_af}" "$caller_filter""${severity_filter}"  "${aORF_filter}" "
+echo $sQuery
 s_gt_filter=''
 # denovo 0/1 is exported in cre.sh
 if [ -n "$denovo" ] && [ "$denovo" == 1 ]

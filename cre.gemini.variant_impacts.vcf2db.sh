@@ -40,6 +40,16 @@ else
 	caller_filter=""
 fi
 
+if [[ "$type" == "aORF" ]]
+then
+    aORF_anno="aORF as aORF"
+    aORF_filter="and aORF == 1"
+else
+    aORF_anno="00,"
+    aORF_filter=""
+fi
+
+
 
 sQuery="select \
 	i.variant_id,\
@@ -82,7 +92,7 @@ initialQuery=$sQuery" from variants v,variant_impacts i" #store field selection
 
 
 sQuery=$initialQuery" where "$severity_filter" v.gnomad_af_popmax <= "$max_af" and \
-v.variant_id=i.variant_id "$caller_filter""
+v.variant_id=i.variant_id "$caller_filter" "$aORF_filter""
 
 s_gt_filter=''
 

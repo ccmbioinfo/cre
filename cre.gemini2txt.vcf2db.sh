@@ -93,6 +93,7 @@ sQuery="select \
         phylop30way_mammalian as Conserved_in_30_mammals,\
         COALESCE(spliceai_score, '') as SpliceAI_score, \
         uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
+        Dark_genes as Dark_genes, \
         $noncoding_anno, \
         gts,"
 

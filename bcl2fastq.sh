@@ -1,14 +1,18 @@
 #!/bin/bash
+#SBATCH --job-name=bcl2fastq
+#SBATCH --time=23:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=30G
+#SBATCH --output=%x-%j.out
 
-#PBS -l walltime=23:00:00,nodes=1:ppn=10
-#PBS -joe .
-#PBS -d .
-#PBS -l vmem=30g,mem=30g
-
-#usage: qsub ~/cre/bcl2fastq.sh -v run=<run_folder>,sample_sheet=SampleSheet.csv
+#usage: sbatch ~/cre/bcl2fastq.sh <run_folder> <SampleSheet.csv>
 
 #run: base run-folder where RunInfo.xml , SampleSheet.csv are present along with Data/Intensities/BaseCalls/L<lane folders>
 #FASTQ output will be placed in $run/Data/Intensities/BaseCalls/
+
+run=$1
+sample_sheet=$2
+
 if [ -z $run ]; then
 	run=$1;
 fi;

@@ -16,7 +16,7 @@ get_variants_from_file <- function (filename){
 }
 
 # returns Hom / Het / - (for HOM reference)
-genotype2zygocity <- function (genotype_str, ref, alt_depth){
+genotype2zygocity <- function (genotype_str, ref, alt_depth, type){
     # test
     # genotype_str = "A|A|B"
     # genotype_str = "./." - call not possible
@@ -111,7 +111,7 @@ create_report <- function(family, samples, type){
         #t = lapply(variants[,paste0("gts.",sample),"Ref"],genotype2zygocity)
         #t = lapply(variants[,paste0("gts.",sample),"Ref"],genotype2zygocity)
         t <- unlist(mapply(genotype2zygocity, variants[,paste0("gts.",sample)], 
-                           variants[,"Ref"], variants[,paste0("gt_alt_depths.",sample)]))
+                           variants[,"Ref"], variants[,paste0("gt_alt_depths.",sample)], type))
         variants[,zygocity_column_name] <- unlist(t)
     
         burden_column_name <- paste0("Burden.", sample)
@@ -212,7 +212,7 @@ create_report <- function(family, samples, type){
     # Column19 - Omim_phenotype
     # Column20 - Omim_inheritance 
     # Column20 - Omim_inheritance 
-    omim_map_file <- paste0(default_tables_path,"/OMIM_hgnc_join_omim_phenos_2021-10-19.tsv")
+    omim_map_file <- paste0(default_tables_path,"/OMIM_hgnc_join_omim_phenos_2023-06-22.tsv")
     if(file.exists(omim_map_file)){
     # read in tsv
     hgnc_join_omim_phenos <- read.delim(omim_map_file, stringsAsFactors=FALSE)
@@ -257,9 +257,9 @@ create_report <- function(family, samples, type){
     
     # Column 26 - Protein_domains
     
-    # Column 27, 28 = Frequency_in_C4R, Seen_in_C4R_samples
-    variants <- add_placeholder(variants, "Frequency_in_C4R", "Frequency_in_C4R")
-    variants <- add_placeholder(variants, "Seen_in_C4R_samples", "Seen_in_C4R_samples")
+    # Column 27, 28 = C4R_WES_counts, C4R_WES_samples
+    variants <- add_placeholder(variants, "C4R_WES_counts", "C4R_WES_counts")
+    variants <- add_placeholder(variants, "C4R_WES_samples", "C4R_WES_samples")
     
     # Columns 29,30,31,32: HGMD
     for(hgmd_field in c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref")){
@@ -430,9 +430,14 @@ select_and_write2 <- function(variants, samples, prefix, type)
     print(colnames(variants))
     if (type == 'wgs' || type == 'denovo'){
         noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
+        wgs_counts <- c("C4R_WGS_counts", "C4R_WGS_samples")
+        variants$C4R_WGS_counts[variants$C4R_WGS_counts == "None"] <- 0 
+        variants$C4R_WGS_counts <- as.integer(variants$C4R_WGS_counts)
+        variants$C4R_WGS_samples[variants$C4R_WGS_samples == "None"] <- 0
         }
     else {
         noncoding_cols <- c()
+        wgs_counts <- c()
         }
     variants <- variants[c(c("Position", "UCSC_Link", "GNOMAD_Link", "Ref", "Alt"),
                           paste0("Zygosity.", samples),
@@ -452,6 +457,10 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp", "Dark_genes"), noncoding_cols)]
   
     variants <- variants[order(variants$Position),]
+
+    if (type == 'denovo'){
+        variants <- variants[variants$C4R_WGS_counts < 10,]
+    }
     
     write.csv(variants, paste0(prefix,".csv"), row.names = F)
 }
@@ -461,6 +470,20 @@ fix_column_name <- function(column_name){
         column_name <- paste0("X", column_name)
     }
     return(column_name)
+}
+
+replace_zero_cov <- function(trio_coverage) {
+    coverage_fixed <- c()
+    cov_split <- as.list(unlist(strsplit(trio_coverage, "/")))
+    for (coverage in cov_split){
+      if (coverage == '0'){
+        cov <- str_replace(coverage, '0', '-')
+        coverage_fixed <- append(coverage_fixed, cov)
+      }
+      else
+        coverage_fixed <- append(coverage_fixed, coverage)
+    }
+    return(str_c(coverage_fixed, collapse="_"))
 }
 
 # merges ensembl, gatk-haplotype reports
@@ -687,13 +710,23 @@ merge_reports <- function(family, samples, type){
             #print("gt")
             gts <- unlist(strsplit(ensemble[i,"gts"],","))
             #print(gts[sample_index])
-            fixed_zygosity <- genotype2zygocity(gts[sample_index],ensemble[i,"Ref"],ensemble[i,field_depth])
+            fixed_zygosity <- genotype2zygocity(gts[sample_index],ensemble[i,"Ref"],ensemble[i,field_depth], type)
             #print("after")
             #print(fixed_zygosity)
             ensemble[i,zygocity_column_name] <- fixed_zygosity
             sample_index <- sample_index + 1
         }
     }
+    
+    # if vcf is not from GATK HC, samtools, platypus, or samtools, need to run below to remove / in Trio_coverage column
+    for (i in 1:nrow(ensemble)){
+        cov <-  ensemble[i, "Trio_coverage"]
+        if(type == "wes.mosaic"){
+            # replace 0 with - for mosaic report to reflect lack of joint genotyping by Mutect2
+            cov <- replace_zero_cov(cov)
+        }
+        ensemble[i, "Trio_coverage"] <- str_replace_all(cov, '/', '_')
+      }
 
     # if vcf is not from GATK HC, samtools, platypus, or samtools, need to run below to remove / in Trio_coverage column
     for (i in 1:nrow(ensemble)){
@@ -730,21 +763,21 @@ annotate_w_care4rare <- function(family,samples,type){
     if(exists("seen_in_c4r_counts")){
         variants <- merge(variants, seen_in_c4r_counts, by.x = "superindex", 
                           by.y = "Position.Ref.Alt", all.x = T)
-        variants$Frequency_in_C4R <- variants$Frequency
+        variants$C4R_WES_counts <- variants$Frequency
         variants$Frequency <- NULL
     }
     
-    variants$Frequency_in_C4R[is.na(variants$Frequency_in_C4R)] <- 0
+    variants$C4R_WES_counts[is.na(variants$C4R_WES_counts)] <- 0
     
     if(exists("seen_in_c4r_samples")){
         variants <- merge(variants,seen_in_c4r_samples,by.x = "superindex", 
                           by.y = "Position.Ref.Alt", all.x = T)
-        variants$Seen_in_C4R_samples <- variants$Samples
+        variants$C4R_WES_samples <- variants$Samples
     }
     
-    variants$Seen_in_C4R_samples[is.na(variants$Seen_in_C4R_samples)] <- 0        
+    variants$C4R_WES_samples[is.na(variants$C4R_WES_samples)] <- 0        
 		# truncate column if it has more than 30000 variants
-		variants$Seen_in_C4R_samples <- strtrim(variants$Seen_in_C4R_samples, 30000)
+		variants$C4R_WES_samples <- strtrim(variants$C4R_WES_samples, 30000)
 		    
     if (exists("hgmd")){
         variants$HGMD_gene <- NULL
@@ -820,7 +853,7 @@ clinical_report <- function(project,samples,type){
     # for clinical, only keep variants where one of the alt depths was >= 20
     full_report <- dplyr::filter_at(full_report, paste0("Alt_depths.",samples), any_vars(as.integer(.) >= 20))    
     filtered_report <- subset(full_report, 
-               Quality > 1000 & Gnomad_af_popmax < 0.005 & Frequency_in_C4R < 6,
+               Quality > 1000 & Gnomad_af_popmax < 0.005 & C4R_WES_counts < 6,
                select = c("Position", "GNOMAD_Link", "Ref", "Alt", "Gene", paste0("Zygosity.", samples), 
                           paste0("Burden.",samples),
                           paste0("Alt_depths.",samples),
@@ -863,7 +896,7 @@ library(stringr)
 library(data.table)
 library(plyr)
 library(dplyr)
-default_tables_path <- "~/cre/data"
+
 
 # R substitutes "-" with "." in sample names in columns so fix this in samples.txt
 # sample names starting with letters should be prefixed by X in *.table
@@ -872,6 +905,7 @@ default_tables_path <- "~/cre/data"
 args <- commandArgs(trailingOnly = T)
 print(args)
 family <- args[1]
+default_tables_path <- args[4]
 
 coding <- if(is.null(args[2])) T else F
 coding <- F

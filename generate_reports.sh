@@ -11,15 +11,7 @@ curr_date=$(date +"%Y-%m-%d")
 
 rerun_folder="${family}_${curr_date}"
 
-
-if [ "$report_type" == "wes" ] || [ "$report_type" == "wes.both" ]; then
-	eval script="~/cre/cre.vcf2cre.sh"
-elif [ "$report_type" == "wgs" ] || [ "$report_type" == "denovo" ]; then
-	eval script="~/crg/crg.vcf2cre.sh"
-else
-	echo "Please enter a report type (wes, wes.both, or wgs)"
-	exit
-fi
+eval script="~/cre/cre.vcf2cre.sh"
 
 if [ -d "$family" ]; then
 	cd $family

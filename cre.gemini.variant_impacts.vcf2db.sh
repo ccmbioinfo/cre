@@ -30,8 +30,9 @@ else
 fi
 
 #if pipeline is cre, filter out variants only called by one of freebayes, samtools, platypus
+#else pipeline is mosaic/crg (uses one caller), do not filter by caller, i.e. no "callers" in the gemini db
 callers=`gemini db_info $file | grep -w "variants" | grep -w "callers"` 
-if [ ! -z "$callers" ]
+if [ ! -z "$callers" ] #variable $callers is not an empty string, i.e. it exists in the gemini db
 then
 	callers="v.callers"
 	caller_filter="and v.callers not in ('freebayes', 'samtools', 'platypus')"
@@ -88,15 +89,23 @@ s_gt_filter=''
 
 if [ -n "$denovo" ] && [ "$denovo" == 1 ]
 then
-    proband=`gemini query -q "select name from samples where phenotype=2" $file`
-    mom=`gemini query -q "select name from samples where phenotype=-9 and sex=2" $file`
-    dad=`gemini query -q "select name from samples where phenotype=-9 and sex=1" $file`
+    proband=`gemini query -q "select name from samples where paternal_id != -9 and paternal_id != 0 and maternal_id != -9 and maternal_id != 0" $file`
+
+	# print header
+    header=$sQuery" limit 0"
+    gemini query -q "$header" --header $file
     
-    s_gt_filter="((gt_types."$proband" == HET or gt_types."$proband" == HOM_ALT) and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF) \
-	and (gt_alt_depths."$proband" >="${alt_depth}" or (gt_alt_depths).(*).(==-1).(all)) \
-    and ((gt_alt_depths."$dad" < 10 and gt_alt_depths."$mom" < 10)  or (gt_alt_depths).(*).(==-1).(all))"
-    sQuery=$sQuery" and qual>=400"
-    gemini query -q "$sQuery" --gt-filter "$s_gt_filter" --header $file
+	# get de novo variants for each affected proband
+    for p in $proband
+	do
+		mom=`gemini query -q "select maternal_id from samples where name == '$p'" $file`
+        dad=`gemini query -q "select paternal_id from samples where name == '$p'" $file`
+		s_gt_filter="((gt_types."$p" == HET or gt_types."$p" == HOM_ALT) and gt_types."$dad" == HOM_REF and gt_types."$mom" == HOM_REF) \
+		and (gt_alt_depths."$p" >="${alt_depth}" or (gt_alt_depths).(*).(==-1).(all)) \
+		and ((gt_alt_depths."$dad" < 10 and gt_alt_depths."$mom" < 10)  or (gt_alt_depths).(*).(==-1).(all))"
+		sQuery=$sQuery" and qual>=400"
+		gemini query -q "$sQuery" --gt-filter "$s_gt_filter" $file
+	done
 else
     s_gt_filter="(gt_alt_depths).(*).(>="${alt_depth}").(any) or (gt_alt_depths).(*).(==-1).(all)"
 	gemini query -q "$sQuery" --gt-filter "$s_gt_filter" --header $file

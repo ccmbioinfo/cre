@@ -34,7 +34,7 @@ echo "###############################################"
 cre.annotation.strip.sh $original_vcf
 
 gunzip -c $bname.no_anno.vcf.gz | grep "^#"  > $project.vcf
-gunzip -c $bname.no_anno.vcf.gz | grep -v "^#" | grep PASS | grep -v possible_rnaedit | egrep -v "^GL000" >> $project.vcf
+gunzip -c $bname.no_anno.vcf.gz | grep -v "^#" | grep -v possible_rnaedit | egrep -v "^GL000" >> $project.vcf
 bgzip $project.vcf
 tabix $project.vcf.gz
 

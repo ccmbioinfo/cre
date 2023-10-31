@@ -448,7 +448,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                           paste0("gt_quals.", samples),
                           c("Trio_coverage", "Ensembl_gene_id", "Gene_description", "omim_phenotype", "omim_inheritance",
                             "Orphanet", "Clinvar",
-                            "Frequency_in_C4R", "Seen_in_C4R_samples", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac","HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
+                            "C4R_WES_counts", "C4R_WES_samples", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac","HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
                             "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
@@ -858,7 +858,7 @@ clinical_report <- function(project,samples,type){
                           paste0("Burden.",samples),
                           paste0("Alt_depths.",samples),
                         "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
-                        "Orphanet", "Clinvar", "Frequency_in_C4R", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac",
+                        "Orphanet", "Clinvar", "C4R_WES_counts", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac",
                         "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
                         "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp")
@@ -884,7 +884,7 @@ clinical_report <- function(project,samples,type){
     filtered_report <- filtered_report[c("Position", "GNOMAD_Link", "Ref", "Alt", "Gene", paste0("Zygosity.", samples), 
       paste0("Burden.", samples),
       "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
-      "Orphanet", "Clinvar", "Frequency_in_C4R", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac", 
+      "Orphanet", "Clinvar", "C4R_WES_counts", "HPRC_af", "HPRC_ac", "HPRC_hom", "CMH_af", "CMH_ac", 
       "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
       "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp")]

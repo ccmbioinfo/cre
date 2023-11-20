@@ -92,8 +92,9 @@ create_report <- function(family, samples, type){
     # Column3 = GNOMAD_Link
     variants$GNOMAD_POS <- with(variants, paste(Chrom,Pos,Ref,Alt, sep='-'))
     sGNOMAD1 <- "=HYPERLINK(\"http://gnomad.broadinstitute.org/variant/"
-    sGNOMAD2 <- "\",\"GNOMAD_link\")"
-    variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sep = ''))
+    sGNOMAD2 <- "?dataset=gnomad_r2_1"
+    sGNOMAD3 <- "\",\"GNOMAD_link\")"
+    variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sGNOMAD3, sep = ''))
 
     # Columns 4,5: Ref,Alt
 

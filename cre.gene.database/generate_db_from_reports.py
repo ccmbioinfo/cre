@@ -14,8 +14,10 @@ SEEN_IN_C4R_COUNTS = "seen_in_c4r_counts.txt"
 SEEN_IN_C4R_SAMPLES = "seen_in_c4r_samples.txt"
 
 ALL_SAMPLES_DFS = []
-RESULTS_PATH = "/hpf/largeprojects/ccm_dccforge/dccforge/results"
+RESULTS_PATH = "/srv/shared/hpf/exomes/results/"
+ANALYSIS_PATH = "/srv/shared/analyses/exomes/"
 IGNORE_FOLDERS = set(join(RESULTS_PATH, folder) for folder in ["calx/", "misc/", "run_statistics/", "database/"])
+IGNORE_FOLDERS_ANALYSIS = set(join(ANALYSIS_PATH, folder) for folder in ["bam_to_cram", "HPO", "GSO", "scripts"])
 WES_REPORT_FIELDS = ['Position', 'Ref', 'Alt', 'Variation', 'Refseq_change', 'Depth', 'Gene', 'Conserved_in_20_mammals', \
 'Sift_score', 'Polyphen_score', 'Cadd_score', 'Gnomad_af']
 
@@ -28,8 +30,15 @@ def get_latest_wes_report_paths():
 
 		# sorted - ascending order
 		for family in glob(join(family_prefix_dir, "*/")):
-			reports = sorted([report for report in glob(join(family, "*wes*")) if "clinical" not in report \
+			# for reports generated with bcbio: 
+			reports_bcbio = sorted([report for report in glob(join(family, "*wes*")) if "clinical" not in report \
 			and "synonymous" not in report])
+			# for reports generated with crg:
+			report_dir = family +  f"/*/report/coding/*/*wes*"
+			reports_crg2 = sorted([report for report in glob(report_dir) if "clinical" not in report \
+			and "synonymous" not in report])
+			reports = reports_bcbio + reports_crg2
+
 
 			if len(reports) >= 1:
 				report_paths.append(reports[-1]) #latest report since prefix is: yyyy-mm-dd
@@ -38,7 +47,28 @@ def get_latest_wes_report_paths():
 
 	return report_paths
 
-for report in get_latest_wes_report_paths():
+def get_report_paths_analysis_path():
+	report_paths = []
+
+	for family in glob(join(ANALYSIS_PATH, "*/")):
+		if family in IGNORE_FOLDERS_ANALYSIS:
+			continue
+
+		# sorted - ascending order
+		report_dir = family +  f"/*/report/coding/*/*wes*"
+		reports = sorted([report for report in glob(report_dir) if "clinical" not in report \
+		and "synonymous" not in report])
+
+		if len(reports) >= 1:
+			report_paths.append(reports[-1]) #latest report since prefix is: yyyy-mm-dd
+		else:
+			print("No report files found for %s" % family)
+	
+	return report_paths
+
+paths = get_latest_wes_report_paths() + get_report_paths_analysis_path()
+
+for report in paths:
 	print("Parsing %s" % report)
 
 	sep = "," if report.endswith(".csv") else "\t"
@@ -113,7 +143,7 @@ df = df.groupby(['Position', 'Ref', 'Alt']).agg({
 	'Alt_depths' : list,
 	'Sample' : list })
 
-df['Frequency'] = df['Sample'].str.len()
+df['Frequency'] = df['Sample'].apply(lambda x: len(set(x))) # there could be multiple reports assoc with one family if there is a new analysis in the analysis dir
 df['Zygosity'] = df['Zygosity'].apply(lambda g: '; '.join(g))
 df['Burden'] = df['Burden'].apply(lambda g: '; '.join(g))
 df['Alt_depths'] = df['Alt_depths'].apply(lambda g: '; '.join(g))

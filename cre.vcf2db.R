@@ -87,7 +87,7 @@ create_report <- function(family, samples, type){
     # Column3 = GNOMAD_Link
     variants$GNOMAD_POS <- with(variants, paste(Chrom,Pos,Ref,Alt, sep='-'))
     sGNOMAD1 <- "=HYPERLINK(\"http://gnomad.broadinstitute.org/variant/"
-    sGNOMAD2 <- "?dataset=gnomad_r3"
+    sGNOMAD2 <- "?dataset=gnomad_r4"
     sGNOMAD3 <- "\",\"GNOMAD_link\")"
     variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sGNOMAD3, sep = ''))
 
@@ -429,7 +429,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
 {
     print(colnames(variants))
     if (type == 'wgs' || type == 'denovo'){
-        noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
+        noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites, FATHMM_XF")
         wgs_counts <- c("C4R_WGS_counts", "C4R_WGS_samples")
         variants$C4R_WGS_counts[variants$C4R_WGS_counts == "None"] <- 0 
         variants$C4R_WGS_counts <- as.integer(variants$C4R_WGS_counts)

@@ -50,7 +50,8 @@ then
             enh_cellline_tissue as ENH_cellline_tissue,
             tf_binding_sites as TF_binding_sites,
             c4r_wgs_counts as C4R_WGS_counts,
-            c4r_wgs_samples as C4R_WGS_samples"
+            c4r_wgs_samples as C4R_WGS_samples,
+            LinSight_Score"
 else
     noncoding_anno="00 as noncoding"
 fi

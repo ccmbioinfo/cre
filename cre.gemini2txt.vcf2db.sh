@@ -52,8 +52,10 @@ then
             tf_binding_sites as TF_binding_sites,
             c4r_wgs_counts as C4R_WGS_counts,
             c4r_wgs_samples as C4R_WGS_samples"
+    noncoding_scores="ncER as ncER_score, ReMM as ReMM_score, LinSight_Score as LINSIGHT_score"
 else
     noncoding_anno="00 as noncoding"
+    noncoding_scores="00 as noncoding_scores"
 fi
 
 sQuery="select \
@@ -85,6 +87,7 @@ sQuery="select \
         vest3_score as Vest3_score,\
         revel_score as Revel_score,\
         gerp_score as Gerp_score,\
+        $noncoding_scores, \
         AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\
         hgvsc as Codon_change,\

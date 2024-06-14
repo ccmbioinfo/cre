@@ -85,6 +85,7 @@ sQuery="select \
         vest3_score as Vest3_score,\
         revel_score as Revel_score,\
         gerp_score as Gerp_score,\
+        AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\
         hgvsc as Codon_change,\
         "$callers" as Callers,\

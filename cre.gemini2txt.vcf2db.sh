@@ -88,6 +88,7 @@ sQuery="select \
         revel_score as Revel_score,\
         gerp_score as Gerp_score,\
         $noncoding_scores, \
+        AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\
         hgvsc as Codon_change,\
         "$callers" as Callers,\

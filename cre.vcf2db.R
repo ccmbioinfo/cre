@@ -52,6 +52,27 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth, type){
     return(result)
 }
 
+# count how many noncoding scores predict an impact and return a fraction
+# e.g. 3/4 indicates that 3/4 scores predict an impact
+noncoding_pred <- function(cadd, ncer, remm, linsight){
+  cadd <- ifelse(cadd == "None", NA, cadd)
+  ncer <- ifelse(ncer == "None", NA, ncer)
+  remm <- ifelse(remm == "None", NA, remm)
+  linsight <- ifelse(linsight == "None", NA, linsight)
+  # https://doi.org/10.1016/j.gpb.2022.02.002 table 3 best threshold
+  cadd_pred <- cadd > 14.19 # paper used CADD v1.3, we use 1.6, so score here is from personal work
+  ncer_pred <- ncer > 95.95
+  remm_pred <- remm > 0.9585 
+  linsight_pred <- linsight > 0.9828
+  preds <- c(cadd_pred, ncer_pred, remm_pred, linsight_pred)
+  pred_impact <- sum(preds, na.rm = TRUE)
+  denominator <- sum(!is.na(preds))
+  fraction = paste(as.character(pred_impact), as.character(denominator), sep="/")
+  
+  return(fraction)
+}
+
+
 # output : family.ensemble.txt
 create_report <- function(family, samples, type){
     file <- paste0(family, ".variants.txt")
@@ -400,6 +421,13 @@ create_report <- function(family, samples, type){
         }
     }else print("VEP MaxEntScan annotation is missing")
 
+    # count number of noncoding scores that predict an impact
+    if (type == 'wgs' || type == 'denovo'){
+        noncoding_agg <- mapply(noncoding_pred, variants[, "Cadd_score"], variants[,"ncER_score"], variants[,"ReMM_score"], variants[,"LINSIGHT_score"])
+        variants[, "Noncoding_path_pred"] <- unlist(noncoding_agg)
+    }
+    
+
     # Column 51: SpliceAI
 
     
@@ -435,7 +463,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
     print(colnames(variants))
     if (type == 'wgs' || type == 'denovo'){
         noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
-        noncoding_scores <- c("ncER_score", "ReMM_score", "LINSIGHT_score")
+        noncoding_scores <- c("ncER_score", "ReMM_score", "LINSIGHT_score", "Noncoding_path_pred")
         wgs_counts <- c("C4R_WGS_counts", "C4R_WGS_samples")
         variants$C4R_WGS_counts[variants$C4R_WGS_counts == "None"] <- 0 
         variants$C4R_WGS_counts <- as.integer(variants$C4R_WGS_counts)

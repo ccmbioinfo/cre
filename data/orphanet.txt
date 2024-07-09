@@ -1,4 +1,4 @@
-Ensembl_gene_id	Orphanet	
+Ensembl_gene_id	Orphanet
 ENSG00000000419	dolichyl-phosphate mannosyltransferase subunit 1, catalytic
 ENSG00000000971	ATP binding cassette subfamily A member 4,Atypical hemolytic uremic syndrome with complement gene abnormality,CD46 molecule,complement factor H,complement factor I,complement factor I,Dense deposit disease,Immunoglobulin-mediated membranoproliferative glomerulonephritis
 ENSG00000001084	glutamate-cysteine ligase catalytic subunit,serpin family A member 1

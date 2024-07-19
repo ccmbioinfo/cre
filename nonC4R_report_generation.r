@@ -476,7 +476,7 @@ clean_and_output_report <- function(out){
                    'Vest4_score','Revel_score','Gerp_score', 'AlphaMissense', 'ncER_score', 'ReMM_score',               
                    'LINSIGHT_score', 'Imprinting_status','Imprinting_expressed_allele','Pseudoautosomal',
                    'Gnomad_male_ac','Old_multiallelic','UCE_100bp','UCE_200bp','DNaseI_hypersensitive_site','CTCF_binding_site',
-                   'ENH_cellline_tissue','TF_binding_sites')
+                   'ENH_cellline_tissue','TF_binding_sites',"GreenDB_variant_type", "GreenDB_closest_gene", "GreenDB_controlled_gene")
   out = out[,column_order]
   
   write.csv(out, paste0(family,".", type, ".", datetime,".csv"), row.names = F)

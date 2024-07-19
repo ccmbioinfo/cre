@@ -334,7 +334,8 @@ load_tables <- function(){
 select_and_write2 <- function(variants, samples, prefix, type){
     print(colnames(variants))
     if (type == 'wgs' || type == 'denovo'){
-        noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites")
+        noncoding_cols <- c("DNaseI_hypersensitive_site", "CTCF_binding_site", "ENH_cellline_tissue", "TF_binding_sites",
+                           "GreenDB_variant_type", "GreenDB_closest_gene", "GreenDB_controlled_gene")
         noncoding_scores <- c("ncER_score", "ReMM_score", "LINSIGHT_score")
         }
     else {

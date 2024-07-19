@@ -49,6 +49,9 @@ then
             ctcf_binding_site as CTCF_binding_site, 
             enh_cellline_tissue as ENH_cellline_tissue,
             tf_binding_sites as TF_binding_sites,
+            GreenDB_variant_type as GreenDB_variant_type,
+            GreenDB_closest_gene as GreenDB_closest_gene,
+            GreenDB_controlled_gene as GreenDB_controlled_gene,
             c4r_wgs_counts as C4R_WGS_counts,
             c4r_wgs_samples as C4R_WGS_samples"
     noncoding_scores="ncER as ncER_score, ReMM as ReMM_score, LinSight_Score as LINSIGHT_score"
@@ -88,6 +91,7 @@ sQuery="select \
         gerp_score as Gerp_score,\
         AlphaMissense as AlphaMissense,\
         $noncoding_scores, \
+        AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\
         hgvsc as Codon_change,\
         "$callers" as Callers,\

@@ -81,7 +81,7 @@ fi
 initialQuery=$sQuery" from variants v,variant_impacts i" #store field selection
 
 
-sQuery=$initialQuery" where "$severity_filter" v.gnomad_af_popmax <= "$max_af" and \
+sQuery=$initialQuery" where "$severity_filter" v.gnomad_af_grpmax <= "$max_af" and \
 v.variant_id=i.variant_id "$caller_filter""
 
 s_gt_filter=''
@@ -111,13 +111,13 @@ else
     # grab the clinvar variants
     cQuery=$initialQuery 
     # everything that has a clinvar_sig value
-	cQuery=$cQuery" where v.gnomad_af_popmax <= ${max_af} and v.variant_id=i.variant_id and v.clinvar_status <> '' "$caller_filter" "
-    #cQuery=$cQuery" where gnomad_af_popmax <= ${max_af} and v.variant_id=i.variant_id and clinvar_sig <> ''"
+	cQuery=$cQuery" where v.gnomad_af_grpmax <= ${max_af} and v.variant_id=i.variant_id and v.clinvar_status <> '' "$caller_filter" "
+    #cQuery=$cQuery" where gnomad_af_grpax <= ${max_af} and v.variant_id=i.variant_id and clinvar_sig <> ''"
     # only get variants where AD >= 1 (any sample with an alternate read)
     s_gt_filter="(gt_alt_depths).(*).(>=1).(any) or (gt_alt_depths).(*).(==-1).(all)"
     gemini query -q "$cQuery" --gt-filter "$s_gt_filter" $file
     # add variants where gnomad freq is > 1%, Clinvar is pathogenic, likely pathogenic or conflicting and any status except no assertion 
     cQuery=$initialQuery
-    cQuery=$cQuery" where v.gnomad_af_popmax > ${max_af} and v.variant_id=i.variant_id and v.clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity') "$caller_filter""
+    cQuery=$cQuery" where v.gnomad_af_grpmax > ${max_af} and v.variant_id=i.variant_id and v.clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity') "$caller_filter""
     gemini query -q "$cQuery" $file
 fi

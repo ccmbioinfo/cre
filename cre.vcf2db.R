@@ -275,7 +275,14 @@ create_report <- function(family, samples, type){
     # Gnomad gene constraint scores
     # Column36 = Gnomad_oe_lof_score
     # Column37 = Gnomad_oe_mis_score
-    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores.csv")
+    # Column = Ensembl_transcript_id
+    # Column = Gnomad_oe_ci_lower
+    # Column = Gnomad_oe_ci_upper
+    # Column = Gnomad_pLI_score
+    # Column = Gnomad_pnull_score
+    # Column = Gnomad_prec_score
+    # Column = Gnomad_mis_z_score 
+    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores_v4.1.csv")
     gnomad_scores <- read.csv(gnomad_scores_file, stringsAsFactors = F)
     variants <- merge(variants, gnomad_scores, all.x = T, all.y = F)
 
@@ -455,11 +462,11 @@ select_and_write2 <- function(variants, samples, prefix, type)
                            c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
                             "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_fafmax_faf95_max",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
-                            "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
+                            "Gnomad_oe_lof_score", "Gnomad_oe_ci_lower","Gnomad_oe_ci_upper","Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
                             "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score", "AlphaMissense"),
                             noncoding_scores,
                             c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
-                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
+                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)] 
   
     variants <- variants[order(variants$Position),]
 

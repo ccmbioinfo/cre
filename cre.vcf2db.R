@@ -460,12 +460,12 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "C4R_WES_counts", "C4R_WES_samples"), 
                            wgs_counts, 
                            c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
-                            "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_fafmax_faf95_max",
+                            "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max", "Gnomad_filter",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
                             "Gnomad_oe_lof_score", "Gnomad_oe_ci_lower","Gnomad_oe_ci_upper","Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
                             "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score", "AlphaMissense"),
                             noncoding_scores,
-                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
+                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
                             "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)] 
   
     variants <- variants[order(variants$Position),]
@@ -841,9 +841,9 @@ clinical_report <- function(project,samples,type){
                           paste0("Alt_depths.",samples),
                         "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
                         "Orphanet", "Clinvar", "C4R_WES_counts",
-                        "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_fafmax_faf95_max",
+                        "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max","Gnomad_filter",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
-                        "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp")
+                        "Imprinting_status", "Pseudoautosomal", "UCE_100bp","UCE_200bp")
                )
     
     # recalculate burden using the filtered report
@@ -867,9 +867,9 @@ clinical_report <- function(project,samples,type){
       paste0("Burden.", samples),
       "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
       "Orphanet", "Clinvar", "C4R_WES_counts",
-      "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom", "Gnomad_fafmax_faf95_max",
+      "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom", "Gnomad_male_ac","Gnomad_fafmax_faf95_max","Gnomad_filter",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
-      "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp")]
+      "Imprinting_status", "Pseudoautosomal", "UCE_100bp", "UCE_200bp")]
 
     write.csv(filtered_report, paste0(project, ".clinical.", type, ".", datetime, ".csv"), row.names = F)
 }

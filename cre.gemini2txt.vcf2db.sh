@@ -130,8 +130,8 @@ sQuery=$sQuery"hgvsc as Nucleotide_change_ensembl,\
 
 initialQuery=$sQuery # keep the field selection part for later use
 
-#max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequencing, gnomad WES only
-#gnomad_af includes gnomad WGS
+#max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequency, gnomad WES only
+#gnomad_fafmax_faf95_max is joint gnomad FAF
 sQuery=$sQuery" where gnomad_fafmax_faf95_max <= "${max_af}" "$caller_filter""${severity_filter}""
 
 s_gt_filter=''

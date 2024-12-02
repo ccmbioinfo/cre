@@ -8,10 +8,9 @@
 #  when using vcfanno/vcfdb loader some fields are different
 #  for some reason \n in the query string does not work here
 
-#PBS -l walltime=1:00:00,nodes=1:ppn=1
-#PBS -joe .
-#PBS -d .
-#PBS -l vmem=10g,mem=10g
+#SBATCH --time=1:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=10G
 
 if [ -z $file ]
 then
@@ -79,10 +78,12 @@ sQuery="select \
         domains as Protein_domains,\
         rs_ids as rsIDs,\
         gnomad_af as Gnomad_af,\
-        gnomad_af_popmax as Gnomad_af_popmax,\
+        gnomad_af_grpmax as Gnomad_af_grpmax,\
         gnomad_ac as Gnomad_ac,\
         gnomad_hom as Gnomad_hom,\
-	      gnomad_male_ac as Gnomad_male_ac, \
+	    gnomad_male_ac as Gnomad_male_ac, \
+        gnomad_fafmax_faf95_max as Gnomad_fafmax_faf95_max, \
+        gnomad_filter as Gnomad_filter, \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\
@@ -129,9 +130,9 @@ sQuery=$sQuery"hgvsc as Nucleotide_change_ensembl,\
 
 initialQuery=$sQuery # keep the field selection part for later use
 
-#max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequencing, gnomad WES only
-#gnomad_af includes gnomad WGS
-sQuery=$sQuery" where gnomad_af_popmax <= "${max_af}" "$caller_filter""${severity_filter}""
+#max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequency, gnomad WES only
+#gnomad_fafmax_faf95_max is joint gnomad FAF
+sQuery=$sQuery" where gnomad_fafmax_faf95_max <= "${max_af}" "$caller_filter""${severity_filter}""
 
 s_gt_filter=''
 # denovo 0/1 is exported in cre.sh
@@ -163,14 +164,14 @@ else
 
     # also get the clinvar variants (duplicates will be removed later)
     cQuery=$initialQuery
-    cQuery=$cQuery" where gnomad_af_popmax <= ${max_af} "$caller_filter" and Clinvar <> ''"
+    cQuery=$cQuery" where gnomad_fafmax_faf95_max <= ${max_af} "$caller_filter" and Clinvar <> ''"
     # only get variants where AD >= 1 (any sample with an alternate read)
     c_gt_filter="(gt_alt_depths).(*).(>=1).(any) or (gt_alt_depths).(*).(==-1).(all)"
     gemini query -q "$cQuery" --gt-filter "$c_gt_filter" $file
 
     # if allele frequency is > 1% and Clinvar is pathogenic, likely pathogenic or conflicting and any status except for no assertion
     cQuery=$initialQuery
-    cQuery=$cQuery" where gnomad_af_popmax > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity')"
+    cQuery=$cQuery" where gnomad_fafmax_faf95_max > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity')"
     gemini query -q "$cQuery" $file
 
 fi

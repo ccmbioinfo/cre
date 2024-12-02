@@ -87,7 +87,7 @@ create_report <- function(family, samples, type){
     # Column3 = GNOMAD_Link
     variants$GNOMAD_POS <- with(variants, paste(Chrom,Pos,Ref,Alt, sep='-'))
     sGNOMAD1 <- "=HYPERLINK(\"http://gnomad.broadinstitute.org/variant/"
-    sGNOMAD2 <- "?dataset=gnomad_r3"
+    sGNOMAD2 <- "?dataset=gnomad_r4"
     sGNOMAD3 <- "\",\"GNOMAD_link\")"
     variants$GNOMAD_Link <- with(variants, paste(sGNOMAD1, GNOMAD_POS, sGNOMAD2, sGNOMAD3, sep = ''))
 
@@ -270,12 +270,19 @@ create_report <- function(family, samples, type){
 
     # population frequencies
     # Column34 = Gnomad_af
-    # Column35 = Gnomad_af_popmax
+    # Column35 = gnomad_af_grpmax
     
     # Gnomad gene constraint scores
     # Column36 = Gnomad_oe_lof_score
     # Column37 = Gnomad_oe_mis_score
-    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores.csv")
+    # Column = Ensembl_transcript_id
+    # Column = Gnomad_oe_ci_lower
+    # Column = Gnomad_oe_ci_upper
+    # Column = Gnomad_pLI_score
+    # Column = Gnomad_pnull_score
+    # Column = Gnomad_prec_score
+    # Column = Gnomad_mis_z_score 
+    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores_v4.1.csv")
     gnomad_scores <- read.csv(gnomad_scores_file, stringsAsFactors = F)
     variants <- merge(variants, gnomad_scores, all.x = T, all.y = F)
 
@@ -411,7 +418,7 @@ create_report <- function(family, samples, type){
     # Column 57: ENH_cellline_tissue
         
     # replace -1 with 0
-    for (field in c("Trio_coverage", "Gnomad_af", "Gnomad_af_popmax")){
+    for (field in c("Trio_coverage", "Gnomad_af", "Gnomad_af_grpmax", "Gnomad_fafmax_faf95_max")){
         variants[,field] <- with(variants, gsub("-1", "0", get(field), fixed = T))
         variants[,field] <- with(variants, gsub("None", "0", get(field), fixed = T))
     }
@@ -453,13 +460,13 @@ select_and_write2 <- function(variants, samples, prefix, type)
                             "C4R_WES_counts", "C4R_WES_samples"), 
                            wgs_counts, 
                            c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
-                            "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
+                            "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max", "Gnomad_filter",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
-                            "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
+                            "Gnomad_oe_lof_score", "Gnomad_oe_ci_lower","Gnomad_oe_ci_upper","Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
                             "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score", "AlphaMissense"),
                             noncoding_scores,
-                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
-                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
+                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
+                            "Number_of_callers", "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)] 
   
     variants <- variants[order(variants$Position),]
 
@@ -828,15 +835,15 @@ clinical_report <- function(project,samples,type){
     # for clinical, only keep variants where one of the alt depths was >= 20
     full_report <- dplyr::filter_at(full_report, paste0("Alt_depths.",samples), any_vars(as.integer(.) >= 20))    
     filtered_report <- subset(full_report, 
-               Quality > 1000 & Gnomad_af_popmax < 0.005 & C4R_WES_counts < 6,
+               Quality > 1000 & Gnomad_af_grpmax < 0.005 & C4R_WES_counts < 6,
                select = c("Position", "GNOMAD_Link", "Ref", "Alt", "Gene", paste0("Zygosity.", samples), 
                           paste0("Burden.",samples),
                           paste0("Alt_depths.",samples),
                         "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
                         "Orphanet", "Clinvar", "C4R_WES_counts",
-                        "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
+                        "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max","Gnomad_filter",
                         "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
-                        "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp","UCE_200bp")
+                        "Imprinting_status", "Pseudoautosomal", "UCE_100bp","UCE_200bp")
                )
     
     # recalculate burden using the filtered report
@@ -860,9 +867,9 @@ clinical_report <- function(project,samples,type){
       paste0("Burden.", samples),
       "Variation", "Info", "Refseq_change", "omim_phenotype", "omim_inheritance",
       "Orphanet", "Clinvar", "C4R_WES_counts",
-      "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
+      "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom", "Gnomad_male_ac","Gnomad_fafmax_faf95_max","Gnomad_filter",
       "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score",
-      "Imprinting_status", "Pseudoautosomal", "Gnomad_male_ac", "UCE_100bp", "UCE_200bp")]
+      "Imprinting_status", "Pseudoautosomal", "UCE_100bp", "UCE_200bp")]
 
     write.csv(filtered_report, paste0(project, ".clinical.", type, ".", datetime, ".csv"), row.names = F)
 }
@@ -871,7 +878,6 @@ library(stringr)
 library(data.table)
 library(plyr)
 library(dplyr)
-default_tables_path <- "~/cre/data"
 
 # R substitutes "-" with "." in sample names in columns so fix this in samples.txt
 # sample names starting with letters should be prefixed by X in *.table
@@ -880,6 +886,7 @@ default_tables_path <- "~/cre/data"
 args <- commandArgs(trailingOnly = T)
 print(args)
 family <- args[1]
+default_tables_path <- args[4]
 
 coding <- if(is.null(args[2])) T else F
 coding <- F

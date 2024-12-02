@@ -246,7 +246,7 @@ function f_make_report
     fi
 
     echo GENERATING REPORT WITH TYPE: "${type}"
-    Rscript $cre/cre.vcf2db.R $family "${type}" "${database}"
+    Rscript $cre/cre.vcf2db.R $family "${type}" "${database}" "${cre}/data"
     
     cd $family
     #rm $family.create_report.csv $family.merge_reports.csv

@@ -90,6 +90,7 @@ sQuery="select \
         vest4_score as Vest4_score,\
         revel_score as Revel_score,\
         gerp_score as Gerp_score,\
+        AlphaMissense as AlphaMissense,\
         $noncoding_scores, \
         AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\

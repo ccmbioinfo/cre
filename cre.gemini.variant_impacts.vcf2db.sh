@@ -119,6 +119,6 @@ else
     gemini query -q "$cQuery" --gt-filter "$s_gt_filter" $file
     # add variants where gnomad freq is > 1%, Clinvar is pathogenic, likely pathogenic or conflicting and any status except no assertion 
     cQuery=$initialQuery
-    cQuery=$cQuery" where v.gnomad_af_popmax > ${max_af} and v.variant_id=i.variant_id and v.clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity') "$caller_filter""
+    cQuery=$cQuery" where v.gnomad_af_popmax > ${max_af} and v.variant_id=i.variant_id and v.clinvar_status != 'no_assertion_criteria_provided' and lower(Clinvar) like '%pathogenic%' "$caller_filter""
     gemini query -q "$cQuery" $file
 fi

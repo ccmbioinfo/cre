@@ -172,7 +172,7 @@ else
 
     # if allele frequency is > 1% and Clinvar is pathogenic, likely pathogenic or conflicting and any status except for no assertion
     cQuery=$initialQuery
-    cQuery=$cQuery" where gnomad_fafmax_faf95_max > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity')"
+    cQuery=$cQuery" where gnomad_fafmax_faf95_max > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and lower(Clinvar) like '%pathogenic%'"
     gemini query -q "$cQuery" $file
 
 fi

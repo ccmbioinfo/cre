@@ -107,7 +107,7 @@ create_report <- function(family, samples, type){
     
     # Column19 - Omim_phenotype
     # Column20 - Omim_inheritance 
-    omim_map_file <- paste0(default_tables_path,"/OMIM_hgnc_join_omim_phenos_2021-10-19.tsv")
+    omim_map_file <- paste0(default_tables_path,"/OMIM_hgnc_join_omim_phenos_2025-01-06.tsv")
     if(file.exists(omim_map_file)){
     # read in tsv
     hgnc_join_omim_phenos <- read.delim(omim_map_file, stringsAsFactors=FALSE)

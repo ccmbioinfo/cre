@@ -102,7 +102,9 @@ sQuery="select \
         $noncoding_anno, \
         gts, \
         c4r_wes_counts as C4R_WES_counts, \
-        c4r_wes_samples as C4R_WES_samples,"
+        c4r_wes_samples as C4R_WES_samples, \
+        CMP_samples as CMP_samples, \
+        CMP_samples_counts as CMP_samples_counts"
 
 while read sample
 do

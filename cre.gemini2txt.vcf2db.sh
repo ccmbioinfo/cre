@@ -43,16 +43,9 @@ fi
 
 if [[ "$type" == 'wgs' || "$type" == 'denovo' ]]
 then
-    noncoding_anno="uce_100bp as UCE_100bp, uce_200bp as UCE_200bp,
-            dnasei_hypersensitive_site as DNaseI_hypersensitive_site,
-            ctcf_binding_site as CTCF_binding_site, 
-            enh_cellline_tissue as ENH_cellline_tissue,
-            tf_binding_sites as TF_binding_sites,
-            GreenDB_variant_type as GreenDB_variant_type,
+    noncoding_anno="GreenDB_variant_type as GreenDB_variant_type,
             GreenDB_closest_gene as GreenDB_closest_gene,
-            GreenDB_controlled_gene as GreenDB_controlled_gene,
-            c4r_wgs_counts as C4R_WGS_counts,
-            c4r_wgs_samples as C4R_WGS_samples"
+            GreenDB_controlled_gene as GreenDB_controlled_gene"
     noncoding_scores="ncER as ncER_score, ReMM as ReMM_score, LinSight_Score as LINSIGHT_score"
 else
     noncoding_anno="00 as noncoding"
@@ -77,13 +70,32 @@ sQuery="select \
         exon as Exon,\
         domains as Protein_domains,\
         rs_ids as rsIDs,\
-        gnomad_af as Gnomad_af,\
-        gnomad_af_grpmax as Gnomad_af_grpmax,\
-        gnomad_ac as Gnomad_ac,\
-        gnomad_hom as Gnomad_hom,\
-	    gnomad_male_ac as Gnomad_male_ac, \
-        gnomad_fafmax_faf95_max as Gnomad_fafmax_faf95_max, \
-        gnomad_filter as Gnomad_filter, \
+        gnomad_exome_af as gnomad_exome_af, \
+        gnomad_exome_nhomalt as gnomad_exome_nhomalt,\
+        gnomad_exome_af_popmax as gnomad_exome_af_popmax,\
+        gnomad_exome_af_nfe as gnomad_exome_af_nfe,\
+        gnomad_exome_af_afr as gnomad_exome_af_afr,\
+        gnomad_exome_af_amr as gnomad_exome_af_amr,\
+        gnomad_exome_af_eas as gnomad_exome_af_eas,\
+        gnomad_exome_af_asj as gnomad_exome_af_asj, \
+        gnomad_exome_af_fin as gnomad_exome_af_fin, \
+        gnomad_exome_af_oth as gnomad_exome_af_oth, \
+        gnomad_genome_af as gnomad_genome_af,\
+        gnomad_genome_nhomalt as gnomad_genome_nhomalt,\
+        gnomad_genome_af_popmax as gnomad_genome_af_popmax,\
+        gnomad_genome_af_nfe as gnomad_genome_af_nfe,\
+        gnomad_genome_af_afr as gnomad_genome_af_afr,\
+        gnomad_genome_af_amr as gnomad_genome_af_amr,\
+        gnomad_genome_af_eas as gnomad_genome_af_eas,\
+        gnomad_genome_af_asj as gnomad_genome_af_asj,\
+        gnomad_genome_af_fin as gnomad_genome_af_fin,\
+        gnomad_genome_af_oth as gnomad_genome_af_oth,\
+        af_1kg as af_1kg, \
+        af_afr_1kg as af_afr_1kg, \
+        af_amr_1kg as af_amr_1kg, \
+        af_eas_1kg as af_eas_1kg, \
+        af_eur_1kg as af_eur_1kg, \
+        af_sas_1kg as af_sas_1kg, \
         sift_score as Sift_score,\
         polyphen_score as Polyphen_score,\
         cadd_phred as Cadd_score,\
@@ -92,19 +104,13 @@ sQuery="select \
         gerp_score as Gerp_score,\
         AlphaMissense as AlphaMissense,\
         $noncoding_scores, \
-        AlphaMissense as AlphaMissense,\
         aa_change as AA_change,\
         hgvsc as Codon_change,\
         "$callers" as Callers,\
         phylop30way_mammalian as Conserved_in_30_mammals,\
         COALESCE(spliceai_score, '') as SpliceAI_score, \
-        uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
         $noncoding_anno, \
-        gts, \
-        c4r_wes_counts as C4R_WES_counts, \
-        c4r_wes_samples as C4R_WES_samples, \
-        CMP_samples as CMP_samples, \
-        CMP_samples_counts as CMP_samples_counts"
+        gts,"
 
 while read sample
 do
@@ -134,8 +140,8 @@ sQuery=$sQuery"hgvsc as Nucleotide_change_ensembl,\
 initialQuery=$sQuery # keep the field selection part for later use
 
 #max_aaf_all frequency is from gemini.conf and does not include gnomad WGS frequency, gnomad WES only
-#gnomad_fafmax_faf95_max is joint gnomad FAF
-sQuery=$sQuery" where gnomad_fafmax_faf95_max <= "${max_af}" "$caller_filter""${severity_filter}""
+#gnomad_genome_af_popmax includes gnomad WGS. Use genome af_popmax to filter 
+sQuery=$sQuery" where gnomad_genome_af_popmax <= "${max_af}" "$caller_filter""${severity_filter}""
 
 s_gt_filter=''
 # denovo 0/1 is exported in cre.sh
@@ -167,14 +173,14 @@ else
 
     # also get the clinvar variants (duplicates will be removed later)
     cQuery=$initialQuery
-    cQuery=$cQuery" where gnomad_fafmax_faf95_max <= ${max_af} "$caller_filter" and Clinvar <> ''"
+    cQuery=$cQuery" where gnomad_genome_af_popmax <= ${max_af} "$caller_filter" and Clinvar <> ''"
     # only get variants where AD >= 1 (any sample with an alternate read)
     c_gt_filter="(gt_alt_depths).(*).(>=1).(any) or (gt_alt_depths).(*).(==-1).(all)"
     gemini query -q "$cQuery" --gt-filter "$c_gt_filter" $file
 
     # if allele frequency is > 1% and Clinvar is pathogenic, likely pathogenic or conflicting and any status except for no assertion
     cQuery=$initialQuery
-    cQuery=$cQuery" where gnomad_fafmax_faf95_max > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity')"
+    cQuery=$cQuery" where gnomad_genome_af_popmax > ${max_af} "$caller_filter" and Clinvar_status != 'no_assertion_criteria_provided' and Clinvar in ('Pathogenic', 'Likely_pathogenic', 'Conflicting_interpretations_of_pathogenicity')"
     gemini query -q "$cQuery" $file
 
 fi

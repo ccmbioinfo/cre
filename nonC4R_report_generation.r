@@ -163,12 +163,12 @@ create_report <- function(family, samples, type){
 
     # population frequencies
     # Column34 = Gnomad_af
-    # Column35 = Gnomad_af_popmax
+    # Column35 = Gnomad_af_grpmax
     
     # Gnomad gene constraint scores
     # Column36 = Gnomad_oe_lof_score
     # Column37 = Gnomad_oe_mis_score
-    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores.csv")
+    gnomad_scores_file <- paste0(default_tables_path, "/gnomad_scores_v4.1.csv")
     gnomad_scores <- read.csv(gnomad_scores_file, stringsAsFactors = F)
     variants <- merge(variants, gnomad_scores, all.x = T, all.y = F)
 
@@ -304,7 +304,7 @@ create_report <- function(family, samples, type){
     # Column 57: ENH_cellline_tissue
         
     # replace -1 with 0
-    for (field in c("Gnomad_af", "Gnomad_af_popmax")){
+    for (field in c("Gnomad_af", "Gnomad_af_grpmax", "Gnomad_fafmax_faf95_max")){
         variants[,field] <- with(variants, gsub("-1", "0", get(field), fixed = T))
         variants[,field] <- with(variants, gsub("None", "0", get(field), fixed = T))
     }
@@ -343,19 +343,40 @@ select_and_write2 <- function(variants, samples, prefix, type){
         wgs_counts <- c()
         noncoding_scores <- c()
         }
+    variants_column_check = c(c("Position", "UCSC_Link", "GNOMAD_Link", "Ref", "Alt"),
+                          c("Gene"),
+                          c("gts", "Variation", "Info", "Refseq_change", "Depth", "Quality"),
+                          c("Ensembl_gene_id", "Gene_description", "omim_phenotype", "omim_inheritance",
+                            "Orphanet", "Clinvar"), 
+                            c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
+                            "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max", "Gnomad_filter",
+                            "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
+                            "Gnomad_oe_lof_score", "Gnomad_oe_ci_lower","Gnomad_oe_ci_upper", "Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
+                            "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score", "AlphaMissense"),
+                            noncoding_scores,
+                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
+                            "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols,
+                            "CMP_samples", "CMP_samples_counts")
+
+    print("CHECK! Print columns not in report")
+    print(setdiff(variants_column_check, colnames(variants)) )
+
+    # set column order
     variants <- variants[c(c("Position", "UCSC_Link", "GNOMAD_Link", "Ref", "Alt"),
                           c("Gene"),
                           c("gts", "Variation", "Info", "Refseq_change", "Depth", "Quality"),
                           c("Ensembl_gene_id", "Gene_description", "omim_phenotype", "omim_inheritance",
-                            "Orphanet", "Clinvar"), c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
-                            "Gnomad_af_popmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom",
+                            "Orphanet", "Clinvar"), 
+                            c("HGMD_id", "HGMD_gene", "HGMD_tag", "HGMD_ref",
+                            "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max", "Gnomad_filter",
                             "Ensembl_transcript_id", "AA_position", "Exon", "Protein_domains", "rsIDs",
-                            "Gnomad_oe_lof_score", "Gnomad_oe_mis_score", "Exac_pli_score", "Exac_prec_score", "Exac_pnull_score",
+                            "Gnomad_oe_lof_score","Gnomad_oe_ci_lower","Gnomad_oe_ci_upper", "Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
                             "Conserved_in_30_mammals", "SpliceAI_impact", "SpliceAI_score", "Sift_score", "Polyphen_score", "Cadd_score", "Vest4_score", "Revel_score", "Gerp_score", "AlphaMissense"),
-                           noncoding_scores,
-                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal", "Gnomad_male_ac",
-                            "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols)]
-  
+                            noncoding_scores,
+                            c("Imprinting_status", "Imprinting_expressed_allele", "Pseudoautosomal",
+                            "Old_multiallelic", "UCE_100bp", "UCE_200bp"), noncoding_cols,
+                            "CMP_samples", "CMP_samples_counts" )]
+
     variants <- variants[order(variants$Position),]
 
     if (type == 'denovo'){
@@ -469,16 +490,22 @@ clean_and_output_report <- function(out){
                    'Variation','Info','Refseq_change','Depth','Quality',
                    'Ensembl_gene_id','Gene_description','omim_phenotype','omim_inheritance',
                    'Orphanet','Clinvar','HGMD_id','HGMD_tag','HGMD_ref','HGMD_gene',
-                   'Gnomad_af_popmax','Gnomad_af','Gnomad_ac','Gnomad_hom',
+                   "Gnomad_af_grpmax", "Gnomad_af", "Gnomad_ac", "Gnomad_hom","Gnomad_male_ac","Gnomad_fafmax_faf95_max", "Gnomad_filter",
                    'Ensembl_transcript_id','AA_position','Exon','Protein_domains','rsIDs',
-                   'Gnomad_oe_lof_score','Gnomad_oe_mis_score','Exac_pli_score','Exac_prec_score','Exac_pnull_score',
+                   "Gnomad_oe_lof_score", "Gnomad_oe_ci_lower","Gnomad_oe_ci_upper", "Gnomad_oe_mis_score", "Gnomad_mis_z_score","Gnomad_pLI_score","Gnomad_pnull_score","Gnomad_prec_score",
                    'Conserved_in_30_mammals','SpliceAI_impact','SpliceAI_score','Sift_score','Polyphen_score','Cadd_score',
-                   'Vest4_score','Revel_score','Gerp_score', 'AlphaMissense', 'ncER_score', 'ReMM_score',               
-                   'LINSIGHT_score', 'Imprinting_status','Imprinting_expressed_allele','Pseudoautosomal',
-                   'Gnomad_male_ac','Old_multiallelic','UCE_100bp','UCE_200bp','DNaseI_hypersensitive_site','CTCF_binding_site',
-                   'ENH_cellline_tissue','TF_binding_sites',"GreenDB_variant_type", "GreenDB_closest_gene", "GreenDB_controlled_gene")
+                   'Vest4_score','Revel_score','Gerp_score', 'AlphaMissense', 
+                   'ncER_score', 'ReMM_score', 'LINSIGHT_score', 
+                   'Imprinting_status','Imprinting_expressed_allele','Pseudoautosomal',
+                   'Old_multiallelic','UCE_100bp','UCE_200bp','DNaseI_hypersensitive_site','CTCF_binding_site',
+                   'ENH_cellline_tissue','TF_binding_sites',"GreenDB_variant_type", "GreenDB_closest_gene", "GreenDB_controlled_gene",
+                   "CMP_samples", "CMP_samples_counts")
+                   
+  print("CHECK! Print columns not in final output")
+  print(setdiff(column_order, colnames(out)) )
+
   out = out[,column_order]
-  
+
   write.csv(out, paste0(family,".", type, ".", datetime,".csv"), row.names = F)
 }
 
@@ -487,7 +514,6 @@ library(stringr)
 library(data.table)
 library(plyr)
 library(dplyr)
-default_tables_path <- "~/cre/data"
 
 # R substitutes "-" with "." in sample names in columns so fix this in samples.txt
 # sample names starting with letters should be prefixed by X in *.table
@@ -496,6 +522,7 @@ default_tables_path <- "~/cre/data"
 args <- commandArgs(trailingOnly = T)
 print(args)
 family <- args[1]
+default_tables_path <- args[4]
 
 coding <- if(is.null(args[2])) T else F
 coding <- F

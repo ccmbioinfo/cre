@@ -100,11 +100,11 @@ sQuery="select \
         COALESCE(spliceai_score, '') as SpliceAI_score, \
         uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
         $noncoding_anno, \
-        gts, \
         c4r_wes_counts as C4R_WES_counts, \
         c4r_wes_samples as C4R_WES_samples, \
         CMP_samples as CMP_samples, \
-        CMP_samples_counts as CMP_samples_counts"
+        CMP_samples_counts as CMP_samples_counts, \
+        gts,"
 
 while read sample
 do

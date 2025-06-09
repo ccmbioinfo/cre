@@ -247,7 +247,7 @@ function f_make_report
 
     echo GENERATING REPORT WITH TYPE: "${type}"
 
-    Rscript $cre/nonC4R_report_generation.r $family "${type}" "${database}"
+    Rscript $cre/nonC4R_report_generation.r $family "${type}" "${database}" "${cre}/data"
 
     
     cd $family
@@ -300,7 +300,7 @@ fi
 # set path to cre
 if [ -z $cre ]
 then
-    cre=~/cre
+    cre=/hpf/largeprojects/ccmbio/pxu/cre
 fi
 
 if [ $cleanup -eq 1 ]

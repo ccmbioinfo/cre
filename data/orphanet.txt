@@ -3,7 +3,7 @@ ENSG00000000419	dolichyl-phosphate mannosyltransferase subunit 1, catalytic
 ENSG00000000971	Atypical hemolytic uremic syndrome with complement gene abnormality,CD46 molecule,complement factor H,complement factor I,complement factor I,Dense deposit disease,Immunoglobulin-mediated membranoproliferative glomerulonephritis
 ENSG00000001084	glutamate-cysteine ligase catalytic subunit,serpin family A member 1
 ENSG00000001497	histone deacetylase 8,LAS1 like ribosome biogenesis factor
-ENSG00000001626	adhesion G protein-coupled receptor G2,calcium sensing receptor,CF transmembrane conductance regulator,CF transmembrane conductance regulator,serpin family A member 1,sperm associated antigen 17
+ENSG00000001626	adhesion G protein-coupled receptor G2,CF transmembrane conductance regulator,CF transmembrane conductance regulator,serine peptidase inhibitor Kazal type 1,serpin family A member 1,sperm associated antigen 17
 ENSG00000001630	cytochrome P450 family 51 subfamily A member 1
 ENSG00000001631	CCM2 scaffold protein
 ENSG00000003137	cytochrome P450 family 26 subfamily B member 1
@@ -13,14 +13,15 @@ ENSG00000004399	plexin D1,T-box transcription factor 1
 ENSG00000004455	adenylate kinase 2
 ENSG00000004487	lysine demethylase 1A,lysine demethylase 1A
 ENSG00000004838	NME/NM23 family member 5
-ENSG00000004848	aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,Dmx like 2,neurotrophic receptor tyrosine kinase 2,X-linked non-syndromic intellectual disability
+ENSG00000004848	aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,aristaless related homeobox,Dmx like 2,sodium voltage-gated channel alpha subunit 2,X-linked non-syndromic intellectual disability
 ENSG00000004864	solute carrier family 25 member 13,solute carrier family 25 member 13
 ENSG00000004939	Autosomal dominant distal renal tubular acidosis,Distal renal tubular acidosis with anemia,solute carrier family 4 member 1 (Diego blood group),solute carrier family 4 member 1 (Diego blood group),solute carrier family 4 member 1 (Diego blood group),solute carrier family 4 member 1 (Diego blood group)
 ENSG00000004961	holocytochrome c synthase
+ENSG00000005007	Disorder-associated locus
 ENSG00000005073	MDS1 and EVI1 complex locus
 ENSG00000005102	growth differentiation factor 3
 ENSG00000005156	DNA polymerase gamma, catalytic subunit
-ENSG00000005339	CREB binding protein,CREB binding protein,Rubinstein-Taybi syndrome due to 16p13.3 microdeletion,Rubinstein-Taybi syndrome due to CREBBP mutations
+ENSG00000005339	CREB binding lysine acetyltransferase,CREB binding lysine acetyltransferase,Rubinstein-Taybi syndrome due to 16p13.3 microdeletion,Rubinstein-Taybi syndrome due to CREBBP mutations
 ENSG00000005379	tyrosine hydroxylase
 ENSG00000005381	myeloperoxidase
 ENSG00000005421	cyclin F
@@ -35,6 +36,7 @@ ENSG00000006062	mitogen-activated protein kinase kinase kinase 14
 ENSG00000006071	ATP binding cassette subfamily C member 8,ATP binding cassette subfamily C member 8,ATP binding cassette subfamily C member 8,ATP binding cassette subfamily C member 8,ATP binding cassette subfamily C member 8,ATP binding cassette subfamily C member 8,signal transducer and activator of transcription 3
 ENSG00000006283	calcium voltage-gated channel subunit alpha1 G
 ENSG00000006377	distal-less homeobox 6
+ENSG00000006451	zinc finger MIZ-type containing 1
 ENSG00000006468	ETS transcription factor ERG
 ENSG00000006530	Total early-onset cataract,triokinase and FMN cyclase
 ENSG00000006611	Disease-causing germline mutation(s) in,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
@@ -47,14 +49,14 @@ ENSG00000006744	cadherin 1,elaC ribonuclease Z 2
 ENSG00000007062	cyclic nucleotide gated channel subunit beta 3,prominin 1,retinitis pigmentosa GTPase regulator,S-phase cyclin A associated protein in the ER
 ENSG00000007168	doublecortin,HIC ZBTB transcriptional repressor 1,platelet activating factor acetylhydrolase 1b regulatory subunit 1,platelet activating factor acetylhydrolase 1b regulatory subunit 1
 ENSG00000007174	ankyrin repeat and sterile alpha motif domain containing 3,NME/NM23 family member 5,polycystin 1 like 1, transient receptor potential channel interacting
-ENSG00000007312	Autosomal agammaglobulinemia
+ENSG00000007312	Autosomal non-syndromic agammaglobulinemia
 ENSG00000007314	Postsynaptic congenital myasthenic syndromes,sodium voltage-gated channel alpha subunit 4,sodium voltage-gated channel alpha subunit 4,sodium voltage-gated channel alpha subunit 4,sodium voltage-gated channel alpha subunit 4,sodium voltage-gated channel alpha subunit 4,sodium voltage-gated channel alpha subunit 4
 ENSG00000007372	actin gamma 1,actin gamma 1,forkhead box C1,frizzled class receptor 5,frizzled class receptor 5,frizzled class receptor 5,frizzled class receptor 5,inositol 1,4,5-trisphosphate receptor type 1,paired box 6,paired box 6,paired box 6,paired box 6,WT1 transcription factor
 ENSG00000007541	Dmx like 2
 ENSG00000007933	flavin containing dimethylaniline monoxygenase 3
 ENSG00000008056	synapsin I
 ENSG00000008083	zinc finger MIZ-type containing 1
-ENSG00000008086	cyclin dependent kinase like 5,Dmx like 2,methyl-CpG binding protein 2,neurotrophic receptor tyrosine kinase 2
+ENSG00000008086	cyclin dependent kinase like 5,Dmx like 2,methyl-CpG binding protein 2,sodium voltage-gated channel alpha subunit 2
 ENSG00000008196	transcription factor AP-2 beta,transcription factor AP-2 beta
 ENSG00000008226	WW domain containing oxidoreductase
 ENSG00000008311	aminoadipate-semialdehyde synthase,aminoadipate-semialdehyde synthase
@@ -78,7 +80,7 @@ ENSG00000011021	chloride voltage-gated channel 6
 ENSG00000011143	Abelson helper integration site 1,Bardet-Biedl syndrome 1,centrosomal protein 120,thioredoxin domain containing 15
 ENSG00000011198	abhydrolase domain containing 5, lysophosphatidic acid acyltransferase
 ENSG00000011201	Kallmann syndrome
-ENSG00000011275	patatin like phospholipase domain containing 6
+ENSG00000011275	patatin like domain 6, lysophospholipase
 ENSG00000011295	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
 ENSG00000011376	leucyl-tRNA synthetase 2, mitochondrial,Perrault syndrome type 1,Perrault syndrome type 2
 ENSG00000011405	phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 alpha
@@ -86,13 +88,14 @@ ENSG00000011426	membrane associated guanylate kinase, WW and PDZ domain containi
 ENSG00000011465	decorin
 ENSG00000011600	triggering receptor expressed on myeloid cells 2
 ENSG00000011677	calcium voltage-gated channel subunit alpha1 S
-ENSG00000012048	BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA1 DNA repair associated,cadherin 1,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,phosphatase and tensin homolog,RAD51 recombinase
+ENSG00000012048	BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA1 DNA repair associated,cadherin 1,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,phosphatase and tensin homolog,RAD51 recombinase
 ENSG00000012061	Cockayne syndrome type 2,COFS syndrome
 ENSG00000012174	membrane bound transcription factor peptidase, site 2,membrane bound transcription factor peptidase, site 2,membrane bound transcription factor peptidase, site 2,Osteogenesis imperfecta type 1,Osteogenesis imperfecta type 3,Osteogenesis imperfecta type 4,p53 apoptosis effector related to PMP22
 ENSG00000012232	exostosin like glycosyltransferase 3
 ENSG00000012504	nuclear receptor subfamily 1 group H member 4,Progressive familial intrahepatic cholestasis type 5
 ENSG00000012660	ELOVL fatty acid elongase 5
 ENSG00000012963	zinc finger MIZ-type containing 1
+ENSG00000013288	mannosidase alpha class 2B member 2
 ENSG00000013293	S-phase cyclin A associated protein in the ER
 ENSG00000013375	phosphoglucomutase 3
 ENSG00000013503	Hypomyelination-hypogonadotropic hypogonadism-hypodontia syndrome,RNA polymerase III subunit B
@@ -103,11 +106,11 @@ ENSG00000014216	calpain 1
 ENSG00000014824	solute carrier family 30 member 9
 ENSG00000014919	synthesis of cytochrome C oxidase 1
 ENSG00000015133	coiled-coil domain containing 88C,Congenital non-communicating hydrocephalus
-ENSG00000015171	zinc finger MIZ-type containing 1,zinc finger MYND-type containing 11
+ENSG00000015171	ZMYND11-related developmental delay-speech delay-seizures-behavioral abnormalities-craniofacial dysmorphism syndrome due to 10p15.3 microdeletion,ZMYND11-related developmental delay-speech delay-seizures-behavioral abnormalities-craniofacial dysmorphism syndrome due to a point mutation
 ENSG00000015285	WASP actin nucleation promoting factor,WASP actin nucleation promoting factor,X-linked thrombocytopenia with normal platelets
 ENSG00000015479	cyclin F,matrin 3
 ENSG00000015532	xylosyltransferase 2
-ENSG00000016082	Bladder exstrophy
+ENSG00000016082	Classic bladder exstrophy
 ENSG00000016602	serpin family A member 1
 ENSG00000016864	cyclin F
 ENSG00000017260	ATPase secretory pathway Ca2+ transporting 1
@@ -132,10 +135,11 @@ ENSG00000022355	ciliogenesis associated kinase 1,gamma-aminobutyric acid type A 
 ENSG00000023228	transmembrane protein 126B
 ENSG00000023445	MALT1 paracaspase
 ENSG00000023839	ATP binding cassette subfamily C member 2
+ENSG00000025039	Ras related GTP binding D
 ENSG00000025708	DNA polymerase gamma, catalytic subunit
 ENSG00000025796	PRKCSH beta subunit of glucosidase II
 ENSG00000026025	FosB proto-oncogene, AP-1 transcription factor subunit,Pulverulent cataract
-ENSG00000026103	caspase 10,caspase 10,Fas cell surface death receptor,interleukin 10
+ENSG00000026103	caspase 10,caspase 10,interleukin 10,major histocompatibility complex, class II, DR beta 1
 ENSG00000026297	NADH:ubiquinone oxidoreductase subunit A2
 ENSG00000027001	mitochondrial intermediate peptidase
 ENSG00000027697	interferon gamma receptor 1,interferon gamma receptor 1,interferon gamma receptor 1,interleukin 10
@@ -145,10 +149,11 @@ ENSG00000029534	ankyrin 1,solute carrier family 4 member 1 (Diego blood group)
 ENSG00000029639	Rare mitochondrial non-syndromic sensorineural deafness
 ENSG00000030066	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000030304	Postsynaptic congenital myasthenic syndromes,solute carrier family 18 member A3
+ENSG00000030419	IKAROS family zinc finger 2,IKAROS family zinc finger 2
 ENSG00000030582	granulin precursor,presenilin 1,transmembrane protein 106B,transmembrane protein 106B
 ENSG00000031081	notch receptor 1
 ENSG00000031698	Autosomal recessive non-syndromic intellectual disability,Autosomal recessive primary microcephaly
-ENSG00000032444	patatin like phospholipase domain containing 6,patatin like phospholipase domain containing 6,patatin like phospholipase domain containing 6,patatin like phospholipase domain containing 6,patatin like phospholipase domain containing 6
+ENSG00000032444	patatin like domain 6, lysophospholipase,patatin like domain 6, lysophospholipase,patatin like domain 6, lysophospholipase,patatin like domain 6, lysophospholipase,patatin like domain 6, lysophospholipase
 ENSG00000032742	S-phase cyclin A associated protein in the ER
 ENSG00000033011	ALG1 chitobiosyldiphosphodolichol beta-mannosyltransferase
 ENSG00000033627	zinc finger MIZ-type containing 1
@@ -159,7 +164,7 @@ ENSG00000035928	replication factor C subunit 1
 ENSG00000036257	Pseudohypoaldosteronism type 2E,zinc finger MIZ-type containing 1
 ENSG00000036473	ornithine transcarbamylase
 ENSG00000036828	Autosomal dominant hypocalcemia,calcium sensing receptor,Familial hypocalciuric hypercalcemia type 1,transient receptor potential cation channel subfamily V member 6
-ENSG00000037280	angiopoietin 2,kinase insert domain receptor
+ENSG00000037280	fms related receptor tyrosine kinase 4,kinase insert domain receptor
 ENSG00000037474	Autosomal recessive non-syndromic intellectual disability,DNA ligase 4
 ENSG00000038002	aspartylglucosaminidase
 ENSG00000038295	Atrial septal defect, ostium primum type,Atrial septal defect, ostium secundum type
@@ -185,6 +190,7 @@ ENSG00000044115	cadherin 1,peripherin 2
 ENSG00000044446	phosphorylase kinase regulatory subunit alpha 2
 ENSG00000046604	Inherited isolated arrhythmogenic cardiomyopathy, dominant-left variant,Inherited isolated arrhythmogenic cardiomyopathy, dominant-right variant,Inherited isolated arrhythmogenic ventricular dysplasia, biventricular variant,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000046651	centrosomal protein 120,family with sequence similarity 149 member B1,NME/NM23 family member 5,OFD1 centriole and centriolar satellite protein,S-phase cyclin A associated protein in the ER
+ENSG00000047056	WD repeat domain 37
 ENSG00000047410	Autosomal recessive non-syndromic intellectual disability,B-Raf proto-oncogene, serine/threonine kinase
 ENSG00000047457	ceruloplasmin
 ENSG00000047578	centrosomal protein 120
@@ -253,7 +259,7 @@ ENSG00000061938	tyrosine kinase non receptor 2
 ENSG00000062038	cadherin 3,cadherin 3
 ENSG00000062282	diacylglycerol O-acyltransferase 2
 ENSG00000062598	engulfment and cell motility 2,engulfment and cell motility 2
-ENSG00000062822	bone morphogenetic protein receptor type 1A,DNA polymerase delta 1, catalytic subunit,Polymerase proofreading-related adenomatous polyposis
+ENSG00000062822	bone morphogenetic protein receptor type 1A,DNA polymerase delta 1, catalytic subunit,DNA polymerase epsilon, catalytic subunit
 ENSG00000063177	ribosomal protein L18
 ENSG00000064012	axin 1,caspase 8
 ENSG00000064195	distal-less homeobox 3,Hypomaturation-hypoplastic amelogenesis imperfecta with taurodontism
@@ -268,7 +274,7 @@ ENSG00000064835	forkhead box A2,Isolated growth hormone deficiency type II,POU c
 ENSG00000064933	mutS homolog 6
 ENSG00000064989	Non-immune hydrops fetalis
 ENSG00000065000	adaptor related protein complex 3 subunit delta 1,adaptor related protein complex 3 subunit delta 1,Early-onset severe Hermansky-Pudlak syndrome with hearing loss, due to AP3D1 deficiency
-ENSG00000065057	NTHL1-related attenuated familial adenomatous polyposis
+ENSG00000065057	nth like DNA glycosylase 1
 ENSG00000065135	G protein subunit alpha i3
 ENSG00000065154	ornithine aminotransferase
 ENSG00000065320	dynein axonemal light chain 4
@@ -282,7 +288,7 @@ ENSG00000065923	X-linked non-syndromic intellectual disability
 ENSG00000066117	AT-rich interaction domain 2
 ENSG00000066230	guanylate cyclase 2C,serpin family A member 1
 ENSG00000066279	Autosomal recessive primary microcephaly
-ENSG00000066336	Autosomal agammaglobulinemia
+ENSG00000066336	Autosomal non-syndromic agammaglobulinemia
 ENSG00000066427	Machado-Joseph disease type 1,Machado-Joseph disease type 2,Machado-Joseph disease type 3
 ENSG00000066455	B-Raf proto-oncogene, serine/threonine kinase
 ENSG00000066468	Antley-Bixler syndrome without genital anomaly or disorder of steroidogenesis,fibroblast growth factor 10,fibroblast growth factor receptor 2,fibroblast growth factor receptor 2,fibroblast growth factor receptor 2,fibroblast growth factor receptor 2,fibroblast growth factor receptor 2,fibroblast growth factor receptor 2,fibroblast growth factor receptor 3,Pfeiffer syndrome type 1,Pfeiffer syndrome type 2,Pfeiffer syndrome type 3
@@ -295,7 +301,7 @@ ENSG00000067177	phosphorylase kinase regulatory subunit alpha 1
 ENSG00000067182	MEFV innate immunity regulator, pyrin,TNF receptor superfamily member 1A
 ENSG00000067560	ras homolog family member A
 ENSG00000067606	arginine-glutamic acid dipeptide repeats
-ENSG00000067704	isoleucyl-tRNA synthetase 2, mitochondrial
+ENSG00000067704	isoleucyl-tRNA synthetase 2, mitochondrial,isoleucyl-tRNA synthetase 2, mitochondrial
 ENSG00000067715	synaptotagmin 1
 ENSG00000067836	solute carrier family 13 member 5
 ENSG00000067842	ATPase plasma membrane Ca2+ transporting 3
@@ -313,7 +319,7 @@ ENSG00000068438	X-linked non-syndromic intellectual disability
 ENSG00000068615	receptor accessory protein 1,receptor accessory protein 1
 ENSG00000068650	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,surfactant protein A1
 ENSG00000068654	RNA polymerase I subunit A
-ENSG00000068724	tetratricopeptide repeat domain 7A,tetratricopeptide repeat domain 7A
+ENSG00000068724	tetratricopeptide repeat domain 7A
 ENSG00000068831	RAS guanyl releasing protein 2
 ENSG00000068885	intraflagellar transport 80,intraflagellar transport 80,KIAA0753
 ENSG00000068976	glycogen phosphorylase, muscle associated
@@ -333,6 +339,7 @@ ENSG00000070061	elongator complex protein 1
 ENSG00000070159	BRCA1 DNA repair associated
 ENSG00000070182	solute carrier family 4 member 1 (Diego blood group),spectrin alpha, erythrocytic 1
 ENSG00000070193	fibroblast growth factor 10,fibroblast growth factor 10
+ENSG00000070269	transmembrane protein 260
 ENSG00000070371	clathrin heavy chain like 1
 ENSG00000070610	glucosylceramidase beta 2,glucosylceramidase beta 2
 ENSG00000070614	Autosomal recessive non-syndromic intellectual disability
@@ -349,7 +356,8 @@ ENSG00000071082	ribosomal protein L18
 ENSG00000071127	WD repeat domain 1
 ENSG00000071462	syntaxin 1A
 ENSG00000071539	BRCA2 DNA repair associated,thyroid hormone receptor interactor 13
-ENSG00000071564	Autosomal agammaglobulinemia,B-lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3),B-lymphoblastic leukemia/lymphoma with t(17;19)
+ENSG00000071553	ATPase H+ transporting accessory protein 1
+ENSG00000071564	Autosomal non-syndromic agammaglobulinemia,B-lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3),B-lymphoblastic leukemia/lymphoma with t(17;19)
 ENSG00000071859	zinc finger MIZ-type containing 1
 ENSG00000072042	retinol dehydrogenase 11
 ENSG00000072062	DnaJ heat shock protein family (Hsp40) member B1,dynein cytoplasmic 2 light intermediate chain 1
@@ -371,18 +379,19 @@ ENSG00000072778	acyl-CoA dehydrogenase very long chain
 ENSG00000072803	zinc finger MIZ-type containing 1
 ENSG00000072840	dynein cytoplasmic 2 light intermediate chain 1,EvC ciliary complex subunit 1
 ENSG00000072864	Lissencephaly syndrome, Norman-Roberts type,nudE neurodevelopment protein 1,nudE neurodevelopment protein 1
+ENSG00000073060	cholesteryl ester transfer protein
 ENSG00000073111	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000073146	sperm associated antigen 17
-ENSG00000073282	Ankyloblepharon filiforme adnatum-cleft palate syndrome,Bladder exstrophy,distal-less homeobox 6,msh homeobox 1,Rho GTPase activating protein 29,tumor protein p63,tumor protein p63,tumor protein p63,tumor protein p63
+ENSG00000073282	Ankyloblepharon filiforme adnatum-cleft palate syndrome,Classic bladder exstrophy,distal-less homeobox 6,msh homeobox 1,Rho GTPase activating protein 29,tumor protein p63,tumor protein p63,tumor protein p63,tumor protein p63
 ENSG00000073331	alpha kinase 1
 ENSG00000073464	chloride voltage-gated channel 4,X-linked non-syndromic intellectual disability
-ENSG00000073578	solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex flavoprotein subunit A,TATA-box binding protein associated factor, RNA polymerase I subunit A
-ENSG00000073584	AT-rich interaction domain 2,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000073578	platelet derived growth factor receptor alpha,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,TATA-box binding protein associated factor, RNA polymerase I subunit A
+ENSG00000073584	AT-rich interaction domain 2,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000073734	Benign recurrent intrahepatic cholestasis type 2,nuclear receptor subfamily 1 group H member 4,Progressive familial intrahepatic cholestasis type 2
 ENSG00000073921	ABL proto-oncogene 1, non-receptor tyrosine kinase
 ENSG00000074047	Alobar holoprosencephaly,fibroblast growth factor receptor 1,forkhead box A2,GLI family zinc finger 2,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000074181	notch receptor 3,notch receptor 3,notch receptor 3
-ENSG00000074266	embryonic ectoderm development,PRC-2 complex-related overgrowth spectrum
+ENSG00000074266	embryonic ectoderm development
 ENSG00000074410	carbonic anhydrase 12
 ENSG00000074582	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone,BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone,BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone,BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
 ENSG00000074621	rhodopsin
@@ -406,13 +415,14 @@ ENSG00000076248	Hyper-IgM syndrome type 5
 ENSG00000076351	solute carrier family 46 member 1
 ENSG00000076685	5'-nucleotidase, cytosolic II
 ENSG00000076716	glypican 3,glypican 4
+ENSG00000076928	Rho guanine nucleotide exchange factor 1
 ENSG00000076944	perforin 1
 ENSG00000077080	actin like 6B,zinc finger MIZ-type containing 1
-ENSG00000077092	signaling receptor and transporter of retinol STRA6
+ENSG00000077092	retinoic acid receptor beta
 ENSG00000077097	DNA topoisomerase II beta
-ENSG00000077150	CD19 molecule,nuclear factor kappa B subunit 2
+ENSG00000077150	nuclear factor kappa B subunit 2
 ENSG00000077152	RAD51 recombinase
-ENSG00000077264	X-linked non-syndromic intellectual disability
+ENSG00000077264	zinc finger MIZ-type containing 1
 ENSG00000077279	doublecortin,doublecortin
 ENSG00000077348	exosome component 5
 ENSG00000077463	sirtuin 6
@@ -446,7 +456,7 @@ ENSG00000079841	retinitis pigmentosa GTPase regulator
 ENSG00000079999	kelch like ECH associated protein 1
 ENSG00000080166	dopachrome tautomerase
 ENSG00000080493	Autosomal recessive proximal renal tubular acidosis
-ENSG00000080503	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2
+ENSG00000080503	SWI/SNF related BAF chromatin remodeling complex subunit ATPase 2,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 2
 ENSG00000080561	X-linked non-syndromic intellectual disability
 ENSG00000080572	NME/NM23 family member 5
 ENSG00000080603	Snf2 related CREBBP activator protein,zinc finger MIZ-type containing 1
@@ -475,7 +485,7 @@ ENSG00000082996	ring finger protein 13
 ENSG00000083067	Autosomal dominant non-syndromic intellectual disability
 ENSG00000083093	BRCA1 DNA repair associated,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,partner and localizer of BRCA2,phosphatase and tensin homolog,RAD51 recombinase
 ENSG00000083123	Classic maple syrup urine disease,Intermediate maple syrup urine disease,Intermittent maple syrup urine disease
-ENSG00000083168	CREB binding protein,lysine acetyltransferase 6A
+ENSG00000083168	CREB binding lysine acetyltransferase,lysine acetyltransferase 6A
 ENSG00000083307	grainyhead like transcription factor 2,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,visual system homeobox 1
 ENSG00000083444	Kyphoscoliotic Ehlers-Danlos syndrome due to lysyl hydroxylase 1 deficiency
 ENSG00000083535	centrosomal protein 120
@@ -494,7 +504,7 @@ ENSG00000085185	zinc finger MIZ-type containing 1
 ENSG00000085224	ATRX chromatin remodeler,ATRX chromatin remodeler,ATRX chromatin remodeler,cadherin related 23
 ENSG00000085276	MDS1 and EVI1 complex locus,MDS1 and EVI1 complex locus
 ENSG00000085382	HECT domain and ankyrin repeat containing E3 ubiquitin protein ligase 1,MYCN proto-oncogene, bHLH transcription factor
-ENSG00000085491	solute carrier family 25 member 24,solute carrier family 25 member 24
+ENSG00000085491	Gorlin-Chaudhry-Moss syndrome,Progeroid syndrome, Petty type
 ENSG00000085788	DDHD domain containing 2
 ENSG00000085840	origin recognition complex subunit 4
 ENSG00000085998	CDP-L-ribitol pyrophosphorylase A,collagen type IV alpha 1 chain,protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-),protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-),S-phase cyclin A associated protein in the ER
@@ -547,14 +557,14 @@ ENSG00000090382	ALys amyloidosis
 ENSG00000090402	sucrase-isomaltase
 ENSG00000090487	SPG21 abhydrolase domain containing, maspardin
 ENSG00000090520	glucosidase II alpha subunit
-ENSG00000090530	synthesis of cytochrome C oxidase 2
+ENSG00000090530	solute carrier family 39 member 5
 ENSG00000090534	thrombopoietin,thrombopoietin,thrombopoietin,thrombopoietin
 ENSG00000090581	Mucolipidosis type III gamma
 ENSG00000090674	mucolipin TRP cation channel 1
 ENSG00000090686	cadherin related 23,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000090776	ephrin B1
 ENSG00000090861	actin like 6B,alanyl-tRNA synthetase 1,M-phase specific PLK1 interacting protein
-ENSG00000090932	delta like canonical Notch ligand 3
+ENSG00000090932	T-box transcription factor 6
 ENSG00000091010	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000091106	NLR family CARD domain containing 4,NLR family CARD domain containing 4
 ENSG00000091127	zinc finger MIZ-type containing 1
@@ -566,7 +576,7 @@ ENSG00000091140	Pyruvate dehydrogenase E3 deficiency
 ENSG00000091262	ATP binding cassette subfamily C member 6,ATP binding cassette subfamily C member 6
 ENSG00000091409	integrin subunit alpha 6
 ENSG00000091436	mitogen-activated protein kinase kinase kinase 20,mitogen-activated protein kinase kinase kinase 20
-ENSG00000091482	Rare X-linked non-syndromic sensorineural deafness type DFN
+ENSG00000091482	Rare X-linked non-syndromic sensorineural deafness type DFN,small muscle protein X-linked
 ENSG00000091483	fumarate hydratase,fumarate hydratase,solute carrier family 25 member 11
 ENSG00000091513	transferrin
 ENSG00000091536	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
@@ -576,7 +586,7 @@ ENSG00000091651	origin recognition complex subunit 4
 ENSG00000091656	collagen type XXV alpha 1 chain
 ENSG00000091704	calcium sensing receptor
 ENSG00000091831	estrogen receptor 1
-ENSG00000091879	angiopoietin 2,Non-immune hydrops fetalis
+ENSG00000091879	Non-immune hydrops fetalis
 ENSG00000092054	Autosomal dominant myosin storage myopathy,Autosomal recessive myosin storage myopathy,Classic multiminicore myopathy,myosin heavy chain 7,myosin heavy chain 7,pleckstrin homology and RUN domain containing M2,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000092067	CCAAT enhancer binding protein epsilon,CCAAT enhancer binding protein epsilon
 ENSG00000092094	O-sialoglycoprotein endopeptidase
@@ -611,7 +621,7 @@ ENSG00000095397	Rare autosomal recessive non-syndromic sensorineural deafness ty
 ENSG00000095464	phosphodiesterase 6C,phosphodiesterase 6C
 ENSG00000095485	CWF19 like cell cycle control factor 1
 ENSG00000095574	Autosomal thrombocytopenia with normal platelets
-ENSG00000095585	Autosomal agammaglobulinemia
+ENSG00000095585	Autosomal non-syndromic agammaglobulinemia
 ENSG00000095777	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000095787	Facial dysmorphism-developmental delay-behavioral abnormalities syndrome due to 10p11.21p12.31 microdeletion,Facial dysmorphism-developmental delay-behavioral abnormalities syndrome due to WAC point mutation
 ENSG00000095970	ATP binding cassette subfamily A member 7,cyclin F,presenilin 1,transmembrane protein 106B,transmembrane protein 106B,triggering receptor expressed on myeloid cells 2
@@ -632,8 +642,8 @@ ENSG00000099810	methylthioadenosine phosphorylase
 ENSG00000099889	T-box transcription factor 1
 ENSG00000099940	synaptosome associated protein 29
 ENSG00000099942	BCR activator of RhoGEF and GTPase
-ENSG00000099949	Giant cell glioblastoma,Gliosarcoma,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,RAS related
-ENSG00000099956	AT-rich interaction domain 2,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000099949	Giant cell glioblastoma,Gliosarcoma,leucine zipper like post translational regulator 1,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,RAS related
+ENSG00000099956	AT-rich interaction domain 2,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000100014	patched 2,sperm antigen with calponin homology and coiled-coil domains 1 like,sperm antigen with calponin homology and coiled-coil domains 1 like
 ENSG00000100024	beta-ureidopropionase 1
 ENSG00000100030	BCR activator of RhoGEF and GTPase
@@ -662,7 +672,7 @@ ENSG00000100288	choline kinase beta,choline kinase beta
 ENSG00000100292	heme oxygenase 1,serpin family A member 1
 ENSG00000100294	YME1 like 1 ATPase
 ENSG00000100299	Metachromatic leukodystrophy, adult form,Metachromatic leukodystrophy, juvenile form,Metachromatic leukodystrophy, late infantile form
-ENSG00000100311	collagen type I alpha 1 chain,junctional adhesion molecule 2,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000100311	collagen type I alpha 1 chain,N-alpha-acetyltransferase 60, NatF catalytic subunit,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000100342	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000100345	myosin heavy chain 9,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,ubiquitin specific peptidase 6
 ENSG00000100346	Autosomal dominant non-syndromic intellectual disability
@@ -700,6 +710,7 @@ ENSG00000100836	poly(A) binding protein nuclear 1
 ENSG00000100883	signal recognition particle 54
 ENSG00000100888	chromodomain helicase DNA binding protein 8,chromodomain helicase DNA binding protein 8
 ENSG00000100889	phosphoenolpyruvate carboxykinase 1
+ENSG00000100890	Perrault syndrome type 1,Perrault syndrome type 2
 ENSG00000100906	Giant cell glioblastoma,Gliosarcoma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,NFKB inhibitor alpha
 ENSG00000100934	SEC23 homolog A, COPII coat complex component
 ENSG00000100983	Glutathione synthetase deficiency with 5-oxoprolinuria,Glutathione synthetase deficiency without 5-oxoprolinuria
@@ -725,7 +736,7 @@ ENSG00000101266	zinc finger MIZ-type containing 1
 ENSG00000101276	RFVT3-related riboflavin transporter deficiency
 ENSG00000101282	Anonychia congenita totalis
 ENSG00000101292	Kallmann syndrome,Normosmic congenital hypogonadotropic hypogonadism,prokineticin receptor 2,WD repeat domain 11
-ENSG00000101310	phosphatase and tensin homolog,SEC23 homolog B, COPII coat complex component
+ENSG00000101310	Cowden syndrome,SEC23 homolog B, COPII coat complex component
 ENSG00000101311	FERM domain containing kindlin 1
 ENSG00000101327	prodynorphin
 ENSG00000101333	G protein subunit alpha i3
@@ -749,6 +760,7 @@ ENSG00000101850	adaptor related protein complex 3 subunit delta 1
 ENSG00000101856	Total early-onset cataract
 ENSG00000101868	DNA polymerase alpha 1, catalytic subunit,DNA polymerase alpha 1, catalytic subunit
 ENSG00000101871	midline 1
+ENSG00000101882	NFKB activating protein
 ENSG00000101901	ALG13 UDP-N-acetylglucosaminyltransferase subunit,X-linked non-syndromic intellectual disability
 ENSG00000101916	toll like receptor 8
 ENSG00000101935	AMMECR nuclear protein 1,potassium voltage-gated channel subfamily E regulatory subunit 5
@@ -764,7 +776,7 @@ ENSG00000102024	plastin 3
 ENSG00000102030	BCL6 corepressor,N-alpha-acetyltransferase 10, NatA catalytic subunit
 ENSG00000102034	E74 like ETS transcription factor 4,Short stature due to isolated growth hormone deficiency with X-linked hypogammaglobulinemia
 ENSG00000102076	opsin 1, medium wave sensitive,opsin 1, medium wave sensitive,retinitis pigmentosa GTPase regulator
-ENSG00000102081	fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1
+ENSG00000102081	fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1,fragile X messenger ribonucleoprotein 1
 ENSG00000102100	Isolated focal cortical dysplasia type Ia,solute carrier family 35 member A2
 ENSG00000102103	Hamel cerebro-palato-cardiac syndrome,X-linked intellectual disability, Golabi-Ito-Hall type,X-linked intellectual disability, Porteous type,X-linked intellectual disability, Sutherland-Haan type
 ENSG00000102104	retinoschisin 1
@@ -782,7 +794,7 @@ ENSG00000102312	porcupine O-acyltransferase,sonic hedgehog signaling molecule
 ENSG00000102316	Bartter syndrome type 5
 ENSG00000102359	Bilateral perisylvian polymicrogyria,gamma-aminobutyric acid type A receptor subunit gamma2,sushi repeat containing protein X-linked 2
 ENSG00000102393	galactosidase alpha
-ENSG00000102452	sodium leak channel, non-selective,sodium leak channel, non-selective,sodium leak channel, non-selective,sodium leak channel, non-selective,sodium leak channel, non-selective
+ENSG00000102452	Hypotonia-speech impairment-severe cognitive delay syndrome due to NALCN deficiency,sodium leak channel, non-selective,sodium leak channel, non-selective,sodium leak channel, non-selective,sodium leak channel, non-selective
 ENSG00000102466	fibroblast growth factor 14,fibroblast growth factor 14
 ENSG00000102575	acid phosphatase 5, tartrate resistant
 ENSG00000102580	DnaJ heat shock protein family (Hsp40) member C3
@@ -791,7 +803,7 @@ ENSG00000102683	sarcoglycan gamma
 ENSG00000102743	solute carrier family 25 member 15
 ENSG00000102753	Disease-causing germline mutation(s) in
 ENSG00000102755	fms related receptor tyrosine kinase 1
-ENSG00000102805	CLN5 intracellular trafficking protein
+ENSG00000102805	Adult CLN5 disease,CLN5 intracellular trafficking protein,Juvenile CLN5 disease,Late infantile CLN5 disease
 ENSG00000102878	Early-onset lamellar cataract,Total early-onset cataract
 ENSG00000102879	coronin 1A
 ENSG00000102893	phosphorylase kinase regulatory subunit beta
@@ -820,7 +832,7 @@ ENSG00000103310	zona pellucida glycoprotein 2
 ENSG00000103313	interleukin 10,MEFV innate immunity regulator, pyrin,MEFV innate immunity regulator, pyrin,protein tyrosine phosphatase non-receptor type 6
 ENSG00000103316	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000103326	calpain 15
-ENSG00000103335	angiopoietin 2,piezo type mechanosensitive ion channel component 1 (Er blood group),solute carrier family 4 member 1 (Diego blood group)
+ENSG00000103335	piezo type mechanosensitive ion channel component 1 (Er blood group),solute carrier family 4 member 1 (Diego blood group)
 ENSG00000103356	glutamyl-tRNA synthetase 2, mitochondrial
 ENSG00000103449	spalt like transcription factor 1
 ENSG00000103489	chondroitin sulfate N-acetylgalactosaminyltransferase 1,xylosyltransferase 1
@@ -854,7 +866,7 @@ ENSG00000104320	cadherin 1,nibrin,phosphatase and tensin homolog
 ENSG00000104321	Familial episodic pain syndrome with predominantly upper body involvement,transient receptor potential cation channel subfamily A member 1
 ENSG00000104331	3'(2'), 5'-bisphosphate nucleotidase 2
 ENSG00000104356	RNA component of mitochondrial RNA processing endoribonuclease
-ENSG00000104365	inhibitor of nuclear factor kappa B kinase subunit beta
+ENSG00000104365	inhibitor of nuclear factor kappa B kinase subunit beta,inhibitor of nuclear factor kappa B kinase subunit beta
 ENSG00000104368	plasminogen activator, tissue type
 ENSG00000104381	ganglioside induced differentiation associated protein 1,ganglioside induced differentiation associated protein 1,ganglioside induced differentiation associated protein 1,ganglioside induced differentiation associated protein 1,ganglioside induced differentiation associated protein 1
 ENSG00000104419	N-myc downstream regulated 1
@@ -873,12 +885,14 @@ ENSG00000104812	glycogen synthase 1
 ENSG00000104826	Leydig cell hypoplasia due to LHB deficiency
 ENSG00000104833	tubulin beta 4A class IVa,tubulin beta 4A class IVa
 ENSG00000104835	seryl-tRNA synthetase 2, mitochondrial
+ENSG00000104856	RELB proto-oncogene, NF-kB subunit
 ENSG00000104880	S-phase cyclin A associated protein in the ER
 ENSG00000104884	COFS syndrome,ERCC excision repair 5, endonuclease,M-phase specific PLK1 interacting protein,XPA, DNA damage recognition and repair factor
 ENSG00000104889	LSM11, U7 small nuclear RNA associated
 ENSG00000104899	anti-Mullerian hormone
 ENSG00000104907	zinc finger MIZ-type containing 1
 ENSG00000104936	Adult-onset Steinert myotonic dystrophy,Childhood-onset Steinert myotonic dystrophy,Congenital-onset Steinert myotonic dystrophy,Juvenile-onset Steinert myotonic dystrophy,Late-onset Steinert myotonic dystrophy
+ENSG00000104967	zinc finger MIZ-type containing 1
 ENSG00000104973	Autosomal recessive non-syndromic intellectual disability,mediator complex subunit 25
 ENSG00000105048	troponin T1, slow skeletal type
 ENSG00000105146	Male infertility due to large-headed multiflagellar polyploid spermatozoa
@@ -890,7 +904,7 @@ ENSG00000105227	periaxin,peripheral myelin protein 22
 ENSG00000105325	actin like 6B
 ENSG00000105329	serpin family A member 1,transforming growth factor beta 1,transforming growth factor beta 1
 ENSG00000105357	myosin heavy chain 14,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
-ENSG00000105369	Autosomal agammaglobulinemia
+ENSG00000105369	Autosomal non-syndromic agammaglobulinemia
 ENSG00000105370	Total early-onset cataract
 ENSG00000105372	ribosomal protein L18
 ENSG00000105379	Multiple acyl-CoA dehydrogenase deficiency, mild type,Multiple acyl-CoA dehydrogenase deficiency, severe neonatal type
@@ -912,7 +926,7 @@ ENSG00000105675	ATPase H+/K+ transporting subunit alpha
 ENSG00000105695	myelin associated glycoprotein
 ENSG00000105697	hemojuvelin BMP co-receptor,homeostatic iron regulator
 ENSG00000105711	ATP binding cassette subfamily C member 9,Dmx like 2,hyperpolarization activated cyclic nucleotide gated potassium channel 1,hyperpolarization activated cyclic nucleotide gated potassium channel 4,sodium voltage-gated channel alpha subunit 1,sodium voltage-gated channel beta subunit 1
-ENSG00000105722	ALX homeobox 4,ETS2 repressor factor,fibroblast growth factor receptor 2
+ENSG00000105722	ETS2 repressor factor,fibroblast growth factor receptor 2
 ENSG00000105738	Total early-onset cataract
 ENSG00000105755	ETHE1 persulfide dioxygenase
 ENSG00000105792	cilia and flagella associated protein 251
@@ -925,13 +939,13 @@ ENSG00000105880	distal-less homeobox 5,distal-less homeobox 6
 ENSG00000105928	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000105929	Autosomal recessive distal renal tubular acidosis
 ENSG00000105953	oxoglutarate dehydrogenase
-ENSG00000105974	caveolae associated protein 1,Diffuse cutaneous systemic sclerosis,Heritable pulmonary arterial hypertension,Limited cutaneous systemic sclerosis
+ENSG00000105974	Congenital generalized lipodystrophy type 3,Diffuse cutaneous systemic sclerosis,Heritable pulmonary arterial hypertension,Limited cutaneous systemic sclerosis
 ENSG00000105976	MET proto-oncogene, receptor tyrosine kinase,MET proto-oncogene, receptor tyrosine kinase,MET proto-oncogene, receptor tyrosine kinase,MET proto-oncogene, receptor tyrosine kinase,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000105983	limb development membrane protein 1,limb development membrane protein 1,limb development membrane protein 1,sonic hedgehog signaling molecule,sonic hedgehog signaling molecule,sonic hedgehog signaling molecule
 ENSG00000105991	homeobox A1,homeobox A1
 ENSG00000105993	DnaJ heat shock protein family (Hsp40) member B6
 ENSG00000105996	homeobox A2,homeobox A2
-ENSG00000106003	delta like canonical Notch ligand 3
+ENSG00000106003	T-box transcription factor 6
 ENSG00000106009	BRCA1 associated ATM activator 1
 ENSG00000106012	GLI family zinc finger 1
 ENSG00000106025	catenin beta 1
@@ -943,6 +957,7 @@ ENSG00000106089	serpin family A member 1,syntaxin 1A
 ENSG00000106105	glycyl-tRNA synthetase 1,receptor accessory protein 1
 ENSG00000106128	Isolated growth hormone deficiency type IV
 ENSG00000106211	heat shock protein family B (small) member 1,heat shock protein family B (small) member 1
+ENSG00000106290	TATA-box binding protein associated factor 6
 ENSG00000106327	homeostatic iron regulator,transferrin receptor 2
 ENSG00000106331	ATP binding cassette subfamily C member 8
 ENSG00000106344	RNA binding motif protein 28
@@ -951,7 +966,7 @@ ENSG00000106366	FosB proto-oncogene, AP-1 transcription factor subunit,serpin fa
 ENSG00000106367	adaptor related protein complex 1 subunit beta 1
 ENSG00000106397	procollagen-lysine,2-oxoglutarate 5-dioxygenase 3
 ENSG00000106460	presenilin 1,transmembrane protein 106B,transmembrane protein 106B
-ENSG00000106462	nuclear receptor binding SET domain protein 1,PRC-2 complex-related overgrowth spectrum
+ENSG00000106462	nuclear receptor binding SET domain protein 1
 ENSG00000106477	Abelson helper integration site 1,centrosomal protein 120
 ENSG00000106483	secreted frizzled related protein 4
 ENSG00000106536	BRCA2 DNA repair associated
@@ -1002,13 +1017,13 @@ ENSG00000107815	DNA polymerase gamma, catalytic subunit,DNA polymerase gamma, ca
 ENSG00000107829	distal-less homeobox 6
 ENSG00000107831	Alobar holoprosencephaly,fibroblast growth factor receptor 1,Kallmann syndrome,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Normosmic congenital hypogonadotropic hypogonadism,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000107859	Early-onset posterior polar cataract,paired like homeodomain 3
-ENSG00000107882	centrosomal protein 120,Desmoplastic/nodular medulloblastoma,fibroblast growth factor receptor 1,Medulloblastoma with extensive nodularity,patched 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000107882	centrosomal protein 120,Desmoplastic/nodular medulloblastoma,fibroblast growth factor receptor 1,Medulloblastoma with extensive nodularity,patched 1,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000107890	Autosomal thrombocytopenia with normal platelets
 ENSG00000107951	mitochondrial poly(A) polymerase
 ENSG00000107957	Malignant peripheral nerve sheath tumor with perineurial differentiation,Malignant triton tumor
 ENSG00000107960	CST telomere replication complex component 1,surfactant protein A1
 ENSG00000107984	dickkopf WNT signaling pathway inhibitor 1,Wnt family member 3A
-ENSG00000108001	EBF transcription factor 3,zinc finger MIZ-type containing 1
+ENSG00000108001	EBF transcription factor 3,EBF transcription factor 3
 ENSG00000108055	structural maintenance of chromosomes 1A
 ENSG00000108061	protein phosphatase 1 catalytic subunit beta
 ENSG00000108091	B-Raf proto-oncogene, serine/threonine kinase
@@ -1046,7 +1061,7 @@ ENSG00000108821	collagen type I alpha 1 chain,collagen type I alpha 1 chain,coll
 ENSG00000108823	sarcoglycan alpha
 ENSG00000108883	elongation factor Tu GTP binding domain containing 2
 ENSG00000108924	B-lymphoblastic leukemia/lymphoma with t(17;19)
-ENSG00000108946	phosphodiesterase 4D,PML nuclear body scaffold,protein kinase cAMP-dependent type I regulatory subunit alpha,protein kinase cAMP-dependent type I regulatory subunit alpha,tumor protein p53
+ENSG00000108946	phosphodiesterase 4D,PML nuclear body scaffold,protein kinase cAMP-dependent type I regulatory subunit alpha,protein kinase cAMP-dependent type I regulatory subunit alpha,protein kinase cAMP-dependent type I regulatory subunit alpha,tumor protein p53
 ENSG00000108950	FAM20A golgi associated secretory pathway pseudokinase
 ENSG00000108953	BCL6 corepressor,HIC ZBTB transcriptional repressor 1,platelet activating factor acetylhydrolase 1b regulatory subunit 1,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon
 ENSG00000108961	hyperpolarization activated cyclic nucleotide gated potassium channel 4
@@ -1058,7 +1073,7 @@ ENSG00000109101	forkhead box N1,forkhead box N1,forkhead box N1
 ENSG00000109103	retinitis pigmentosa GTPase regulator,unc-119 lipid binding chaperone
 ENSG00000109132	ladybird homeobox 1,MYCN proto-oncogene, bHLH transcription factor,paired like homeobox 2B,paired like homeobox 2B
 ENSG00000109163	Normosmic congenital hypogonadotropic hypogonadism
-ENSG00000109320	CD19 molecule
+ENSG00000109320	nuclear factor kappa B subunit 1
 ENSG00000109323	mannosidase beta
 ENSG00000109339	cut like homeobox 2
 ENSG00000109472	carboxypeptidase E
@@ -1087,7 +1102,7 @@ ENSG00000110074	transmembrane protein 126B
 ENSG00000110090	carnitine palmitoyltransferase 1A
 ENSG00000110092	cyclin D1,cyclin D1,cyclin D1,purinergic receptor P2X 7
 ENSG00000110195	folate receptor 1
-ENSG00000110218	WEE2 oocyte meiosis inhibiting kinase
+ENSG00000110218	TLE family member 6, subcortical maternal complex member
 ENSG00000110243	Familial apolipoprotein A5 deficiency
 ENSG00000110245	cholesteryl ester transfer protein
 ENSG00000110274	centrosomal protein 290
@@ -1103,7 +1118,7 @@ ENSG00000110514	MAP kinase activating death domain,zinc finger MIZ-type containi
 ENSG00000110619	M-phase specific PLK1 interacting protein,tropomyosin 3
 ENSG00000110628	Embryonal rhabdomyosarcoma,N-ribosyldihydronicotinamide:quinone dehydrogenase 2
 ENSG00000110651	CD19 molecule
-ENSG00000110711	aryl hydrocarbon receptor interacting protein,aryl hydrocarbon receptor interacting protein,cadherin related 23,cadherin related 23,Null pituitary adenoma,Silent pituitary adenoma
+ENSG00000110711	AHR interacting HSP90 co-chaperone,AHR interacting HSP90 co-chaperone,cadherin related 23,cadherin related 23,Null pituitary adenoma,Silent pituitary adenoma
 ENSG00000110717	transmembrane protein 126B
 ENSG00000110719	chloride voltage-gated channel 7,T cell immune regulator 1, ATPase H+ transporting V0 subunit a3,T cell immune regulator 1, ATPase H+ transporting V0 subunit a3,TNF receptor superfamily member 11a
 ENSG00000110721	Autosomal recessive non-syndromic intellectual disability
@@ -1128,9 +1143,9 @@ ENSG00000111319	CF transmembrane conductance regulator,Generalized pseudohypoald
 ENSG00000111341	matrix Gla protein
 ENSG00000111361	Congenital or early infantile CACH syndrome,Cree leukoencephalopathy,Juvenile or adult CACH syndrome,Late infantile CACH syndrome,Ovarioleukodystrophy
 ENSG00000111424	vitamin D receptor
-ENSG00000111537	interferon gamma,interferon regulatory factor 1,perforin 1
+ENSG00000111537	interferon gamma,interferon gamma,perforin 1
 ENSG00000111581	membrane associated guanylate kinase, WW and PDZ domain containing 2,nuclear receptor subfamily 5 group A member 1,O-sialoglycoprotein endopeptidase
-ENSG00000111596	CCR4-NOT transcription complex subunit 2
+ENSG00000111596	12q15q21 microdeletion syndrome,Intellectual disability-nasal speech-craniofacial dysmorphism syndrome due to CNOT2 mutation
 ENSG00000111642	chromodomain helicase DNA binding protein 4
 ENSG00000111664	rhodopsin
 ENSG00000111669	triosephosphate isomerase 1
@@ -1159,13 +1174,13 @@ ENSG00000112041	S-phase cyclin A associated protein in the ER,ubiquitin specific
 ENSG00000112053	cilia and flagella associated protein 251
 ENSG00000112077	Rh associated glycoprotein,Rh blood group CcEe antigens
 ENSG00000112116	C-type lectin domain containing 7A
-ENSG00000112137	neurotrophic receptor tyrosine kinase 2
+ENSG00000112137	sodium voltage-gated channel alpha subunit 2
 ENSG00000112144	ciliogenesis associated kinase 1,ciliogenesis associated kinase 1
 ENSG00000112186	TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000112210	multiple EGF like domains 8
 ENSG00000112234	F-box and leucine rich repeat protein 4
 ENSG00000112246	Obesity due to SIM1 deficiency,SIM bHLH transcription factor 1,SIM bHLH transcription factor 1
-ENSG00000112276	blood vessel epicardial substance
+ENSG00000112276	popeye domain cAMP effector 1
 ENSG00000112280	Autosomal recessive Stickler syndrome,collagen type IX alpha 1 chain
 ENSG00000112282	Autosomal recessive non-syndromic intellectual disability
 ENSG00000112290	zinc finger MIZ-type containing 1
@@ -1178,7 +1193,7 @@ ENSG00000112365	DNA methyltransferase 3 beta
 ENSG00000112367	Bilateral parasagittal parieto-occipital polymicrogyria,cyclin F,FIG4 phosphoinositide 5-phosphatase,FIG4 phosphoinositide 5-phosphatase
 ENSG00000112378	p53 apoptosis effector related to PMP22
 ENSG00000112425	EPM2A glucan phosphatase, laforin
-ENSG00000112473	Autosomal agammaglobulinemia
+ENSG00000112473	solute carrier family 39 member 7
 ENSG00000112486	Diffuse cutaneous systemic sclerosis,Limited cutaneous systemic sclerosis
 ENSG00000112531	MYB proto-oncogene, transcription factor
 ENSG00000112541	phosphodiesterase 10A,phosphodiesterase 10A
@@ -1206,12 +1221,12 @@ ENSG00000113083	forkhead box E3
 ENSG00000113140	Osteogenesis imperfecta type 4
 ENSG00000113161	3-hydroxy-3-methylglutaryl-CoA reductase
 ENSG00000113163	zinc finger MIZ-type containing 1
-ENSG00000113231	phosphodiesterase 8B
+ENSG00000113231	phosphodiesterase 11A,phosphodiesterase 8B
 ENSG00000113262	rhodopsin
 ENSG00000113263	IL2 inducible T cell kinase
 ENSG00000113273	Mucopolysaccharidosis type 6, rapidly progressing,Mucopolysaccharidosis type 6, slowly progressing
 ENSG00000113302	interleukin 12B,major histocompatibility complex, class I, B
-ENSG00000113318	MSH3-related attenuated familial adenomatous polyposis
+ENSG00000113318	mutS homolog 3
 ENSG00000113327	actin like 6B,gamma-aminobutyric acid type A receptor subunit alpha1,gamma-aminobutyric acid type A receptor subunit gamma2,hyperpolarization activated cyclic nucleotide gated potassium channel 1,sodium voltage-gated channel alpha subunit 1
 ENSG00000113368	Autosomal dominant primary microcephaly,lamin B1
 ENSG00000113407	M-phase specific PLK1 interacting protein
@@ -1228,7 +1243,7 @@ ENSG00000113621	thioredoxin domain containing 15
 ENSG00000113643	arginyl-tRNA synthetase 1
 ENSG00000113648	macroH2A.1 histone
 ENSG00000113719	SCY1 like pseudokinase 2
-ENSG00000113721	fibroblast growth factor receptor 1,junctional adhesion molecule 2,notch receptor 3,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta
+ENSG00000113721	fibroblast growth factor receptor 1,N-alpha-acetyltransferase 60, NatF catalytic subunit,notch receptor 3,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta,platelet derived growth factor receptor beta
 ENSG00000113790	enoyl-CoA hydratase and 3-hydroxyacyl CoA dehydrogenase,hydroxysteroid 17-beta dehydrogenase 4
 ENSG00000113845	transmembrane protein 126B
 ENSG00000113851	Autosomal recessive non-syndromic intellectual disability
@@ -1283,7 +1298,7 @@ ENSG00000115204	mitochondrial inner membrane protein MPV17
 ENSG00000115211	Congenital or early infantile CACH syndrome,Cree leukoencephalopathy,Juvenile or adult CACH syndrome,Late infantile CACH syndrome,Ovarioleukodystrophy
 ENSG00000115221	Hypocalcified amelogenesis imperfecta,Hypoplastic amelogenesis imperfecta,integrin subunit beta 6
 ENSG00000115255	S-phase cyclin A associated protein in the ER
-ENSG00000115266	Classic lissencephaly,nuclear receptor binding SET domain protein 1
+ENSG00000115266	nuclear receptor binding SET domain protein 1
 ENSG00000115267	interferon induced with helicase C domain 1,interferon induced with helicase C domain 1,LSM11, U7 small nuclear RNA associated
 ENSG00000115268	purinergic receptor P2X 7
 ENSG00000115275	mannosyl-oligosaccharide glucosidase
@@ -1338,7 +1353,7 @@ ENSG00000116254	zinc finger MIZ-type containing 1
 ENSG00000116288	Parkinsonism associated deglycase,synaptojanin 1
 ENSG00000116337	adenosine monophosphate deaminase 2,adenosine monophosphate deaminase 2
 ENSG00000116353	mitochondrial trans-2-enoyl-CoA reductase
-ENSG00000116406	zinc finger MIZ-type containing 1
+ENSG00000116406	ER degradation enhancing alpha-mannosidase like protein 3
 ENSG00000116539	Autosomal dominant non-syndromic intellectual disability
 ENSG00000116560	proline rich mitotic checkpoint control factor
 ENSG00000116586	late endosomal/lysosomal adaptor, MAPK and MTOR activator 2
@@ -1357,6 +1372,7 @@ ENSG00000116761	cystathionine gamma-lyase
 ENSG00000116783	TNNI3 interacting kinase
 ENSG00000116785	C3 glomerulonephritis
 ENSG00000116786	pleckstrin homology and RUN domain containing M2
+ENSG00000116863	ADP-ribosylserine hydrolase
 ENSG00000116874	tryptophanyl tRNA synthetase 2, mitochondrial
 ENSG00000116906	Rhizomelic chondrodysplasia punctata type 2
 ENSG00000116962	Isolated Dandy-Walker malformation without hydrocephalus
@@ -1364,19 +1380,20 @@ ENSG00000116984	Methylcobalamin deficiency type cblG
 ENSG00000117013	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000117020	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphoinositide-3-kinase regulatory subunit 2
 ENSG00000117054	acyl-CoA dehydrogenase medium chain
-ENSG00000117118	phosphatase and tensin homolog,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex iron sulfur subunit B,succinate dehydrogenase complex subunit D
+ENSG00000117118	Cowden syndrome,platelet derived growth factor receptor alpha,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex iron sulfur subunit B,succinate dehydrogenase complex subunit D
 ENSG00000117139	Autosomal dominant non-syndromic intellectual disability,Autosomal recessive non-syndromic intellectual disability
 ENSG00000117298	ATPase copper transporting alpha
 ENSG00000117305	3-hydroxy-3-methylglutaryl-CoA lyase
 ENSG00000117308	Erythrocyte galactose epimerase deficiency,Generalized galactose epimerase deficiency
-ENSG00000117322	B cell scaffold protein with ankyrin repeats 1,CD19 molecule
+ENSG00000117322	B cell scaffold protein with ankyrin repeats 1,complement C3d receptor 2
 ENSG00000117335	Atypical hemolytic uremic syndrome with complement gene abnormality,CD46 molecule
 ENSG00000117360	S-phase cyclin A associated protein in the ER
 ENSG00000117385	Osteogenesis imperfecta type 2,Osteogenesis imperfecta type 3
-ENSG00000117394	gamma-aminobutyric acid type A receptor subunit alpha1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1
+ENSG00000117394	calcium voltage-gated channel subunit alpha1 A,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1,solute carrier family 2 member 1
 ENSG00000117400	Janus kinase 2,tet methylcytosine dioxygenase 2,thrombopoietin,thrombopoietin,thrombopoietin
 ENSG00000117425	patched 1,patched 2
 ENSG00000117479	solute carrier family 19 member 2
+ENSG00000117528	notch 2 N-terminal like C
 ENSG00000117560	caspase 10
 ENSG00000117586	B cell scaffold protein with ankyrin repeats 1,hypocretin neuropeptide precursor
 ENSG00000117593	aspartyl-tRNA synthetase 2, mitochondrial
@@ -1390,7 +1407,7 @@ ENSG00000117713	AT-rich interaction domain 2
 ENSG00000117724	centromere protein F,centromere protein F
 ENSG00000117899	Osteogenesis imperfecta type 2
 ENSG00000117983	mucin 5B, oligomeric mucus/gel-forming,mucin like 3,surfactant protein A1
-ENSG00000117984	cathepsin D
+ENSG00000117984	Congenital CLN10 disease,Juvenile CLN10 disease,Late infantile CLN10 disease
 ENSG00000118004	collectin subfamily member 10
 ENSG00000118007	STAG1 cohesin complex component
 ENSG00000118046	serine/threonine kinase 11
@@ -1404,7 +1421,7 @@ ENSG00000118197	DEAD-box helicase 59
 ENSG00000118217	phosphodiesterase 6C,retinitis pigmentosa GTPase regulator
 ENSG00000118231	Cerulean cataract,Coralliform cataract,crystallin alpha A,Early-onset lamellar cataract,Early-onset nuclear cataract,Pulverulent cataract
 ENSG00000118246	FAST kinase domains 2
-ENSG00000118260	EWS RNA binding protein 1
+ENSG00000118260	cAMP responsive element binding protein 1,EWS RNA binding protein 1
 ENSG00000118271	ATTRV122I amyloidosis,ATTRV30M amyloidosis,transthyretin
 ENSG00000118402	cyclic nucleotide gated channel subunit beta 3,ELOVL fatty acid elongase 4,ELOVL fatty acid elongase 4
 ENSG00000118495	ATP binding cassette subfamily C member 8,hydatidiform mole associated and imprinted
@@ -1439,7 +1456,7 @@ ENSG00000119537	gap junction protein alpha 1,transient receptor potential cation
 ENSG00000119541	Dentin dysplasia type I
 ENSG00000119614	sonic hedgehog signaling molecule
 ENSG00000119638	NIMA related kinase 9,NIMA related kinase 9
-ENSG00000119650	intraflagellar transport 122
+ENSG00000119650	intraflagellar transport 122,S-phase cyclin A associated protein in the ER
 ENSG00000119655	Niemann-Pick disease type C, adult neurologic onset,Niemann-Pick disease type C, juvenile neurologic onset,Niemann-Pick disease type C, late infantile neurologic onset,Niemann-Pick disease type C, severe early infantile neurologic onset,Niemann-Pick disease type C, severe perinatal form
 ENSG00000119661	NME/NM23 family member 5
 ENSG00000119669	interferon regulatory factor 2 binding protein like
@@ -1454,7 +1471,7 @@ ENSG00000119714	Hypomaturation amelogenesis imperfecta
 ENSG00000119715	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000119718	Congenital or early infantile CACH syndrome,Cree leukoencephalopathy,Juvenile or adult CACH syndrome,Late infantile CACH syndrome,Ovarioleukodystrophy
 ENSG00000119723	coenzyme Q6, monooxygenase,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor
-ENSG00000119772	DNA methyltransferase 3 alpha,succinate dehydrogenase complex subunit D,tet methylcytosine dioxygenase 2
+ENSG00000119772	DNA methyltransferase 3 alpha,DNA methyltransferase 3 alpha,succinate dehydrogenase complex subunit D,tet methylcytosine dioxygenase 2
 ENSG00000119866	BCL11 transcription factor A,hemoglobin subunit beta
 ENSG00000119888	epithelial cell adhesion molecule,mutS homolog 6
 ENSG00000119899	Free sialic acid storage disease, infantile form,Intermediate severe Salla disease,Salla disease
@@ -1476,15 +1493,15 @@ ENSG00000120697	glucosidase II alpha subunit
 ENSG00000120699	ATP/GTP binding carboxypeptidase 1
 ENSG00000120708	transforming growth factor beta induced,transforming growth factor beta induced,transforming growth factor beta induced,transforming growth factor beta induced,transforming growth factor beta induced,transforming growth factor beta induced
 ENSG00000120725	SIL1 nucleotide exchange factor
-ENSG00000120729	myotilin,myotilin,myotilin
+ENSG00000120729	myotilin,myotilin
 ENSG00000120733	lysine demethylase 3B
 ENSG00000120756	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000120802	TATA-box binding protein associated factor, RNA polymerase I subunit A
-ENSG00000120889	OBSOLETE: Squamous cell carcinoma of salivary glands,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
+ENSG00000120889	TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
 ENSG00000120903	cholinergic receptor nicotinic alpha 4 subunit
 ENSG00000120925	ring finger protein 170
 ENSG00000120942	UbiA prenyltransferase domain containing 1
-ENSG00000120948	cyclin F,valosin containing protein
+ENSG00000120948	cyclin F,TAR DNA binding protein,valosin containing protein
 ENSG00000121067	speckle type BTB/POZ protein,speckle type BTB/POZ protein
 ENSG00000121075	Familial clubfoot due to 17q23.1q23.2 microduplication,Heritable pulmonary arterial hypertension,R-spondin 2,T-box transcription factor 4,T-box transcription factor 4
 ENSG00000121101	sperm associated antigen 17
@@ -1500,7 +1517,7 @@ ENSG00000121741	zinc finger MIZ-type containing 1
 ENSG00000121742	gap junction protein beta 2,gap junction protein beta 6,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000121743	Early-onset nuclear cataract,Early-onset posterior polar cataract,Pulverulent cataract
 ENSG00000121853	growth hormone secretagogue receptor
-ENSG00000121879	angiogenic factor with G-patch and FHA domains 1,axin 1,CCM2 scaffold protein,Macrodactyly of fingers, unilateral,Macrodactyly of toes, unilateral,mutS homolog 6,phosphatase and tensin homolog,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000121879	angiogenic factor with G-patch and FHA domains 1,axin 1,CCM2 scaffold protein,Cowden syndrome,Macrodactyly of fingers, unilateral,Macrodactyly of toes, unilateral,mutS homolog 6,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000121897	lipoic acid synthetase
 ENSG00000121905	hippocalcin
 ENSG00000121957	G protein signaling modulator 2,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
@@ -1516,6 +1533,7 @@ ENSG00000122218	COPI coat complex subunit alpha
 ENSG00000122335	serine active site containing 1
 ENSG00000122359	cyclin F
 ENSG00000122367	Inherited isolated arrhythmogenic cardiomyopathy, dominant-left variant,Inherited isolated arrhythmogenic cardiomyopathy, dominant-right variant,Inherited isolated arrhythmogenic ventricular dysplasia, biventricular variant,LIM domain binding 3,pleckstrin homology and RUN domain containing M2,TATA-box binding protein associated factor, RNA polymerase I subunit A
+ENSG00000122390	N-alpha-acetyltransferase 60, NatF catalytic subunit
 ENSG00000122406	ribosomal protein L18
 ENSG00000122507	Bardet-Biedl syndrome 1
 ENSG00000122512	mutS homolog 6,PMS1 homolog 2, mismatch repair system component
@@ -1560,7 +1578,7 @@ ENSG00000123607	Infantile nephronophthisis,KIAA0753
 ENSG00000123700	ATP binding cassette subfamily C member 9,potassium inwardly rectifying channel subfamily J member 2,solute carrier family 4 member 3
 ENSG00000123737	ATP/GTP binding carboxypeptidase 1
 ENSG00000123810	centrosomal protein 120,thioredoxin domain containing 15
-ENSG00000123815	membrane associated guanylate kinase, WW and PDZ domain containing 2
+ENSG00000123815	membrane associated guanylate kinase, WW and PDZ domain containing 2,S-phase cyclin A associated protein in the ER
 ENSG00000123908	zinc finger MIZ-type containing 1
 ENSG00000124006	cullin 7
 ENSG00000124140	sodium voltage-gated channel alpha subunit 2
@@ -1599,8 +1617,9 @@ ENSG00000124827	Familial isolated hypoparathyroidism due to agenesis of parathyr
 ENSG00000124920	myelin regulatory factor
 ENSG00000125046	Dentin dysplasia type I
 ENSG00000125084	Osteogenesis imperfecta type 3,Osteogenesis imperfecta type 4,Wnt family member 3A
-ENSG00000125107	CCR4-NOT transcription complex subunit 1
+ENSG00000125107	CCR4-NOT transcription complex subunit 1,zinc finger MIZ-type containing 1
 ENSG00000125124	Bardet-Biedl syndrome 1,S-phase cyclin A associated protein in the ER
+ENSG00000125347	interferon regulatory factor 1
 ENSG00000125351	mediator complex subunit 12,X-linked non-syndromic intellectual disability
 ENSG00000125352	M-phase specific PLK1 interacting protein
 ENSG00000125356	transmembrane protein 126B
@@ -1643,10 +1662,10 @@ ENSG00000125952	solute carrier family 25 member 11
 ENSG00000125965	bone morphogenetic protein 2,bone morphogenetic protein receptor type 1B,bone morphogenetic protein receptor type 1B,bone morphogenetic protein receptor type 1B,bone morphogenetic protein receptor type 1B,growth differentiation factor 5,growth differentiation factor 5,growth differentiation factor 5,growth differentiation factor 5
 ENSG00000126012	lysine demethylase 5C
 ENSG00000126088	Familial porphyria cutanea tarda,uroporphyrinogen decarboxylase
-ENSG00000126091	Autosomal recessive non-syndromic intellectual disability,neurotrophic receptor tyrosine kinase 2
+ENSG00000126091	ST3 beta-galactoside alpha-2,3-sialyltransferase 3
 ENSG00000126218	coagulation factor X
 ENSG00000126231	coagulation factor II, thrombin
-ENSG00000126233	secreted LY6/PLAUR domain containing 1,secreted LY6/PLAUR domain containing 1
+ENSG00000126233	secreted LY6/PLAUR domain containing 1
 ENSG00000126261	plectin
 ENSG00000126267	cytochrome c oxidase assembly factor heme A:farnesyltransferase COX10
 ENSG00000126351	thyroid hormone receptor alpha
@@ -1660,7 +1679,7 @@ ENSG00000126583	protein kinase C gamma
 ENSG00000126603	Acute megakaryoblastic leukemia in children without Down syndrome,Juvenile nephronophthisis
 ENSG00000126705	AT-hook DNA binding motif containing 1
 ENSG00000126749	EMG1 N1-specific pseudouridine methyltransferase
-ENSG00000126752	SS18 subunit of BAF chromatin remodeling complex
+ENSG00000126752	cilia and flagella associated protein 251,SS18 subunit of BAF chromatin remodeling complex
 ENSG00000126759	complement factor properdin
 ENSG00000126778	EYA transcriptional coactivator and phosphatase 1,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,SIX homeobox 1
 ENSG00000126814	tRNA methyltransferase 5
@@ -1682,7 +1701,7 @@ ENSG00000127511	SIN3-related intellectual disability syndrome due to a point mut
 ENSG00000127527	distal-less homeobox 6
 ENSG00000127554	growth factor, augmenter of liver regeneration
 ENSG00000127603	microtubule actin crosslinking factor 1
-ENSG00000127616	AT-rich interaction domain 2,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000127616	AT-rich interaction domain 2,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 4,SWI/SNF related BAF chromatin remodeling complex subunit ATPase 4,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000127663	zinc finger MIZ-type containing 1
 ENSG00000127666	unc-93 homolog B1, TLR signaling regulator
 ENSG00000127838	PNKD metallo-beta-lactamase domain containing
@@ -1697,19 +1716,19 @@ ENSG00000128039	steroid 5 alpha-reductase 3
 ENSG00000128052	kinase insert domain receptor
 ENSG00000128159	polo like kinase 4
 ENSG00000128271	adenosine A2a receptor
-ENSG00000128322	Autosomal agammaglobulinemia
-ENSG00000128340	Rac family small GTPase 2
+ENSG00000128322	Autosomal non-syndromic agammaglobulinemia
+ENSG00000128340	Rac family small GTPase 2,Rac family small GTPase 2,Rac family small GTPase 2
 ENSG00000128422	keratin 16,keratin 17
 ENSG00000128513	cyclin dependent kinase 4,isocitrate dehydrogenase (NADP(+)) 2,isocitrate dehydrogenase (NADP(+)) 2,purinergic receptor P2X 7
 ENSG00000128567	podocalyxin like,synaptojanin 1
 ENSG00000128573	forkhead box P2,forkhead box P2
 ENSG00000128591	filamin C,filamin C,filamin C
-ENSG00000128602	ATPase copper transporting alpha,smoothened, frizzled class receptor,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000128602	ATPase copper transporting alpha,smoothened, frizzled class receptor,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000128604	B cell scaffold protein with ankyrin repeats 1,Diffuse cutaneous systemic sclerosis,interleukin 12 receptor subunit beta 1,Limited cutaneous systemic sclerosis
 ENSG00000128610	Kallmann syndrome
 ENSG00000128617	opsin 1, short wave sensitive
 ENSG00000128654	metaxin 2
-ENSG00000128655	protein kinase cAMP-dependent type I regulatory subunit alpha
+ENSG00000128655	phosphodiesterase 11A,protein kinase cAMP-dependent type I regulatory subunit alpha,protein kinase cAMP-dependent type I regulatory subunit alpha
 ENSG00000128656	chimerin 1
 ENSG00000128683	KN motif and ankyrin repeat domains 1
 ENSG00000128710	Congenital vertical talus, bilateral,Congenital vertical talus, unilateral
@@ -1723,8 +1742,9 @@ ENSG00000128908	INO80 complex ATPase subunit
 ENSG00000128917	notch receptor 1,plectin
 ENSG00000128928	isovaleryl-CoA dehydrogenase
 ENSG00000128944	kinetochore localized astrin (SPAG5) binding protein
-ENSG00000128973	CLN6 transmembrane ER protein
+ENSG00000128973	Adult CLN6 disease,Juvenile CLN6 disease,Late infantile CLN6 disease
 ENSG00000129003	synaptojanin 1
+ENSG00000129071	methyl-CpG binding domain 4, DNA glycosylase
 ENSG00000129083	COPI coat complex subunit beta 1
 ENSG00000129116	BRCA1 DNA repair associated
 ENSG00000129152	solute carrier family 18 member A3
@@ -1754,7 +1774,7 @@ ENSG00000130066	membrane bound transcription factor peptidase, site 2,spermidine
 ENSG00000130158	notch receptor 1
 ENSG00000130164	ATP binding cassette subfamily G member 5
 ENSG00000130175	PRKCSH beta subunit of glucosidase II
-ENSG00000130203	apolipoprotein E,apolipoprotein E,apolipoprotein E
+ENSG00000130203	apolipoprotein E,apolipoprotein E
 ENSG00000130204	ATP binding cassette subfamily A member 7
 ENSG00000130226	Autosomal dominant primary microcephaly,sodium voltage-gated channel alpha subunit 5
 ENSG00000130283	growth differentiation factor 1,Isolated congenitally uncorrected transposition of the great arteries,kinase insert domain receptor
@@ -1765,13 +1785,13 @@ ENSG00000130309	Familial porencephaly
 ENSG00000130347	YME1 like 1 ATPase
 ENSG00000130348	glutaminyl-tRNA amidotransferase subunit QRSL1
 ENSG00000130363	NME/NM23 family member 5
-ENSG00000130385	nuclear receptor subfamily 5 group A member 1
+ENSG00000130385	bone morphogenetic protein 15,nuclear receptor subfamily 5 group A member 1
 ENSG00000130402	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000130427	erythropoietin
 ENSG00000130449	zinc finger SWIM-type containing 6
 ENSG00000130475	FCH and mu domain containing endocytic adaptor 1
 ENSG00000130477	cyclin F
-ENSG00000130508	peroxidasin
+ENSG00000130508	myelin transcription factor 1 like,peroxidasin
 ENSG00000130529	hyperpolarization activated cyclic nucleotide gated potassium channel 4,sodium voltage-gated channel beta subunit 1,transient receptor potential cation channel subfamily M member 4
 ENSG00000130561	rhodopsin,S-antigen visual arrestin,S-phase cyclin A associated protein in the ER
 ENSG00000130595	sodium leak channel, non-selective,sodium leak channel, non-selective
@@ -1782,7 +1802,7 @@ ENSG00000130638	ataxin 10
 ENSG00000130675	motor neuron and pancreas homeobox 1
 ENSG00000130699	zinc finger MIZ-type containing 1
 ENSG00000130700	ATP binding cassette subfamily C member 9,kinase insert domain receptor,NK2 homeobox 5
-ENSG00000130702	laminin subunit alpha 5
+ENSG00000130702	laminin subunit alpha 5,membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000130703	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000130707	Acute neonatal citrullinemia type I,Late-onset citrullinemia type I
 ENSG00000130711	PR/SET domain 12
@@ -1813,7 +1833,7 @@ ENSG00000131165	charged multivesicular body protein 1A
 ENSG00000131174	holocytochrome c synthase
 ENSG00000131183	cytochrome P450 family 24 subfamily A member 1,enoyl-CoA hydratase and 3-hydroxyacyl CoA dehydrogenase,solute carrier family 34 member 1,solute carrier family 34 member 3
 ENSG00000131187	coagulation factor XII,coagulation factor XII,F12-related hereditary angioedema with normal C1Inh
-ENSG00000131238	palmitoyl-protein thioesterase 1
+ENSG00000131238	Adult CLN1 disease,Infantile CLN1 disease,Juvenile CLN1 disease,Late infantile CLN1 disease
 ENSG00000131263	zinc finger MIZ-type containing 1
 ENSG00000131269	ATP binding cassette subfamily B member 7
 ENSG00000131323	unc-93 homolog B1, TLR signaling regulator
@@ -1826,7 +1846,7 @@ ENSG00000131482	Glycogen storage disease due to glucose-6-phosphatase deficiency
 ENSG00000131495	NADH:ubiquinone oxidoreductase subunit A2
 ENSG00000131504	diaphanous related formin 1,diaphanous related formin 1,diaphanous related formin 1
 ENSG00000131652	THO complex subunit 6
-ENSG00000131653	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,TNF receptor associated factor 7
+ENSG00000131653	SWI/SNF related BAF chromatin remodeling complex subunit B1,TNF receptor associated factor 7
 ENSG00000131697	centrosomal protein 290,Juvenile nephronophthisis
 ENSG00000131711	Periventricular nodular heterotopia,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000131759	PML nuclear body scaffold
@@ -1843,7 +1863,8 @@ ENSG00000132024	Autosomal recessive non-syndromic intellectual disability
 ENSG00000132031	matrilin 3,matrilin 3
 ENSG00000132153	DExH-box helicase 30
 ENSG00000132155	Pilomyxoid astrocytoma,protein tyrosine phosphatase non-receptor type 11,RAS related,TATA-box binding protein associated factor, RNA polymerase I subunit A,zinc finger E-box binding homeobox 2
-ENSG00000132170	B-Raf proto-oncogene, serine/threonine kinase,caveolae associated protein 1,Giant cell glioblastoma,Gliosarcoma,peroxisome proliferator activated receptor gamma
+ENSG00000132170	B-Raf proto-oncogene, serine/threonine kinase,Giant cell glioblastoma,Gliosarcoma,peroxisome proliferator activated receptor gamma,peroxisome proliferator activated receptor gamma,PPARG-associated congenital generalized lipodystrophy
+ENSG00000132274	tripartite motif containing 22
 ENSG00000132326	period circadian regulator 3
 ENSG00000132376	inositol polyphosphate-5-phosphatase K
 ENSG00000132386	Osteogenesis imperfecta type 3,Osteogenesis imperfecta type 4
@@ -1860,6 +1881,7 @@ ENSG00000132549	vacuolar protein sorting 13 homolog B
 ENSG00000132563	receptor accessory protein 2
 ENSG00000132591	Perrault syndrome type 1,Perrault syndrome type 2
 ENSG00000132600	protein arginine methyltransferase 7
+ENSG00000132612	vacuolar protein sorting 4 homolog A
 ENSG00000132639	Presynaptic congenital myasthenic syndromes
 ENSG00000132646	proliferating cell nuclear antigen
 ENSG00000132669	Ras and Rab interactor 2
@@ -1868,7 +1890,7 @@ ENSG00000132740	immunoglobulin mu DNA binding protein 2,immunoglobulin mu DNA bi
 ENSG00000132763	Methylmalonic acidemia with homocystinuria, type cblC
 ENSG00000132768	diphthamide biosynthesis 1
 ENSG00000132773	target of EGR1, exonuclease
-ENSG00000132781	bone morphogenetic protein receptor type 1A,MUTYH-related attenuated familial adenomatous polyposis
+ENSG00000132781	bone morphogenetic protein receptor type 1A,mutY DNA glycosylase
 ENSG00000132837	dimethylglycine dehydrogenase
 ENSG00000132842	Hermansky-Pudlak syndrome due to AP3B1 deficiency
 ENSG00000132912	serpin family A member 1
@@ -1903,7 +1925,7 @@ ENSG00000133818	RAS related
 ENSG00000133835	hydroxysteroid 17-beta dehydrogenase 4,Perrault syndrome type 1,Perrault syndrome type 2
 ENSG00000133863	sperm associated antigen 17
 ENSG00000133884	AT-rich interaction domain 2
-ENSG00000133895	aryl hydrocarbon receptor interacting protein,cadherin related 23,cyclin dependent kinase inhibitor 1B,glial cells missing transcription factor 2,Null pituitary adenoma,Silent pituitary adenoma,YY1 transcription factor
+ENSG00000133895	AHR interacting HSP90 co-chaperone,cadherin related 23,cyclin dependent kinase inhibitor 1B,glial cells missing transcription factor 2,Null pituitary adenoma,Silent pituitary adenoma,YY1 transcription factor
 ENSG00000133937	goosecoid homeobox
 ENSG00000133983	cytochrome c oxidase assembly factor heme A:farnesyltransferase COX10
 ENSG00000134049	immediate early response 3 interacting protein 1
@@ -1914,7 +1936,7 @@ ENSG00000134183	phosphodiesterase 6C,phosphodiesterase 6C
 ENSG00000134200	thyroid stimulating hormone subunit beta
 ENSG00000134202	serpin family A member 1
 ENSG00000134240	3-hydroxy-3-methylglutaryl-CoA synthase 2
-ENSG00000134242	B cell scaffold protein with ankyrin repeats 1,Fas cell surface death receptor,major histocompatibility complex, class II, DP alpha 1,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22
+ENSG00000134242	B cell scaffold protein with ankyrin repeats 1,major histocompatibility complex, class II, DP alpha 1,major histocompatibility complex, class II, DR beta 1,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22
 ENSG00000134250	Alagille syndrome due to a NOTCH2 point mutation,notch receptor 2
 ENSG00000134259	neurotrophic receptor tyrosine kinase 1
 ENSG00000134262	adaptor related protein complex 4 subunit mu 1
@@ -1922,6 +1944,7 @@ ENSG00000134287	Autosomal dominant non-syndromic intellectual disability
 ENSG00000134313	kinase D interacting substrate 220
 ENSG00000134323	Feingold syndrome type 1,Hereditary retinoblastoma,MYCN proto-oncogene, bHLH transcription factor,Non-hereditary retinoblastoma
 ENSG00000134324	mitochondrially encoded cytochrome c oxidase I
+ENSG00000134326	N-alpha-acetyltransferase 60, NatF catalytic subunit
 ENSG00000134333	Glycogen storage disease due to lactate dehydrogenase M-subunit deficiency
 ENSG00000134343	anoctamin 3
 ENSG00000134352	interleukin 6 cytokine family signal transducer,interleukin 6 cytokine family signal transducer,interleukin 6 cytokine family signal transducer
@@ -1938,6 +1961,7 @@ ENSG00000134538	solute carrier organic anion transporter family member 1B1
 ENSG00000134569	APC regulator of WNT signaling pathway,Postsynaptic congenital myasthenic syndromes,sclerostin
 ENSG00000134571	pleckstrin homology and RUN domain containing M2,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000134574	XPA, DNA damage recognition and repair factor
+ENSG00000134588	cilia and flagella associated protein 251
 ENSG00000134595	prokineticin receptor 2,SRY-box transcription factor 3,SRY-box transcription factor 9,X-linked congenital generalized hypertrichosis,X-linked intellectual disability with isolated growth hormone deficiency
 ENSG00000134644	pumilio RNA binding family member 1,pumilio RNA binding family member 1
 ENSG00000134684	tyrosyl-tRNA synthetase 1
@@ -1947,7 +1971,7 @@ ENSG00000134762	desmocollin 3
 ENSG00000134769	pleckstrin homology and RUN domain containing M2
 ENSG00000134812	cobalamin binding intrinsic factor
 ENSG00000134851	transmembrane protein 165
-ENSG00000134853	B-lymphoblastic leukemia/lymphoma with recurrent genetic abnormality,factor interacting with PAPOLA and CPSF1,fibroblast growth factor receptor 1,platelet derived growth factor receptor alpha,Rho GTPase activating protein 29,succinate dehydrogenase complex flavoprotein subunit A
+ENSG00000134853	B-lymphoblastic leukemia/lymphoma with recurrent genetic abnormality,factor interacting with PAPOLA and CPSF1,fibroblast growth factor receptor 1,platelet derived growth factor receptor alpha,platelet derived growth factor receptor alpha,platelet derived growth factor receptor alpha,Rho GTPase activating protein 29
 ENSG00000134871	collagen type IV alpha 1 chain,Familial porencephaly
 ENSG00000134873	claudin 10
 ENSG00000134882	interleukin 10
@@ -1956,7 +1980,7 @@ ENSG00000134900	tripeptidyl peptidase 2
 ENSG00000134905	cysteinyl-tRNA synthetase 2, mitochondrial
 ENSG00000134910	STT3 oligosaccharyltransferase complex catalytic subunit A
 ENSG00000134954	B cell scaffold protein with ankyrin repeats 1
-ENSG00000134982	APC regulator of WNT signaling pathway,APC regulator of WNT signaling pathway,APC-related attenuated familial adenomatous polyposis,catenin beta 1,Familial adenomatous polyposis due to 5q22.2 microdeletion,Gardner syndrome,Turcot syndrome with polyposis
+ENSG00000134982	APC regulator of WNT signaling pathway,APC regulator of WNT signaling pathway,APC regulator of WNT signaling pathway,APC regulator of WNT signaling pathway,catenin beta 1
 ENSG00000135049	ATP/GTP binding carboxypeptidase 1
 ENSG00000135069	Neu-Laxova syndrome due to phosphoserine aminotransferase deficiency,Phosphoserine aminotransferase deficiency, infantile/juvenile form
 ENSG00000135070	iron-sulfur cluster assembly 1
@@ -1973,13 +1997,14 @@ ENSG00000135341	mitogen-activated protein kinase kinase kinase 7,mitogen-activat
 ENSG00000135365	ALX homeobox 4
 ENSG00000135387	zinc finger MIZ-type containing 1
 ENSG00000135406	cyclin F
+ENSG00000135407	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000135409	anti-Mullerian hormone
 ENSG00000135424	integrin subunit alpha 7,mitogen-activated protein kinase kinase kinase 20
 ENSG00000135437	peripherin 2,peripherin 2
 ENSG00000135443	keratin 85
 ENSG00000135446	cyclin dependent kinase 4,Dedifferentiated liposarcoma,Well-differentiated liposarcoma
 ENSG00000135454	beta-1,4-N-acetyl-galactosaminyltransferase 1
-ENSG00000135486	cyclin F,valosin containing protein
+ENSG00000135486	cyclin F,heterogeneous nuclear ribonucleoprotein A1,valosin containing protein
 ENSG00000135517	Cerulean cataract,Early-onset lamellar cataract,Early-onset nuclear cataract,Early-onset posterior polar cataract,Early-onset sutural cataract,Total early-onset cataract
 ENSG00000135535	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000135541	Abelson helper integration site 1,centrosomal protein 120,S-phase cyclin A associated protein in the ER
@@ -2028,7 +2053,7 @@ ENSG00000136425	Disease-causing germline mutation(s) in,Rare autosomal recessive
 ENSG00000136451	TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000136492	phosphatase and tensin homolog,RAD51 recombinase
 ENSG00000136518	zinc finger MIZ-type containing 1
-ENSG00000136531	Dmx like 2,hyperpolarization activated cyclic nucleotide gated potassium channel 1,neurotrophic receptor tyrosine kinase 2,sodium voltage-gated channel alpha subunit 1,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 8
+ENSG00000136531	calcium voltage-gated channel subunit alpha1 A,Dmx like 2,hyperpolarization activated cyclic nucleotide gated potassium channel 1,sodium voltage-gated channel alpha subunit 1,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 8
 ENSG00000136535	Developmental delay-language impairment-dopa responsive dystonia-parkinsonism syndrome due to 2q24 microdeletion,zinc finger MIZ-type containing 1
 ENSG00000136573	ATP binding cassette subfamily C member 8,B cell scaffold protein with ankyrin repeats 1
 ENSG00000136574	ATP binding cassette subfamily C member 9,Atrial septal defect, ostium secundum type,Complete atrioventricular septal defect-tetralogy of Fallot,Complete atrioventricular septal defect with ventricular hypoplasia,DEAH-box helicase 37,GATA binding protein 4,kinase insert domain receptor,Partial atrioventricular septal defect with ventricular hypoplasia
@@ -2038,12 +2063,12 @@ ENSG00000136634	B cell scaffold protein with ankyrin repeats 1,interleukin 10,in
 ENSG00000136689	interleukin 1 receptor antagonist
 ENSG00000136695	interleukin 36 receptor antagonist,interleukin 36 receptor antagonist,interleukin 36 receptor antagonist,interleukin 36 receptor antagonist
 ENSG00000136698	Congenitally uncorrected transposition of the great arteries with cardiac malformation,Congenitally uncorrected transposition of the great arteries with coarctation,cryptic, EGF-CFC family member 1,Isolated congenitally uncorrected transposition of the great arteries,polycystin 1 like 1, transient receptor potential channel interacting
-ENSG00000136710	coiled-coil domain containing 115
+ENSG00000136710	vacuolar ATPase assembly factor VMA22
 ENSG00000136717	ryanodine receptor 1,titin
 ENSG00000136720	Kallmann syndrome,Normosmic congenital hypogonadotropic hypogonadism
 ENSG00000136732	spectrin alpha, erythrocytic 1
 ENSG00000136758	YME1 like 1 ATPase
-ENSG00000136802	Autosomal agammaglobulinemia
+ENSG00000136802	Autosomal non-syndromic agammaglobulinemia
 ENSG00000136827	sarcoglycan epsilon,torsin family 1 member A
 ENSG00000136854	LIM homeobox transcription factor 1 beta,syntaxin binding protein 1
 ENSG00000136861	Autosomal recessive primary microcephaly
@@ -2063,12 +2088,13 @@ ENSG00000137070	interleukin 11 receptor subunit alpha
 ENSG00000137074	aprataxin
 ENSG00000137090	DEAH-box helicase 37
 ENSG00000137106	Primary hyperoxaluria type 2
-ENSG00000137161	neurotrophic receptor tyrosine kinase 2
+ENSG00000137161	sodium voltage-gated channel alpha subunit 2
 ENSG00000137203	transcription factor AP-2 alpha
 ENSG00000137265	interferon regulatory factor 4
 ENSG00000137275	receptor interacting serine/threonine kinase 1
 ENSG00000137285	collagen type XXV alpha 1 chain,tubulin alpha 1a,tubulin beta 2B class IIb,very low density lipoprotein receptor
 ENSG00000137288	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
+ENSG00000137411	valyl-tRNA synthetase 2, mitochondrial
 ENSG00000137473	cilia and flagella associated protein 251
 ENSG00000137474	Disease-causing germline mutation(s) in,Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB,Usher syndrome type 2
 ENSG00000137497	PML nuclear body scaffold
@@ -2110,6 +2136,7 @@ ENSG00000138075	ATP binding cassette subfamily G member 5,ATP binding cassette s
 ENSG00000138078	prolyl endopeptidase like,solute carrier family 3 member 1,solute carrier family 3 member 1,solute carrier family 3 member 1
 ENSG00000138079	Cystinuria type A,solute carrier family 3 member 1,solute carrier family 3 member 1,solute carrier family 3 member 1
 ENSG00000138080	elastin microfibril interfacer 1
+ENSG00000138081	Disorder-associated locus
 ENSG00000138083	Acquired schizencephaly,Alobar holoprosencephaly,fibroblast growth factor receptor 1,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000138095	leucine rich pentatricopeptide repeat containing
 ENSG00000138119	Hereditary angioedema with normal C1Inh not related to F12 or PLG variant
@@ -2129,7 +2156,7 @@ ENSG00000138326	ribosomal protein L18
 ENSG00000138346	DNA replication helicase/nuclease 2,DNA replication helicase/nuclease 2
 ENSG00000138347	filamin C,myopalladin,TATA-box binding protein associated factor, RNA polymerase I subunit A,tropomyosin 2
 ENSG00000138363	5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase
-ENSG00000138375	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a like 1
+ENSG00000138375	SNF2 related chromatin remodeling annealing helicase 1
 ENSG00000138376	phosphatase and tensin homolog
 ENSG00000138378	B cell scaffold protein with ankyrin repeats 1,interleukin 10,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22,spermidine/spermine N1-acetyltransferase 1
 ENSG00000138382	Autosomal recessive primary microcephaly
@@ -2183,7 +2210,7 @@ ENSG00000139537	NME/NM23 family member 5
 ENSG00000139549	DEAH-box helicase 37,desert hedgehog signaling molecule
 ENSG00000139567	activin A receptor like type 1,Heritable pulmonary arterial hypertension
 ENSG00000139613	AT-rich interaction domain 2
-ENSG00000139618	bone morphogenetic protein receptor type 1A,BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA2 DNA repair associated,BRCA2 DNA repair associated,cadherin 1,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,partner and localizer of BRCA2,phosphatase and tensin homolog,RAD51 recombinase
+ENSG00000139618	bone morphogenetic protein receptor type 1A,BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA1 DNA repair associated,BRCA2 DNA repair associated,BRCA2 DNA repair associated,cadherin 1,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,partner and localizer of BRCA2,phosphatase and tensin homolog,RAD51 recombinase
 ENSG00000139648	lysophosphatidic acid receptor 6
 ENSG00000139679	lanosterol synthase,lysophosphatidic acid receptor 6
 ENSG00000139687	checkpoint kinase 2,Hereditary retinoblastoma,Non-hereditary retinoblastoma,RB transcriptional corepressor 1,RB transcriptional corepressor 1
@@ -2199,6 +2226,7 @@ ENSG00000140105	Autosomal recessive primary microcephaly,Disorder-associated loc
 ENSG00000140157	NIPA magnesium transporter 1
 ENSG00000140199	solute carrier family 12 member 6
 ENSG00000140262	fibroblast growth factor receptor 3,trafficking from ER to golgi regulator
+ENSG00000140263	sorbitol dehydrogenase
 ENSG00000140274	solute carrier family 5 member 5
 ENSG00000140279	dual oxidase 2,solute carrier family 5 member 5
 ENSG00000140326	codanin 1
@@ -2243,7 +2271,7 @@ ENSG00000141252	Sep (O-phosphoserine) tRNA:Sec (selenocysteine) tRNA synthase
 ENSG00000141337	Usher syndrome type 3
 ENSG00000141349	glucose-6-phosphatase catalytic subunit 3
 ENSG00000141367	actin like 6B,Autosomal dominant non-syndromic intellectual disability,proline rich mitotic checkpoint control factor,tropomyosin 3
-ENSG00000141376	zinc finger MIZ-type containing 1
+ENSG00000141376	BCAS3 microtubule associated cell migration factor
 ENSG00000141378	peptidyl-tRNA hydrolase 2
 ENSG00000141380	SS18 subunit of BAF chromatin remodeling complex
 ENSG00000141384	sperm associated antigen 17
@@ -2269,19 +2297,19 @@ ENSG00000141579	zinc finger protein 750
 ENSG00000141627	dymeclin,dymeclin
 ENSG00000141646	activin A receptor like type 1,BRCA1 DNA repair associated,forkhead box E3,Generalized juvenile polyposis/juvenile polyposis coli,SMAD family member 4
 ENSG00000141655	Adult-onset myasthenia gravis,TNF receptor superfamily member 11a,TNF receptor superfamily member 11a,TNF receptor superfamily member 11a,TNF receptor superfamily member 11b
-ENSG00000141736	ATPase copper transporting alpha
+ENSG00000141736	ATPase copper transporting alpha,erb-b2 receptor tyrosine kinase 2,erb-b2 receptor tyrosine kinase 2,erb-b2 receptor tyrosine kinase 2
 ENSG00000141756	FKBP prolyl isomerase 10,Osteogenesis imperfecta type 3,Osteogenesis imperfecta type 4,procollagen-lysine,2-oxoglutarate 5-dioxygenase 2
 ENSG00000141759	RNA polymerase I subunit A
 ENSG00000141837	actin like 6B,calcium voltage-gated channel subunit alpha1 A,calcium voltage-gated channel subunit alpha1 A,calcium voltage-gated channel subunit alpha1 A,calcium voltage-gated channel subunit alpha1 A,cut like homeobox 2,cut like homeobox 2,sodium voltage-gated channel alpha subunit 1
 ENSG00000141867	NUT midline carcinoma family member 1,structural maintenance of chromosomes 1A
 ENSG00000142002	surfactant protein A1
-ENSG00000142156	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,Collagen VI-related congenital muscular dystrophy
+ENSG00000142156	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain
 ENSG00000142168	cyclin F
-ENSG00000142173	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 2 chain,Collagen VI-related congenital muscular dystrophy
-ENSG00000142178	Dmx like 2,neurotrophic receptor tyrosine kinase 2
+ENSG00000142173	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 2 chain
+ENSG00000142178	Dmx like 2,sodium voltage-gated channel alpha subunit 2
 ENSG00000142186	SCY1 like pseudokinase 1
 ENSG00000142192	ABetaA21G amyloidosis,ABeta amyloidosis, Arctic type,ABeta amyloidosis, Dutch type,ABeta amyloidosis, Iowa type,ABeta amyloidosis, Italian type,ABetaL34V amyloidosis,ATP binding cassette subfamily A member 7
-ENSG00000142208	AKT serine/threonine kinase 1,phosphatase and tensin homolog,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000142208	AKT serine/threonine kinase 1,Cowden syndrome,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000142303	ADAM metallopeptidase with thrombospondin type 1 motif 17
 ENSG00000142319	solute carrier family 6 member 3
 ENSG00000142405	NLR family pyrin domain containing 12
@@ -2310,12 +2338,12 @@ ENSG00000143183	transmembrane and coiled-coil domains 1
 ENSG00000143199	adenylate cyclase 10
 ENSG00000143217	nectin cell adhesion molecule 4
 ENSG00000143224	protoporphyrinogen oxidase
-ENSG00000143252	phosphatase and tensin homolog,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex iron sulfur subunit B
+ENSG00000143252	Cowden syndrome,platelet derived growth factor receptor alpha,solute carrier family 25 member 11,succinate dehydrogenase complex iron sulfur subunit B
 ENSG00000143278	coagulation factor XIII A chain
 ENSG00000143294	proline rich mitotic checkpoint control factor
 ENSG00000143315	phosphatidylinositol glycan anchor biosynthesis class M
 ENSG00000143318	calsequestrin 1,ORAI calcium release-activated calcium modulator 1
-ENSG00000143324	junctional adhesion molecule 2
+ENSG00000143324	N-alpha-acetyltransferase 60, NatF catalytic subunit
 ENSG00000143337	torsin 1A interacting protein 1
 ENSG00000143363	prune exopolyphosphatase 1
 ENSG00000143365	RAR related orphan receptor C
@@ -2354,10 +2382,12 @@ ENSG00000143919	prolyl endopeptidase like,solute carrier family 3 member 1,solut
 ENSG00000143921	ATP binding cassette subfamily G member 5,ATP binding cassette subfamily G member 5
 ENSG00000143933	calsequestrin 2,triadin
 ENSG00000143951	Bardet-Biedl syndrome 1,WD repeat containing planar cell polarity effector
+ENSG00000143970	ASXL transcriptional regulator 2
 ENSG00000144028	S-phase cyclin A associated protein in the ER
 ENSG00000144034	O-sialoglycoprotein endopeptidase
 ENSG00000144036	exocyst complex component 6B
 ENSG00000144061	Bardet-Biedl syndrome 1,centrosomal protein 290,Juvenile nephronophthisis,nephrocystin 1
+ENSG00000144152	fibulin 7
 ENSG00000144182	lipoyltransferase 1
 ENSG00000144191	phosphodiesterase 6C,retinitis pigmentosa GTPase regulator
 ENSG00000144218	ALF transcription elongation factor 3
@@ -2365,7 +2395,7 @@ ENSG00000144285	actin like 6B,cut like homeobox 2,hyperpolarization activated cy
 ENSG00000144290	solute carrier family 4 member 10
 ENSG00000144354	DNA methyltransferase 3 beta
 ENSG00000144381	heat shock protein family D (Hsp60) member 1,Pelizaeus-Merzbacher-like disease due to HSPD1 mutation
-ENSG00000144406	sodium leak channel, non-selective
+ENSG00000144406	Hypotonia-speech impairment-severe cognitive delay syndrome due to UNC80 deficiency
 ENSG00000144452	ATP binding cassette subfamily A member 12,ATP binding cassette subfamily A member 12,sulfotransferase family 2B member 1
 ENSG00000144455	sulfatase modifying factor 1
 ENSG00000144535	BRCA2 DNA repair associated,DIS3 like 3'-5' exoribonuclease 2
@@ -2398,7 +2428,7 @@ ENSG00000145476	cytochrome P450 family 4 subfamily V member 2
 ENSG00000145494	transmembrane protein 126B
 ENSG00000145495	sterile alpha motif domain containing 12
 ENSG00000145623	oncostatin M receptor
-ENSG00000145675	Autosomal agammaglobulinemia,phosphatase and tensin homolog,phosphoinositide-3-kinase regulatory subunit 1
+ENSG00000145675	Autosomal non-syndromic agammaglobulinemia,phosphoinositide-3-kinase regulatory subunit 1,phosphoinositide-3-kinase regulatory subunit 1
 ENSG00000145715	RAS p21 protein activator 1,RAS p21 protein activator 1
 ENSG00000145725	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000145734	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
@@ -2409,13 +2439,13 @@ ENSG00000145868	heat shock protein family B (small) member 1
 ENSG00000145888	ATPase family AAA domain containing 1
 ENSG00000145901	B cell scaffold protein with ankyrin repeats 1
 ENSG00000145912	nucleophosmin 1
-ENSG00000145979	Isolated megalencephaly
+ENSG00000145979	TBC1 domain family member 7
 ENSG00000145982	phenylalanyl-tRNA synthetase 2, mitochondrial,phenylalanyl-tRNA synthetase 2, mitochondrial
 ENSG00000146021	Pseudohypoaldosteronism type 2D
 ENSG00000146038	doublecortin domain containing 2,doublecortin domain containing 2,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000146085	Vitamin B12-unresponsive methylmalonic acidemia type mut-,Vitamin B12-unresponsive methylmalonic acidemia type mut0
 ENSG00000146122	membrane associated guanylate kinase, WW and PDZ domain containing 2
-ENSG00000146247	pleckstrin homology domain interacting protein
+ENSG00000146247	PHIP subunit of CUL4-Ring ligase complex
 ENSG00000146282	arginyl-tRNA synthetase 2, mitochondrial
 ENSG00000146453	sperm associated antigen 17
 ENSG00000146648	epidermal growth factor receptor,Giant cell glioblastoma,Gliosarcoma
@@ -2435,14 +2465,15 @@ ENSG00000147140	non-POU domain containing octamer binding,proline rich mitotic c
 ENSG00000147145	B-Raf proto-oncogene, serine/threonine kinase
 ENSG00000147155	EBP cholestenol delta-isomerase,EBP cholestenol delta-isomerase
 ENSG00000147168	adenosine deaminase,interleukin 2 receptor subunit gamma
+ENSG00000147174	sperm associated antigen 17
 ENSG00000147180	X-linked non-syndromic intellectual disability
 ENSG00000147224	Mild phosphoribosylpyrophosphate synthetase superactivity,phosphoribosyl pyrophosphate synthetase 1,phosphoribosyl pyrophosphate synthetase 1,phosphoribosyl pyrophosphate synthetase 1,Rare X-linked non-syndromic sensorineural deafness type DFN,Severe phosphoribosylpyrophosphate synthetase superactivity
 ENSG00000147251	dedicator of cytokinesis 11,dedicator of cytokinesis 11
 ENSG00000147255	immunoglobulin superfamily member 1
 ENSG00000147257	BRCA2 DNA repair associated,glypican 3
-ENSG00000147274	RNA binding motif protein X-linked
+ENSG00000147274	RNA binding motif protein X-linked,RNA binding motif protein X-linked
 ENSG00000147316	Autosomal recessive primary microcephaly
-ENSG00000147383	NAD(P) dependent steroid dehydrogenase-like,NAD(P) dependent steroid dehydrogenase-like
+ENSG00000147383	NAD(P) dependent 3-beta-hydroxysteroid dehydrogenase NSDHL,NAD(P) dependent 3-beta-hydroxysteroid dehydrogenase NSDHL
 ENSG00000147403	ribosomal protein L10,ribosomal protein L10
 ENSG00000147408	chondroitin sulfate N-acetylgalactosaminyltransferase 1
 ENSG00000147416	ATPase H+ transporting V1 subunit B2,ATPase H+ transporting V1 subunit B2,potassium calcium-activated channel subfamily N member 3
@@ -2464,7 +2495,7 @@ ENSG00000147889	ABL proto-oncogene 1, non-receptor tyrosine kinase,B-lymphoblast
 ENSG00000147894	C9orf72-SMCR8 complex subunit,cyclin F,presenilin 1,transmembrane protein 106B,transmembrane protein 106B,valosin containing protein
 ENSG00000147955	alsin Rho guanine nucleotide exchange factor ALS2,sigma non-opioid intracellular receptor 1
 ENSG00000148019	Usher syndrome type 3
-ENSG00000148053	actin like 6B,neurotrophic receptor tyrosine kinase 2,neurotrophic receptor tyrosine kinase 2,Pilomyxoid astrocytoma
+ENSG00000148053	actin like 6B,neurotrophic receptor tyrosine kinase 2,Pilomyxoid astrocytoma,sodium voltage-gated channel alpha subunit 2
 ENSG00000148090	AU RNA binding methylglutaconyl-CoA hydratase
 ENSG00000148143	zinc finger protein 462
 ENSG00000148180	gelsolin
@@ -2497,6 +2528,7 @@ ENSG00000149257	Osteogenesis imperfecta type 3
 ENSG00000149260	calpain 5
 ENSG00000149292	NME/NM23 family member 5
 ENSG00000149295	sarcoglycan epsilon
+ENSG00000149308	bone morphogenetic protein receptor type 1A
 ENSG00000149311	ATM serine/threonine kinase,ATM serine/threonine kinase,bone morphogenetic protein receptor type 1A,cadherin 1,cyclin D1,N-ribosyldihydronicotinamide:quinone dehydrogenase 2,purinergic receptor P2X 7
 ENSG00000149418	ST14 transmembrane serine protease matriptase
 ENSG00000149476	triokinase and FMN cyclase
@@ -2510,10 +2542,10 @@ ENSG00000149575	ATP binding cassette subfamily C member 9,hyperpolarization acti
 ENSG00000149596	TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000149781	Leukocyte adhesion deficiency type III
 ENSG00000149782	phospholipase C beta 3
-ENSG00000149922	T-box transcription factor 6
+ENSG00000149922	T-box transcription factor 6,T-box transcription factor 6
 ENSG00000149925	aldolase, fructose-bisphosphate A
 ENSG00000149926	retinitis pigmentosa GTPase regulator
-ENSG00000149948	Dedifferentiated liposarcoma,LEM domain containing 3,OBSOLETE: Pleomorphic salivary gland adenoma,Silver-Russell syndrome due to a point mutation,Well-differentiated liposarcoma
+ENSG00000149948	Dedifferentiated liposarcoma,LEM domain containing 3,PLAG1 zinc finger,Silver-Russell syndrome due to a point mutation,Well-differentiated liposarcoma
 ENSG00000149970	actin like 6B,X-linked non-syndromic intellectual disability
 ENSG00000150275	Disease-causing germline mutation(s) in,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000150433	centrosomal protein 120
@@ -2557,7 +2589,7 @@ ENSG00000151704	Bartter syndrome type 2
 ENSG00000151729	DNA polymerase gamma, catalytic subunit,triokinase and FMN cyclase
 ENSG00000151779	NBAS subunit of NRZ tethering complex,NBAS subunit of NRZ tethering complex
 ENSG00000151790	tryptophan 2,3-dioxygenase
-ENSG00000151806	neurotrophic receptor tyrosine kinase 2
+ENSG00000151806	sodium voltage-gated channel alpha subunit 2
 ENSG00000151834	actin like 6B
 ENSG00000151835	sacsin molecular chaperone
 ENSG00000151849	Autosomal recessive primary microcephaly,DNA replication helicase/nuclease 2
@@ -2571,7 +2603,7 @@ ENSG00000152192	calmodulin binding transcription activator 1
 ENSG00000152207	cysteinyl leukotriene receptor 2
 ENSG00000152208	Autosomal recessive congenital cerebellar ataxia due to GRID2 deficiency
 ENSG00000152213	purinergic receptor P2X 7
-ENSG00000152217	SET binding protein 1,zinc finger MIZ-type containing 1
+ENSG00000152217	SET binding protein 1,SET binding protein 1
 ENSG00000152223	ectopic P-granules 5 autophagy tethering factor
 ENSG00000152234	mitochondrially encoded ATP synthase membrane subunit 6
 ENSG00000152266	Familial isolated hypoparathyroidism due to impaired PTH secretion
@@ -2582,6 +2614,7 @@ ENSG00000152518	Female infertility due to an implantation defect of genetic orig
 ENSG00000152556	phosphofructokinase, muscle
 ENSG00000152578	zinc finger MIZ-type containing 1
 ENSG00000152582	cilia and flagella associated protein 251,NME/NM23 family member 5
+ENSG00000152583	decorin
 ENSG00000152591	Dentin dysplasia type I,Dentin dysplasia type II,Dentinogenesis imperfecta type 2,Dentinogenesis imperfecta type 3
 ENSG00000152592	dentin matrix acidic phosphoprotein 1
 ENSG00000152620	NAD kinase 2, mitochondrial
@@ -2607,10 +2640,11 @@ ENSG00000153162	homeostatic iron regulator
 ENSG00000153187	heterogeneous nuclear ribonucleoprotein U
 ENSG00000153201	carnitine palmitoyltransferase 2,RAN binding protein 2,tropomyosin 3
 ENSG00000153208	S-phase cyclin A associated protein in the ER
+ENSG00000153214	fibulin 7
 ENSG00000153234	Developmental delay-language impairment-dopa responsive dystonia-parkinsonism syndrome due to 2q24 microdeletion,Developmental delay-language impairment-dopa responsive dystonia-parkinsonism syndrome due to a NR4A2 point mutation,GTP cyclohydrolase 1
 ENSG00000153253	actin like 6B
 ENSG00000153283	CD96 molecule
-ENSG00000153487	OBSOLETE: Squamous cell carcinoma of salivary glands,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
+ENSG00000153487	TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
 ENSG00000153563	CD8 subunit alpha
 ENSG00000153574	ribose 5-phosphate isomerase A
 ENSG00000153814	B cell scaffold protein with ankyrin repeats 1,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon
@@ -2642,7 +2676,7 @@ ENSG00000154473	thyroid hormone receptor interactor 13
 ENSG00000154485	ankyrin repeat and sterile alpha motif domain containing 3,polycystin 1 like 1, transient receptor potential channel interacting
 ENSG00000154646	transmembrane serine protease 15
 ENSG00000154678	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
-ENSG00000154721	junctional adhesion molecule 2
+ENSG00000154721	N-alpha-acetyltransferase 60, NatF catalytic subunit
 ENSG00000154743	tRNA splicing endonuclease subunit 15
 ENSG00000154764	Wnt family member 7A,Wnt family member 7A
 ENSG00000154767	XPA, DNA damage recognition and repair factor
@@ -2691,7 +2725,7 @@ ENSG00000156299	zinc finger MIZ-type containing 1
 ENSG00000156304	zinc finger MIZ-type containing 1
 ENSG00000156313	NME/NM23 family member 5,phosphodiesterase 6C,retinitis pigmentosa GTPase regulator,retinitis pigmentosa GTPase regulator,S-phase cyclin A associated protein in the ER
 ENSG00000156414	sperm associated antigen 17
-ENSG00000156466	growth differentiation factor 3,sonic hedgehog signaling molecule,ubiquitin specific peptidase 45
+ENSG00000156466	growth differentiation factor 3,growth differentiation factor 5,sonic hedgehog signaling molecule,ubiquitin specific peptidase 45
 ENSG00000156467	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
 ENSG00000156471	phosphatidylserine synthase 1
 ENSG00000156475	protein phosphatase 2 regulatory subunit Bbeta
@@ -2702,7 +2736,6 @@ ENSG00000156535	glycoprotein Ib platelet subunit alpha
 ENSG00000156574	Alobar holoprosencephaly,ankyrin repeat and sterile alpha motif domain containing 3,fibroblast growth factor receptor 1,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,polycystin 1 like 1, transient receptor potential channel interacting,polycystin 1 like 1, transient receptor potential channel interacting,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000156650	lysine acetyltransferase 6B,lysine acetyltransferase 6B
 ENSG00000156709	apoptosis inducing factor mitochondria associated 1,apoptosis inducing factor mitochondria associated 1,apoptosis inducing factor mitochondria associated 1,apoptosis inducing factor mitochondria associated 1
-ENSG00000156738	CD19 molecule
 ENSG00000156831	NSE2 (MMS21) homolog, SMC5-SMC6 complex SUMO ligase
 ENSG00000156873	phosphorylase kinase regulatory subunit alpha 2
 ENSG00000156876	Autosomal recessive primary microcephaly
@@ -2711,6 +2744,7 @@ ENSG00000156925	Isolated congenitally uncorrected transposition of the great art
 ENSG00000156970	thyroid hormone receptor interactor 13
 ENSG00000156973	centrosomal protein 120,family with sequence similarity 149 member B1
 ENSG00000156976	zinc finger MIZ-type containing 1
+ENSG00000156983	bromodomain and PHD finger containing 1,SET domain containing 5
 ENSG00000157087	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000157103	Autosomal dominant non-syndromic intellectual disability,solute carrier family 2 member 1
 ENSG00000157119	actin alpha 1, skeletal muscle
@@ -2721,7 +2755,7 @@ ENSG00000157259	TATA-box binding protein associated factor, RNA polymerase I sub
 ENSG00000157343	Male infertility due to large-headed multiflagellar polyploid spermatozoa
 ENSG00000157388	calcium voltage-gated channel subunit alpha1 D,calcium voltage-gated channel subunit alpha1 D
 ENSG00000157399	arylsulfatase L
-ENSG00000157404	Acute mast cell leukemia,Bullous diffuse cutaneous mastocytosis,Chronic mast cell leukemia,fms related receptor tyrosine kinase 3,fms related receptor tyrosine kinase 3,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,Nodular urticaria pigmentosa,Plaque-form urticaria pigmentosa,Pseudoxanthomatous diffuse cutaneous mastocytosis,RUNX family transcription factor 1,snail family transcriptional repressor 2,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex flavoprotein subunit A,Telangiectasia macularis eruptiva perstans,Typical urticaria pigmentosa
+ENSG00000157404	Acute mast cell leukemia,Bullous diffuse cutaneous mastocytosis,Chronic mast cell leukemia,fms related receptor tyrosine kinase 3,fms related receptor tyrosine kinase 3,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,KIT proto-oncogene, receptor tyrosine kinase,Nodular urticaria pigmentosa,Plaque-form urticaria pigmentosa,platelet derived growth factor receptor alpha,platelet derived growth factor receptor alpha,Pseudoxanthomatous diffuse cutaneous mastocytosis,RUNX family transcription factor 1,snail family transcriptional repressor 2,Telangiectasia macularis eruptiva perstans,Typical urticaria pigmentosa
 ENSG00000157423	NME/NM23 family member 5
 ENSG00000157483	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000157500	ATP binding cassette subfamily C member 8
@@ -2729,7 +2763,7 @@ ENSG00000157540	DYRK1A-related intellectual disability syndrome due to 21q22.13q
 ENSG00000157542	potassium inwardly rectifying channel subfamily J member 6
 ENSG00000157554	ETS transcription factor ERG,ETS transcription factor ERG
 ENSG00000157613	FUS RNA binding protein,Osteogenesis imperfecta type 3
-ENSG00000157764	B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,cadherin related 23,mitogen-activated protein kinase kinase 1,Pilomyxoid astrocytoma,Pilomyxoid astrocytoma,protein tyrosine phosphatase non-receptor type 11,zinc finger E-box binding homeobox 2,zinc finger E-box binding homeobox 2
+ENSG00000157764	B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,B-Raf proto-oncogene, serine/threonine kinase,cadherin related 23,mitogen-activated protein kinase kinase 1,Pilomyxoid astrocytoma,Pilomyxoid astrocytoma,protein tyrosine phosphatase non-receptor type 11,RAS related,zinc finger E-box binding homeobox 2,zinc finger E-box binding homeobox 2
 ENSG00000157765	solute carrier family 34 member 2
 ENSG00000157766	aggrecan,aggrecan,aggrecan,aggrecan
 ENSG00000157796	centrosomal protein 290,intraflagellar transport 122,Juvenile nephronophthisis,KIAA0753
@@ -2767,7 +2801,7 @@ ENSG00000158874	AApoAII amyloidosis
 ENSG00000158887	keratin 1,myelin protein zero,myelin protein zero,myelin protein zero,myelin protein zero,myelin protein zero,peripheral myelin protein 22,peripheral myelin protein 22
 ENSG00000158955	Renal agenesis, bilateral
 ENSG00000159023	spectrin alpha, erythrocytic 1
-ENSG00000159063	ALG8 alpha-1,3-glucosyltransferase
+ENSG00000159063	ALG8 alpha-1,3-glucosyltransferase,PRKCSH beta subunit of glucosidase II
 ENSG00000159079	NME/NM23 family member 5
 ENSG00000159082	actin like 6B,podocalyxin like,synaptojanin 1
 ENSG00000159110	interferon alpha and beta receptor subunit 2
@@ -2792,7 +2826,7 @@ ENSG00000159692	phosphatidylinositol glycan anchor biosynthesis class G (EMM blo
 ENSG00000159753	capping protein regulator and myosin 1 linker 2
 ENSG00000159899	natriuretic peptide receptor 2,natriuretic peptide receptor 2
 ENSG00000159921	glucosamine (UDP-N-acetyl)-2-epimerase/N-acetylmannosamine kinase,glucosamine (UDP-N-acetyl)-2-epimerase/N-acetylmannosamine kinase,protein kinase cAMP-activated catalytic subunit gamma
-ENSG00000159958	CD19 molecule
+ENSG00000159958	TNF receptor superfamily member 13C
 ENSG00000160014	calsequestrin 2,triadin
 ENSG00000160072	ATPase family AAA domain containing 3A
 ENSG00000160111	C3 and PZP like alpha-2-macroglobulin domain containing 8
@@ -2805,6 +2839,7 @@ ENSG00000160202	crystallin alpha A,Early-onset anterior polar cataract,Early-ons
 ENSG00000160211	glucose-6-phosphate dehydrogenase
 ENSG00000160213	Autosomal recessive hypohidrotic ectodermal dysplasia,cystatin B
 ENSG00000160218	Autosomal recessive primary microcephaly
+ENSG00000160223	inducible T cell costimulator ligand
 ENSG00000160224	autoimmune regulator,Familial isolated hypoparathyroidism due to impaired PTH secretion
 ENSG00000160226	cilia and flagella associated protein 410,cyclin F,retinitis pigmentosa GTPase regulator
 ENSG00000160255	Leukocyte adhesion deficiency type I
@@ -2814,11 +2849,11 @@ ENSG00000160299	DNA replication helicase/nuclease 2,pericentrin
 ENSG00000160323	Congenital thrombotic thrombocytopenic purpura
 ENSG00000160551	Autosomal dominant non-syndromic intellectual disability
 ENSG00000160563	zinc finger MIZ-type containing 1
-ENSG00000160602	Infantile nephronophthisis,nephrocystin 3
+ENSG00000160602	glucosidase II alpha subunit,Infantile nephronophthisis,nephrocystin 3
 ENSG00000160654	CD3 gamma subunit of T-cell receptor complex
 ENSG00000160688	Multiple acyl-CoA dehydrogenase deficiency, mild type,Multiple acyl-CoA dehydrogenase deficiency, severe neonatal type
 ENSG00000160695	VPS11 core subunit of CORVET and HOPS complexes
-ENSG00000160710	adenosine deaminase RNA specific,LSM11, U7 small nuclear RNA associated,nucleoporin 54
+ENSG00000160710	adenosine deaminase RNA specific,adenosine deaminase RNA specific,LSM11, U7 small nuclear RNA associated,nucleoporin 54
 ENSG00000160712	interleukin 6 receptor
 ENSG00000160716	cholinergic receptor nicotinic alpha 4 subunit
 ENSG00000160746	anoctamin 10
@@ -2839,7 +2874,7 @@ ENSG00000161217	phosphate cytidylyltransferase 1A, choline,ubiquitin specific pe
 ENSG00000161270	membrane associated guanylate kinase, WW and PDZ domain containing 2,NPHS1 adhesion molecule, nephrin
 ENSG00000161328	NME/NM23 family member 5
 ENSG00000161395	phosphatidylinositol glycan anchor biosynthesis class V
-ENSG00000161405	purinergic receptor P2X 7
+ENSG00000161405	Combined immunodeficiency-lymphopenia-cancer predisposing syndrome due to AIOLOS deficiency,purinergic receptor P2X 7
 ENSG00000161513	ferredoxin reductase,ferredoxin reductase
 ENSG00000161533	acyl-CoA oxidase 1,acyl-CoA oxidase 1
 ENSG00000161547	ETS variant transcription factor 6,KIT proto-oncogene, receptor tyrosine kinase,tet methylcytosine dioxygenase 2
@@ -2867,14 +2902,15 @@ ENSG00000162434	Janus kinase 1,Janus kinase 1
 ENSG00000162438	calcium sensing receptor,serine peptidase inhibitor Kazal type 1
 ENSG00000162493	arginine-glutamic acid dipeptide repeats
 ENSG00000162551	Adult hypophosphatasia,Childhood-onset hypophosphatasia,Infantile hypophosphatasia,Odontohypophosphatasia,Perinatal lethal hypophosphatasia,Prenatal benign hypophosphatasia
-ENSG00000162552	Mayer-Rokitansky-Küster-Hauser syndrome type 2,Wnt family member 4,Wnt family member 4
+ENSG00000162552	Mayer-Rokitansky-KÃ¼ster-Hauser syndrome type 2,Wnt family member 4,Wnt family member 4
 ENSG00000162594	interleukin 10
 ENSG00000162599	nuclear factor I A
 ENSG00000162601	Myb like, SWIRM and MPN domains 1
 ENSG00000162614	TATA-box binding protein associated factor, RNA polymerase I subunit A
+ENSG00000162616	DnaJ heat shock protein family (Hsp40) member B4
 ENSG00000162631	methyl-CpG binding protein 2,zinc finger MIZ-type containing 1
 ENSG00000162676	T cell immune regulator 1, ATPase H+ transporting V0 subunit a3
-ENSG00000162688	amylo-alpha-1, 6-glucosidase, 4-alpha-glucanotransferase
+ENSG00000162688	amylo-alpha-1,6-glucosidase and 4-alpha-glucanotransferase
 ENSG00000162711	NLR family pyrin domain containing 3,NLR family pyrin domain containing 3,NLR family pyrin domain containing 3,NLR family pyrin domain containing 3
 ENSG00000162733	discoidin domain receptor tyrosine kinase 2
 ENSG00000162735	peroxisomal biogenesis factor 11 beta,peroxisomal biogenesis factor 2,peroxisomal biogenesis factor 2
@@ -2894,7 +2930,7 @@ ENSG00000163050	coenzyme Q8A
 ENSG00000163069	sarcoglycan beta
 ENSG00000163075	NME/NM23 family member 5
 ENSG00000163093	Bardet-Biedl syndrome 1
-ENSG00000163104	SWI/SNF-related, matrix-associated actin-dependent regulator of chromatin, subfamily a, containing DEAD/H box 1,SWI/SNF-related, matrix-associated actin-dependent regulator of chromatin, subfamily a, containing DEAD/H box 1,SWI/SNF-related, matrix-associated actin-dependent regulator of chromatin, subfamily a, containing DEAD/H box 1
+ENSG00000163104	SNF2 related chromatin remodeling ATPase with DExD box 1,SNF2 related chromatin remodeling ATPase with DExD box 1,SNF2 related chromatin remodeling ATPase with DExD box 1
 ENSG00000163114	sperm associated antigen 17
 ENSG00000163132	msh homeobox 1,msh homeobox 1,Rho GTPase activating protein 29,small ubiquitin like modifier 1,tumor protein p63
 ENSG00000163161	ERCC excision repair 5, endonuclease,M-phase specific PLK1 interacting protein,XPA, DNA damage recognition and repair factor
@@ -2902,10 +2938,11 @@ ENSG00000163170	bolA family member 3
 ENSG00000163235	small ubiquitin like modifier 1
 ENSG00000163251	actin gamma 1,actin gamma 1,frizzled class receptor 5,frizzled class receptor 5,frizzled class receptor 5,frizzled class receptor 5
 ENSG00000163254	crystallin alpha A,Early-onset lamellar cataract,Early-onset nuclear cataract,Pulverulent cataract
+ENSG00000163295	alkaline phosphatase, intestinal
 ENSG00000163297	Infantile systemic hyalinosis,Juvenile hyaline fibromatosis
 ENSG00000163344	mevalonate kinase
 ENSG00000163347	claudin 1
-ENSG00000163359	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 3 chain,Collagen VI-related congenital muscular dystrophy
+ENSG00000163359	collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 1 chain,collagen type VI alpha 3 chain
 ENSG00000163374	YY1 associated protein 1
 ENSG00000163378	notch receptor 1
 ENSG00000163380	actin alpha 1, skeletal muscle,actin alpha 1, skeletal muscle
@@ -2925,11 +2962,10 @@ ENSG00000163513	forkhead box E3,Marfan syndrome type 2,mutS homolog 6,transformi
 ENSG00000163527	STT3 oligosaccharyltransferase complex catalytic subunit B
 ENSG00000163536	Progressive dementia with neuroserpin inclusion bodies
 ENSG00000163541	succinate-CoA ligase GDP/ADP-forming subunit alpha
-ENSG00000163545	Isolated anencephaly
 ENSG00000163554	solute carrier family 4 member 1 (Diego blood group),spectrin alpha, erythrocytic 1
 ENSG00000163581	solute carrier family 2 member 2
 ENSG00000163599	Adult-onset myasthenia gravis,B cell scaffold protein with ankyrin repeats 1,cytotoxic T-lymphocyte associated protein 4,cytotoxic T-lymphocyte associated protein 4,cytotoxic T-lymphocyte associated protein 4,major histocompatibility complex, class II, DP alpha 1
-ENSG00000163600	CD19 molecule
+ENSG00000163600	inducible T cell costimulator
 ENSG00000163608	RNA component of mitochondrial RNA processing endoribonuclease
 ENSG00000163625	zinc finger MIZ-type containing 1
 ENSG00000163631	albumin
@@ -2958,13 +2994,13 @@ ENSG00000163898	lanosterol synthase,lysophosphatidic acid receptor 6
 ENSG00000163902	MDS1 and EVI1 complex locus
 ENSG00000163913	intraflagellar transport 122,intraflagellar transport 80
 ENSG00000163914	peripherin 2,rhodopsin,S-phase cyclin A associated protein in the ER
-ENSG00000163930	BRCA1 associated deubiquitinase 1,BRCA1 associated deubiquitinase 1,cyclin dependent kinase 4,cysteinyl leukotriene receptor 2,cysteinyl leukotriene receptor 2,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,zinc finger MIZ-type containing 1
+ENSG00000163930	BRCA1 associated deubiquitinase 1,BRCA1 associated deubiquitinase 1,cyclin dependent kinase 4,cysteinyl leukotriene receptor 2,cysteinyl leukotriene receptor 2,SWI/SNF related BAF chromatin remodeling complex subunit B1,SWI/SNF related BAF chromatin remodeling complex subunit B1,zinc finger MIZ-type containing 1
 ENSG00000163931	transketolase
 ENSG00000163932	protein kinase C delta
-ENSG00000163933	RFT1 homolog
+ENSG00000163933	RFT1 glycolipid translocator homolog
 ENSG00000163939	Clear cell papillary renal cell carcinoma
 ENSG00000163945	ERCC excision repair 6, chromatin remodeling factor
-ENSG00000163956	synthesis of cytochrome C oxidase 2
+ENSG00000163956	solute carrier family 39 member 5
 ENSG00000163961	ring finger protein 168
 ENSG00000164007	Primary hypomagnesemia with hypercalciuria and nephrocalcinosis with severe ocular involvement
 ENSG00000164022	Autosomal recessive non-syndromic intellectual disability,Pelizaeus-Merzbacher-like disease due to AIMP1 mutation
@@ -2987,23 +3023,23 @@ ENSG00000164199	hyperpolarization activated cyclic nucleotide gated potassium ch
 ENSG00000164209	ATP/GTP binding carboxypeptidase 1,solute carrier family 25 member 46
 ENSG00000164252	angiogenic factor with G-patch and FHA domains 1
 ENSG00000164258	transmembrane protein 126B
-ENSG00000164266	calcium sensing receptor,serine peptidase inhibitor Kazal type 1
+ENSG00000164266	serine peptidase inhibitor Kazal type 1,serine peptidase inhibitor Kazal type 1
 ENSG00000164291	arylsulfatase family member K
 ENSG00000164307	interleukin 10
 ENSG00000164342	unc-93 homolog B1, TLR signaling regulator
 ENSG00000164344	kallikrein B1
 ENSG00000164347	GTP dependent ribosome recycling factor mitochondrial 2
-ENSG00000164362	BCL6 corepressor,B-Raf proto-oncogene, serine/threonine kinase,cyclin dependent kinase 4,dyskerin pseudouridine synthase 1,nucleophosmin 1,perforin 1,surfactant protein A1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1,tumor protein p53
+ENSG00000164362	BCL6 corepressor,B-Raf proto-oncogene, serine/threonine kinase,cyclin dependent kinase 4,dyskerin pseudouridine synthase 1,nucleophosmin 1,perforin 1,surfactant protein A1,SWI/SNF related BAF chromatin remodeling complex subunit B1,tumor protein p53
 ENSG00000164363	solute carrier family 6 member 20
 ENSG00000164405	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
 ENSG00000164414	solute carrier family 35 member A1
-ENSG00000164418	Autosomal recessive non-syndromic intellectual disability
+ENSG00000164418	Autosomal recessive non-syndromic intellectual disability,zinc finger MIZ-type containing 1
 ENSG00000164438	ABL proto-oncogene 1, non-receptor tyrosine kinase
 ENSG00000164442	ankyrin repeat and sterile alpha motif domain containing 3,Atrial septal defect, ostium secundum type,Atrial septal defect, sinus venosus type,kinase insert domain receptor
 ENSG00000164458	partner and localizer of BRCA2,T-box transcription factor T
 ENSG00000164509	oncostatin M receptor
 ENSG00000164512	protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22
-ENSG00000164532	Atrial septal defect, ostium secundum type,Atrial septal defect, ostium secundum type
+ENSG00000164532	Atrial septal defect, ostium secundum type,Atrial septal defect, ostium secundum type,pleckstrin homology and RUN domain containing M2
 ENSG00000164587	ribosomal protein S14
 ENSG00000164588	actin like 6B,hyperpolarization activated cyclic nucleotide gated potassium channel 1
 ENSG00000164597	component of oligomeric golgi complex 5
@@ -3029,12 +3065,14 @@ ENSG00000164946	fibroblast growth factor receptor 1,FRAS1 related extracellular 
 ENSG00000164951	Pyruvate dehydrogenase phosphatase deficiency
 ENSG00000164953	centrosomal protein 120,doublecortin domain containing 2,thioredoxin domain containing 15,transmembrane protein 67,transmembrane protein 67
 ENSG00000164961	VPS35 endosomal protein sorting factor like,WASH complex subunit 5
-ENSG00000164976	junctional adhesion molecule 2
+ENSG00000164976	N-alpha-acetyltransferase 60, NatF catalytic subunit
+ENSG00000164978	nudix hydrolase 2
 ENSG00000165006	ubiquitin associated protein 1,ubiquitin associated protein 1
+ENSG00000165025	spleen associated tyrosine kinase
 ENSG00000165029	apolipoprotein A1,ATP binding cassette subfamily A member 1
 ENSG00000165059	protein kinase cAMP-activated catalytic subunit gamma
 ENSG00000165060	frataxin
-ENSG00000165078	carboxypeptidase A6,carboxypeptidase A6
+ENSG00000165078	carboxypeptidase A6,hyperpolarization activated cyclic nucleotide gated potassium channel 1
 ENSG00000165091	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000165102	Sanfilippo syndrome type C,S-phase cyclin A associated protein in the ER
 ENSG00000165119	Neurodevelopmental disorder-craniofacial dysmorphism-cardiac defect-skeletal anomalies syndrome due to 9q21.3 microdeletion,Neurodevelopmental disorder-craniofacial dysmorphism-cardiac defect-skeletal anomalies syndrome due to a point mutation
@@ -3042,18 +3080,18 @@ ENSG00000165125	calcium sensing receptor,transient receptor potential cation cha
 ENSG00000165138	Infantile nephronophthisis,Juvenile nephronophthisis
 ENSG00000165140	fructose-bisphosphatase 1
 ENSG00000165164	Male infertility due to large-headed multiflagellar polyploid spermatozoa
-ENSG00000165168	cytochrome b-245 beta chain,X-linked mendelian susceptibility to mycobacterial diseases due to CYBB deficiency
+ENSG00000165168	cytochrome b-245 beta chain,cytochrome b-245 beta chain
 ENSG00000165171	syntaxin 1A
 ENSG00000165181	sperm associated antigen 17
 ENSG00000165186	X-linked non-syndromic intellectual disability
 ENSG00000165194	protocadherin 19,sodium voltage-gated channel alpha subunit 1
-ENSG00000165195	neurotrophic receptor tyrosine kinase 2,phosphatidylinositol glycan anchor biosynthesis class A,phosphatidylinositol glycan anchor biosynthesis class A,phosphatidylinositol glycan anchor biosynthesis class A,sodium voltage-gated channel alpha subunit 2
+ENSG00000165195	phosphatidylinositol glycan anchor biosynthesis class A,phosphatidylinositol glycan anchor biosynthesis class A,phosphatidylinositol glycan anchor biosynthesis class A,sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 2
 ENSG00000165219	membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000165240	ATPase copper transporting alpha,ATPase copper transporting alpha,ATPase copper transporting alpha,ATPase copper transporting alpha
 ENSG00000165280	cyclin F,transmembrane protein 106B,transmembrane protein 106B,valosin containing protein,valosin containing protein,valosin containing protein,valosin containing protein,valosin containing protein
 ENSG00000165282	phosphatidylinositol glycan anchor biosynthesis class V
 ENSG00000165288	zinc finger MIZ-type containing 1
-ENSG00000165370	aryl hydrocarbon receptor interacting protein
+ENSG00000165370	AHR interacting HSP90 co-chaperone
 ENSG00000165392	WRN RecQ like helicase
 ENSG00000165409	forkhead box E1,solute carrier family 26 member 4,thyroid stimulating hormone receptor,thyroid stimulating hormone receptor,thyroid stimulating hormone receptor
 ENSG00000165410	actin alpha 1, skeletal muscle
@@ -3085,7 +3123,6 @@ ENSG00000165898	iron-sulfur cluster assembly 2
 ENSG00000165899	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000165915	SLC39A13-related spondylodysplastic Ehlers-Danlos syndrome
 ENSG00000165917	nebulin,Postsynaptic congenital myasthenic syndromes,solute carrier family 18 member A3
-ENSG00000165953	secreted LY6/PLAUR domain containing 1
 ENSG00000165970	ATPase family AAA domain containing 1
 ENSG00000165995	hyperpolarization activated cyclic nucleotide gated potassium channel 4
 ENSG00000165996	mitogen-activated protein kinase kinase kinase 20
@@ -3110,7 +3147,7 @@ ENSG00000166257	ATP binding cassette subfamily C member 9,hyperpolarization acti
 ENSG00000166278	complement C2
 ENSG00000166311	sphingomyelin phosphodiesterase 1,sphingomyelin phosphodiesterase 1
 ENSG00000166326	paired box 6
-ENSG00000166340	tripeptidyl peptidase 1,tripeptidyl peptidase 1
+ENSG00000166340	Infantile CLN2 disease,Juvenile CLN2 disease,Late infantile CLN2 disease,tripeptidyl peptidase 1
 ENSG00000166341	dachsous cadherin-related 1,dachsous cadherin-related 1
 ENSG00000166347	cytochrome b5 reductase 3,cytochrome b5 type A
 ENSG00000166349	adenosine deaminase,INO80 complex ATPase subunit,recombination activating 1,recombination activating 1
@@ -3156,7 +3193,6 @@ ENSG00000167113	coenzyme Q4
 ENSG00000167114	solute carrier family 27 member 4
 ENSG00000167131	NME/NM23 family member 5
 ENSG00000167186	coenzyme Q7, hydroxylase,coenzyme Q9
-ENSG00000167202	TBC1 domain family member 2B
 ENSG00000167207	nucleotide binding oligomerization domain containing 2
 ENSG00000167210	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000167244	Beckwith-Wiedemann syndrome due to imprinting defect of 11p15,insulin like growth factor 2,Silver-Russell syndrome due to 11p15 microduplication,Silver-Russell syndrome due to an imprinting defect of 11p15,Silver-Russell syndrome due to a point mutation
@@ -3184,6 +3220,7 @@ ENSG00000167645	Yip1 interacting factor homolog B, membrane trafficking protein
 ENSG00000167646	NME/NM23 family member 5
 ENSG00000167654	ATCAY kinesin light chain interacting caytaxin
 ENSG00000167658	eukaryotic translation elongation factor 2
+ENSG00000167676	perilipin 4
 ENSG00000167680	Autosomal dominant non-syndromic intellectual disability
 ENSG00000167693	Autosomal recessive Robinow syndrome
 ENSG00000167711	serpin family F member 2
@@ -3202,21 +3239,21 @@ ENSG00000167978	serine/arginine repetitive matrix 2
 ENSG00000167985	solute carrier family 25 member 11
 ENSG00000167995	bestrophin 1,bestrophin 1,bestrophin 1,bestrophin 1,membrane frizzled-related protein,peripherin 2,S-phase cyclin A associated protein in the ER
 ENSG00000167996	ferritin heavy chain 1
-ENSG00000168000	BSCL2 lipid droplet biogenesis associated, seipin,BSCL2 lipid droplet biogenesis associated, seipin,caveolae associated protein 1,receptor accessory protein 1
+ENSG00000168000	BSCL2 lipid droplet biogenesis associated, seipin,BSCL2 lipid droplet biogenesis associated, seipin,Congenital generalized lipodystrophy type 2,receptor accessory protein 1
 ENSG00000168014	C2 domain containing 3 centriole elongation regulator
 ENSG00000168016	tetratricopeptide repeat and ankyrin repeat containing 1
 ENSG00000168026	cilia and flagella associated protein 251
 ENSG00000168028	NK2 homeobox 5
-ENSG00000168036	axin 1,B-Raf proto-oncogene, serine/threonine kinase,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,MET proto-oncogene, receptor tyrosine kinase,tumor protein p53
+ENSG00000168036	APC membrane recruitment protein 1,axin 1,B-Raf proto-oncogene, serine/threonine kinase,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,catenin beta 1,EvC ciliary complex subunit 1,MET proto-oncogene, receptor tyrosine kinase,tumor protein p53
 ENSG00000168040	Fas associated via death domain,fibroblast growth factor 3
 ENSG00000168056	fibrillin 1,fibrillin 1,latent transforming growth factor beta binding protein 3
 ENSG00000168096	ankyrin repeat and sterile alpha motif domain containing 3
-ENSG00000168137	SET domain containing 5
+ENSG00000168137	SET domain containing 5,zinc finger MIZ-type containing 1
 ENSG00000168214	notch receptor 1
 ENSG00000168216	Methylmalonic acidemia with homocystinuria type cblF
 ENSG00000168237	glycerate kinase
 ENSG00000168263	potassium voltage-gated channel modifier subfamily V member 2
-ENSG00000168264	CD19 molecule,PML nuclear body scaffold
+ENSG00000168264	interferon regulatory factor 2 binding protein 2,PML nuclear body scaffold
 ENSG00000168267	pancreas associated transcription factor 1a,pancreas associated transcription factor 1a
 ENSG00000168269	Autosomal recessive distal renal tubular acidosis,solute carrier family 26 member 4
 ENSG00000168275	synthesis of cytochrome C oxidase 1
@@ -3241,12 +3278,12 @@ ENSG00000168509	hemojuvelin BMP co-receptor,homeostatic iron regulator
 ENSG00000168530	myosin light chain 1
 ENSG00000168538	trafficking protein particle complex subunit 11,trafficking protein particle complex subunit 11,trafficking protein particle complex subunit 11
 ENSG00000168542	angiopoietin like 6,collagen type III alpha 1 chain,collagen type III alpha 1 chain,collagen type III alpha 1 chain,collagen type III alpha 1 chain
-ENSG00000168575	junctional adhesion molecule 2
+ENSG00000168575	N-alpha-acetyltransferase 60, NatF catalytic subunit
 ENSG00000168610	Janus kinase 1,PML nuclear body scaffold,signal transducer and activator of transcription 3,signal transducer and activator of transcription 3,signal transducer and activator of transcription 3,signal transducer and activator of transcription 3,signal transducer and activator of transcription 3
 ENSG00000168615	retinitis pigmentosa GTPase regulator
 ENSG00000168621	ATPase copper transporting alpha,ladybird homeobox 1
 ENSG00000168631	mucin like 3
-ENSG00000168646	axin 2,AXIN2-related attenuated familial adenomatous polyposis,small ubiquitin like modifier 1
+ENSG00000168646	axin 2
 ENSG00000168685	adenosine deaminase,interleukin 7 receptor
 ENSG00000168724	SBDS ribosome maturation factor
 ENSG00000168769	Janus kinase 2,KIT proto-oncogene, receptor tyrosine kinase,Myelodysplastic neoplasm with increased blasts type 1,Myelodysplastic neoplasm with increased blasts type 2,tet methylcytosine dioxygenase 2,tet methylcytosine dioxygenase 2,tet methylcytosine dioxygenase 2,tet methylcytosine dioxygenase 2,tet methylcytosine dioxygenase 2,tet methylcytosine dioxygenase 2
@@ -3271,7 +3308,7 @@ ENSG00000169105	carbohydrate sulfotransferase 14
 ENSG00000169126	NME/NM23 family member 5
 ENSG00000169169	carnitine palmitoyltransferase 1C
 ENSG00000169174	ATP binding cassette subfamily G member 5
-ENSG00000169184	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000169184	MN1 proto-oncogene, transcriptional regulator,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000169218	R-spondin 1
 ENSG00000169247	SH3 domain and tetratricopeptide repeats 2
 ENSG00000169271	heat shock protein family B (small) member 1
@@ -3296,7 +3333,7 @@ ENSG00000169604	ANTXR cell adhesion molecule 1
 ENSG00000169607	cytoskeleton associated protein 2 like
 ENSG00000169641	arginine-glutamic acid dipeptide repeats
 ENSG00000169679	thyroid hormone receptor interactor 13
-ENSG00000169692	caveolae associated protein 1
+ENSG00000169692	Congenital generalized lipodystrophy type 1
 ENSG00000169696	proline rich mitotic checkpoint control factor,transcription factor binding to IGHM enhancer 3
 ENSG00000169704	glycoprotein Ib platelet subunit alpha
 ENSG00000169714	CCHC-type zinc finger nucleic acid binding protein
@@ -3317,6 +3354,7 @@ ENSG00000170027	actin like 6B
 ENSG00000170099	serpin family A member 6
 ENSG00000170113	NIPA magnesium transporter 1,NIPA magnesium transporter 1
 ENSG00000170175	Postsynaptic congenital myasthenic syndromes,Postsynaptic congenital myasthenic syndromes
+ENSG00000170248	Autosomal recessive primary microcephaly
 ENSG00000170262	steroidogenic acute regulatory protein
 ENSG00000170264	S-phase cyclin A associated protein in the ER
 ENSG00000170266	GM1 gangliosidosis type 1,GM1 gangliosidosis type 2,GM1 gangliosidosis type 3,Mucopolysaccharidosis type 4B
@@ -3325,7 +3363,7 @@ ENSG00000170275	Osteogenesis imperfecta type 2,Osteogenesis imperfecta type 3,Os
 ENSG00000170289	cyclic nucleotide gated channel subunit beta 3,phosphodiesterase 6C,phosphodiesterase 6C
 ENSG00000170315	grainyhead like transcription factor 3,grainyhead like transcription factor 3,grainyhead like transcription factor 3,ubiquitin B
 ENSG00000170325	PR/SET domain 10
-ENSG00000170345	caveolae associated protein 1,FosB proto-oncogene, AP-1 transcription factor subunit
+ENSG00000170345	FosB proto-oncogene, AP-1 transcription factor subunit,peroxisome proliferator activated receptor gamma
 ENSG00000170370	Acquired schizencephaly
 ENSG00000170374	Osteogenesis imperfecta type 4,sclerostin
 ENSG00000170381	semaphorin 3E
@@ -3338,7 +3376,7 @@ ENSG00000170477	keratin 4
 ENSG00000170484	keratin 74,keratin 85,lysophosphatidic acid receptor 6
 ENSG00000170498	Genetic central precocious puberty in male,Normosmic congenital hypogonadotropic hypogonadism
 ENSG00000170523	keratin 86,transient receptor potential cation channel subfamily M member 4
-ENSG00000170540	ADP ribosylation factor like GTPase 6 interacting protein 1
+ENSG00000170540	ARL6 interacting reticulophagy regulator 1
 ENSG00000170558	Inherited isolated arrhythmogenic cardiomyopathy, dominant-right variant
 ENSG00000170561	BCL6 corepressor
 ENSG00000170577	SIX homeobox 2
@@ -3359,7 +3397,7 @@ ENSG00000170921	zinc finger MIZ-type containing 1
 ENSG00000170927	DAZ interacting zinc finger protein 1 like,PKHD1 ciliary IPT domain containing fibrocystin/polyductin
 ENSG00000170956	serpin family A member 1
 ENSG00000171051	formyl peptide receptor 1
-ENSG00000171094	ALK-positive anaplastic large cell lymphoma,ALK receptor tyrosine kinase,B-Raf proto-oncogene, serine/threonine kinase,MYCN proto-oncogene, bHLH transcription factor,MYCN proto-oncogene, bHLH transcription factor,tropomyosin 3,zinc finger E-box binding homeobox 2
+ENSG00000171094	ALK-positive anaplastic large cell lymphoma,ALK receptor tyrosine kinase,B-Raf proto-oncogene, serine/threonine kinase,MYCN proto-oncogene, bHLH transcription factor,tropomyosin 3,zinc finger E-box binding homeobox 2
 ENSG00000171100	mastermind like domain containing 1,myotubularin 1
 ENSG00000171105	insulin receptor,insulin receptor,insulin receptor,insulin receptor
 ENSG00000171119	ATPase copper transporting alpha
@@ -3385,7 +3423,7 @@ ENSG00000171557	Familial afibrinogenemia,Familial dysfibrinogenemia,Familial hyp
 ENSG00000171560	AFib amyloidosis,Familial afibrinogenemia,Familial dysfibrinogenemia,Familial hypodysfibrinogenemia,Familial hypofibrinogenemia
 ENSG00000171564	Familial afibrinogenemia,Familial dysfibrinogenemia,Familial hypodysfibrinogenemia,Familial hypofibrinogenemia
 ENSG00000171595	NME/NM23 family member 5
-ENSG00000171608	kinetochore localized astrin (SPAG5) binding protein,phosphatase and tensin homolog
+ENSG00000171608	Autosomal non-syndromic agammaglobulinemia,kinetochore localized astrin (SPAG5) binding protein,phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta
 ENSG00000171634	bromodomain PHD finger transcription factor,bromodomain PHD finger transcription factor
 ENSG00000171680	pleckstrin homology and RhoGEF domain containing G5,pleckstrin homology and RhoGEF domain containing G5
 ENSG00000171714	anoctamin 5,anoctamin 5,anoctamin 5,anoctamin 5,anoctamin 5
@@ -3400,14 +3438,14 @@ ENSG00000171793	CTP synthase 1
 ENSG00000171812	solute carrier family 4 member 11,visual system homeobox 1
 ENSG00000171843	lysine methyltransferase 2A
 ENSG00000171853	trafficking protein particle complex subunit 12
-ENSG00000171862	Bilateral frontoparietal polymicrogyria,Juvenile polyposis of infancy,OBSOLETE: Squamous cell carcinoma of salivary glands,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,phosphatase and tensin homolog,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
+ENSG00000171862	Bannayan-Riley-Ruvalcaba syndrome,Cowden syndrome,Juvenile polyposis of infancy,Lhermitte-Duclos disease,phosphatase and tensin homolog,phosphatase and tensin homolog,Proteus-like syndrome,Segmental outgrowth-lipomatosis-arteriovenous malformation-epidermal nevus syndrome,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b,TNF receptor superfamily member 10b
 ENSG00000171863	ribosomal protein L18
 ENSG00000171865	ribonucleotide reductase regulatory TP53 inducible subunit M2B
 ENSG00000171867	prion protein (Kanno blood group),prion protein (Kanno blood group),prion protein (Kanno blood group),prion protein (Kanno blood group),prion protein (Kanno blood group),prion protein (Kanno blood group),prion protein (Kanno blood group)
 ENSG00000171953	mitochondrially encoded ATP synthase membrane subunit 6
 ENSG00000171954	sulfotransferase family 2B member 1
 ENSG00000171988	Germinoma of the central nervous system,T-box transcription factor 1
-ENSG00000172005	mal, T cell differentiation protein
+ENSG00000172005	mal, T cell differentiation protein (MAL blood group)
 ENSG00000172007	dymeclin
 ENSG00000172037	laminin subunit beta 2,Synaptic congenital myasthenic syndromes
 ENSG00000172053	glutaminyl-tRNA synthetase 1,glutaminyl-tRNA synthetase 1
@@ -3433,14 +3471,14 @@ ENSG00000172534	Methylmalonic acidemia with homocystinuria, type cblX,X-linked n
 ENSG00000172548	ATP binding cassette subfamily A member 12,sulfotransferase family 2B member 1
 ENSG00000172572	phosphodiesterase 3A
 ENSG00000172575	RAS guanyl releasing protein 1
-ENSG00000172638	EGF containing fibulin extracellular matrix protein 2,EGF containing fibulin extracellular matrix protein 2
+ENSG00000172638	EGF containing fibulin extracellular matrix protein 2,EGF containing fibulin extracellular matrix protein 2,forkhead box E3
 ENSG00000172817	cytochrome P450 family 7 subfamily B member 1,cytochrome P450 family 7 subfamily B member 1
 ENSG00000172867	keratin 2
 ENSG00000172890	kynureninase
 ENSG00000172893	7-dehydrocholesterol reductase
 ENSG00000172915	Autosomal dominant non-syndromic intellectual disability
 ENSG00000172922	LSM11, U7 small nuclear RNA associated
-ENSG00000172936	MYD88 innate immune signal transduction adaptor
+ENSG00000172936	MYD88 innate immune signal transduction adaptor,MYD88 innate immune signal transduction adaptor
 ENSG00000172943	PHD finger protein 8
 ENSG00000172987	heparanase 2 (inactive)
 ENSG00000173039	RELA proto-oncogene, NF-kB subunit,zinc finger translocation associated
@@ -3453,7 +3491,7 @@ ENSG00000173226	centrosomal protein 290,ubiquitin specific peptidase 45
 ENSG00000173369	complement C2
 ENSG00000173372	complement C1q A chain,complement C2
 ENSG00000173376	Kallmann syndrome
-ENSG00000173402	collagen type IV alpha 1 chain,dystroglycan 1,dystroglycan 1
+ENSG00000173402	anoctamin 5,collagen type IV alpha 1 chain,dystroglycan 1,dystroglycan 1
 ENSG00000173406	DAB adaptor protein 1
 ENSG00000173418	Autosomal recessive non-syndromic intellectual disability
 ENSG00000173432	serum amyloid A1
@@ -3491,6 +3529,7 @@ ENSG00000174469	contactin associated protein 2
 ENSG00000174483	Bardet-Biedl syndrome 1,S-phase cyclin A associated protein in the ER
 ENSG00000174502	serpin family A member 1
 ENSG00000174527	ladybird homeobox 1
+ENSG00000174579	Disorder-associated locus
 ENSG00000174611	kyphoscoliosis peptidase,kyphoscoliosis peptidase
 ENSG00000174640	solute carrier organic anion transporter family member 2A1,solute carrier organic anion transporter family member 2A1
 ENSG00000174672	Autosomal dominant non-syndromic intellectual disability
@@ -3511,7 +3550,7 @@ ENSG00000174917	mitochondrial contact site and cristae organizing system subunit
 ENSG00000174963	Isolated Dandy-Walker malformation with hydrocephalus,Isolated Dandy-Walker malformation without hydrocephalus
 ENSG00000174990	carbonic anhydrase 5A
 ENSG00000174996	fibronectin leucine rich transmembrane protein 1
-ENSG00000175054	ATR serine/threonine kinase,DNA replication helicase/nuclease 2
+ENSG00000175054	ATR checkpoint kinase,DNA replication helicase/nuclease 2
 ENSG00000175065	keratin 86,lanosterol synthase
 ENSG00000175084	desmin,desmin,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000175097	adenosine deaminase,INO80 complex ATPase subunit,recombination activating 1
@@ -3525,7 +3564,7 @@ ENSG00000175213	catenin beta 1,S-phase cyclin A associated protein in the ER
 ENSG00000175283	dolichol kinase,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000175294	cilia and flagella associated protein 251
 ENSG00000175325	forkhead box A2,POU class 1 homeobox 1,SRY-box transcription factor 3
-ENSG00000175334	BAF nuclear assembly factor 1
+ENSG00000175334	barrier to autointegration nuclear assembly factor 1
 ENSG00000175344	cholinergic receptor nicotinic alpha 7 subunit
 ENSG00000175354	protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22
 ENSG00000175387	forkhead box E3,transforming growth factor beta 2
@@ -3554,13 +3593,14 @@ ENSG00000176340	cytochrome c oxidase assembly factor heme A:farnesyltransferase 
 ENSG00000176387	hydroxysteroid 11-beta dehydrogenase 2
 ENSG00000176410	NADH:ubiquinone oxidoreductase core subunit S2,syntaxin 1A
 ENSG00000176428	syntaxin 1A
-ENSG00000176542	phosphatase and tensin homolog
+ENSG00000176485	phospholipase A and acyltransferase 3
+ENSG00000176542	Cowden syndrome
 ENSG00000176619	lamin B2,lamin B2
 ENSG00000176692	forkhead box C2
 ENSG00000176697	ladybird homeobox 1,WT1 transcription factor
 ENSG00000176715	acyl-CoA synthetase family member 3
 ENSG00000176842	iroquois homeobox 5
-ENSG00000176884	Autosomal dominant non-syndromic intellectual disability,Bilateral generalized polymicrogyria,Dmx like 2
+ENSG00000176884	Autosomal dominant non-syndromic intellectual disability,Autosomal recessive non-syndromic intellectual disability,Bilateral generalized polymicrogyria,Dmx like 2
 ENSG00000176887	AT-rich interaction domain 2
 ENSG00000176890	nucleophosmin 1
 ENSG00000176915	Autosomal recessive primary microcephaly
@@ -3570,7 +3610,7 @@ ENSG00000177000	Isolated anencephaly,Isolated exencephaly,methylenetetrahydrofol
 ENSG00000177030	Autosomal dominant non-syndromic intellectual disability,DEAF1 transcription factor,DEAF1 transcription factor
 ENSG00000177045	SIX homeobox 1
 ENSG00000177082	O-sialoglycoprotein endopeptidase,zinc finger protein 592
-ENSG00000177084	bone morphogenetic protein receptor type 1A,cyclin dependent kinase inhibitor 1C,DNA polymerase epsilon, catalytic subunit,Polymerase proofreading-related adenomatous polyposis
+ENSG00000177084	bone morphogenetic protein receptor type 1A,cyclin dependent kinase inhibitor 1C,DNA polymerase epsilon, catalytic subunit,DNA polymerase epsilon, catalytic subunit
 ENSG00000177098	ATP binding cassette subfamily C member 9,triadin
 ENSG00000177106	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000177119	anoctamin 6
@@ -3584,7 +3624,7 @@ ENSG00000177374	HIC ZBTB transcriptional repressor 1
 ENSG00000177409	sterile alpha motif domain containing 9 like,sterile alpha motif domain containing 9 like,sterile alpha motif domain containing 9 like
 ENSG00000177426	Alobar holoprosencephaly,fibroblast growth factor receptor 1,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000177455	CD19 molecule
-ENSG00000177469	caveolae associated protein 1
+ENSG00000177469	Congenital generalized  lipodystrophy type 4
 ENSG00000177542	Dmx like 2,sodium voltage-gated channel alpha subunit 2
 ENSG00000177551	Normosmic congenital hypogonadotropic hypogonadism
 ENSG00000177565	PML nuclear body scaffold,TBL1X/Y related 1
@@ -3592,12 +3632,12 @@ ENSG00000177570	sterile alpha motif domain containing 12
 ENSG00000177628	Fetal Gaucher disease,Gaucher disease-ophthalmoplegia-cardiovascular calcification syndrome,Gaucher disease type 1,Gaucher disease type 2,Gaucher disease type 3,synuclein alpha
 ENSG00000177646	acyl-CoA dehydrogenase family member 9
 ENSG00000177663	C-type lectin domain containing 7A
-ENSG00000177666	patatin like phospholipase domain containing 2,patatin like phospholipase domain containing 2
+ENSG00000177666	patatin like domain 2, triacylglycerol lipase,Primary triglyceride deposit cardiomyovasculopathy
 ENSG00000177697	CD151 molecule (Raph blood group)
 ENSG00000177706	FAM20C golgi associated secretory pathway kinase
 ENSG00000177728	transmembrane protein 94
 ENSG00000177731	DEAF1 transcription factor
-ENSG00000177807	potassium inwardly rectifying channel subfamily J member 10,solute carrier family 26 member 4
+ENSG00000177807	potassium inwardly rectifying channel subfamily J member 10,proline rich transmembrane protein 2,solute carrier family 26 member 4
 ENSG00000177868	zinc finger MIZ-type containing 1
 ENSG00000177917	G protein subunit alpha 11
 ENSG00000177954	ribosomal protein L18
@@ -3621,20 +3661,21 @@ ENSG00000178562	cytotoxic T-lymphocyte associated protein 4,cytotoxic T-lymphocy
 ENSG00000178568	Autosomal dominant non-syndromic intellectual disability,cyclin F
 ENSG00000178573	Cerulean cataract,crystallin alpha A,MAF bZIP transcription factor,Pulverulent cataract
 ENSG00000178623	semaphorin 4D
-ENSG00000178691	nuclear receptor binding SET domain protein 1,PRC-2 complex-related overgrowth spectrum,SUZ12 polycomb repressive complex 2 subunit,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon
+ENSG00000178691	nuclear receptor binding SET domain protein 1,SUZ12 polycomb repressive complex 2 subunit,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon
 ENSG00000178726	Atypical hemolytic uremic syndrome with complement gene abnormality,thrombomodulin
 ENSG00000178741	cytochrome c oxidase assembly factor heme A:farnesyltransferase COX10
 ENSG00000178802	mannose phosphate isomerase
 ENSG00000178814	5-oxoprolinase, ATP-hydrolysing
 ENSG00000178919	B-Raf proto-oncogene, serine/threonine kinase,forkhead box E1,forkhead box E1,multiple inositol-polyphosphate phosphatase 1
 ENSG00000178927	cytochrome b-245 beta chain
+ENSG00000178951	zinc finger and BTB domain containing 7A
 ENSG00000178952	Tu translation elongation factor, mitochondrial
 ENSG00000178971	CST telomere replication complex component 1,nucleophosmin 1
 ENSG00000179008	sperm associated antigen 17
 ENSG00000179029	thioredoxin domain containing 15
 ENSG00000179085	dolichyl-phosphate mannosyltransferase subunit 3, regulatory
 ENSG00000179091	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
-ENSG00000179111	delta like canonical Notch ligand 3
+ENSG00000179111	T-box transcription factor 6
 ENSG00000179142	cytochrome P450 family 11 subfamily B member 1,Early-onset familial hypoaldosteronism
 ENSG00000179148	arachidonate 12-lipoxygenase, 12R type,ATP binding cassette subfamily A member 12,sulfotransferase family 2B member 1
 ENSG00000179151	Autosomal recessive non-syndromic intellectual disability
@@ -3696,7 +3737,7 @@ ENSG00000181544	FA complementation group B,RAD51 recombinase
 ENSG00000181555	SET domain containing 2, histone lysine methyltransferase,SET domain containing 2, histone lysine methyltransferase
 ENSG00000181585	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000181634	interleukin 12 receptor subunit beta 1
-ENSG00000181690	OBSOLETE: Pleomorphic salivary gland adenoma,Silver-Russell syndrome due to a point mutation
+ENSG00000181690	PLAG1 zinc finger,Silver-Russell syndrome due to a point mutation
 ENSG00000181722	zinc finger and BTB domain containing 20
 ENSG00000181786	cilia and flagella associated protein 251
 ENSG00000181830	Leukocyte adhesion deficiency type II
@@ -3714,7 +3755,7 @@ ENSG00000182197	exostosin glycosyltransferase 1,exostosin glycosyltransferase 1,
 ENSG00000182220	ATPase H+ transporting accessory protein 2,ATPase H+ transporting accessory protein 2
 ENSG00000182287	adaptor related protein complex 1 subunit sigma 2,adaptor related protein complex 1 subunit sigma 2,adaptor related protein complex 1 subunit sigma 2
 ENSG00000182326	complement C1s,complement C2
-ENSG00000182372	CLN8 transmembrane ER and ERGIC protein,CLN8 transmembrane ER and ERGIC protein
+ENSG00000182372	Late infantile CLN8 disease,Northern epilepsy
 ENSG00000182389	calcium voltage-gated channel auxiliary subunit beta 4,ciliogenesis associated kinase 1
 ENSG00000182450	potassium two pore domain channel subfamily K member 4
 ENSG00000182492	biglycan,biglycan
@@ -3723,7 +3764,7 @@ ENSG00000182533	anoctamin 5,caveolin 3,caveolin 3,triadin
 ENSG00000182568	SATB homeobox 1
 ENSG00000182578	alanyl-tRNA synthetase 2, mitochondrial,colony stimulating factor 1 receptor
 ENSG00000182606	actin like 6B
-ENSG00000182621	neurotrophic receptor tyrosine kinase 2,sodium voltage-gated channel alpha subunit 2
+ENSG00000182621	sodium voltage-gated channel alpha subunit 2,sodium voltage-gated channel alpha subunit 2
 ENSG00000182636	Prader-Willi syndrome due to imprinting mutation,Prader-Willi syndrome due to maternal uniparental disomy of chromosome 15,Prader-Willi syndrome due to paternal deletion of 15q11q13 type 1,Prader-Willi syndrome due to paternal deletion of 15q11q13 type 2
 ENSG00000182774	ribosomal protein L18
 ENSG00000182858	ALG12 alpha-1,6-mannosyltransferase
@@ -3732,7 +3773,7 @@ ENSG00000182871	p21 (RAC1) activated kinase 2
 ENSG00000182872	RNA binding motif protein 10
 ENSG00000182899	ribosomal protein L18
 ENSG00000182923	Autosomal recessive primary microcephaly
-ENSG00000182944	ETS transcription factor ERG,ETS transcription factor ERG,EWS RNA binding protein 1,trafficking from ER to golgi regulator,WT1 transcription factor
+ENSG00000182944	cAMP responsive element binding protein 1,ETS transcription factor ERG,ETS transcription factor ERG,EWS RNA binding protein 1,trafficking from ER to golgi regulator,WT1 transcription factor
 ENSG00000183010	golgin, RAB6 interacting,PYCR1-related De Barsy syndrome,pyrroline-5-carboxylate reductase 1
 ENSG00000183044	4-aminobutyrate aminotransferase
 ENSG00000183072	ATP binding cassette subfamily C member 9,Atrial septal defect, ostium secundum type,forkhead box E1,gap junction protein alpha 1,kinase insert domain receptor,NK2 homeobox 5,NK2 homeobox 5,NK2 homeobox 5,NK2 homeobox 5,NK2 homeobox 5,sodium voltage-gated channel beta subunit 1
@@ -3775,7 +3816,7 @@ ENSG00000184216	B cell scaffold protein with ankyrin repeats 1,spermidine/spermi
 ENSG00000184254	membrane frizzled-related protein,sonic hedgehog signaling molecule
 ENSG00000184292	tumor associated calcium signal transducer 2
 ENSG00000184302	membrane frizzled-related protein,SIX homeobox 6,sonic hedgehog signaling molecule
-ENSG00000184304	OBSOLETE: Squamous cell carcinoma of salivary glands
+ENSG00000184304	protein kinase D1
 ENSG00000184344	growth differentiation factor 3,sonic hedgehog signaling molecule
 ENSG00000184374	collectin subfamily member 10
 ENSG00000184381	phospholipase A2 group VI,phospholipase A2 group VI
@@ -3785,7 +3826,7 @@ ENSG00000184500	protein S
 ENSG00000184507	NUT midline carcinoma family member 1
 ENSG00000184564	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB,SLIT and NTRK like family member 6
 ENSG00000184584	SAM and HD domain containing deoxynucleoside triphosphate triphosphohydrolase 1,stimulator of interferon response cGAMP interactor 1
-ENSG00000184634	mediator complex subunit 12,mediator complex subunit 12,mediator complex subunit 12,mediator complex subunit 12,mediator complex subunit 12,X-linked non-syndromic intellectual disability
+ENSG00000184634	mediator complex subunit 12,mediator complex subunit 12,mediator complex subunit 12,mediator complex subunit 12,X-linked non-syndromic intellectual disability
 ENSG00000184640	septin 9
 ENSG00000184675	APC membrane recruitment protein 1
 ENSG00000184743	atlastin GTPase 1
@@ -3799,7 +3840,7 @@ ENSG00000185000	plasmalemma vesicle associated protein
 ENSG00000185002	regulatory factor X6
 ENSG00000185008	tenascin XB
 ENSG00000185010	Bleeding disorder in hemophilia A carriers,Mild hemophilia A,Moderate hemophilia A,Severe hemophilia A
-ENSG00000185024	BRF1 RNA polymerase III transcription initiation factor subunit
+ENSG00000185024	BRF1 general transcription factor IIIB subunit
 ENSG00000185043	transmembrane channel like 6
 ENSG00000185049	phosphatidylinositol glycan anchor biosynthesis class G (EMM blood group)
 ENSG00000185100	adenylosuccinate synthase 1
@@ -3832,7 +3873,7 @@ ENSG00000185722	membrane associated guanylate kinase, WW and PDZ domain containi
 ENSG00000185760	Autosomal dominant non-syndromic intellectual disability
 ENSG00000185803	RFVT2-related riboflavin transporter deficiency
 ENSG00000185808	Dmx like 2
-ENSG00000185811	B-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2),IKAROS family zinc finger 1,Stevens-Johnson syndrome
+ENSG00000185811	B-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2),IKAROS family zinc finger 1,IKAROS family zinc finger 1,IKAROS family zinc finger 1,Stevens-Johnson syndrome
 ENSG00000185813	phosphate cytidylyltransferase 2, ethanolamine
 ENSG00000185825	ATP binding cassette subfamily D member 1,B cell receptor associated protein 31
 ENSG00000185900	collagen type IV alpha 1 chain,protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-),protein O-mannose kinase
@@ -3855,13 +3896,14 @@ ENSG00000186326	regulator of G protein signaling 9 binding protein
 ENSG00000186335	solute carrier family 6 member 20
 ENSG00000186367	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000186395	keratin 1,keratin 1,keratin 10,keratin 10
+ENSG00000186417	solute carrier family 18 member A3
 ENSG00000186439	calsequestrin 2,triadin
 ENSG00000186442	keratin 12
 ENSG00000186472	piccolo presynaptic cytomatrix protein
-ENSG00000186487	myelin transcription factor 1 like
+ENSG00000186487	myelin transcription factor 1 like,myelin transcription factor 1 like
 ENSG00000186501	zinc finger MIZ-type containing 1
 ENSG00000186510	Bartter syndrome type 4
-ENSG00000186575	NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1
+ENSG00000186575	NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,NF2, moesin-ezrin-radixin like (MERLIN) tumor suppressor,SWI/SNF related BAF chromatin remodeling complex subunit B1
 ENSG00000186603	4-hydroxyphenylpyruvate dioxygenase like,4-hydroxyphenylpyruvate dioxygenase like,zinc finger MIZ-type containing 1
 ENSG00000186642	phosphodiesterase 2A
 ENSG00000186687	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone
@@ -3877,7 +3919,7 @@ ENSG00000186895	fibroblast growth factor 3,fibroblast growth factor 3,fibroblast
 ENSG00000187010	Rh blood group CcEe antigens
 ENSG00000187017	Disease-causing germline mutation(s) in,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000187045	transmembrane serine protease 6
-ENSG00000187049	centrosomal protein 290,family with sequence similarity 149 member B1,thioredoxin domain containing 15
+ENSG00000187049	centrosomal protein 290,family with sequence similarity 149 member B1,S-phase cyclin A associated protein in the ER,thioredoxin domain containing 15
 ENSG00000187079	TEA domain transcription factor 1
 ENSG00000187091	phospholipase C delta 1
 ENSG00000187098	Clear cell papillary renal cell carcinoma,cyclin dependent kinase 4,melanocyte inducing transcription factor,melanocyte inducing transcription factor,MET proto-oncogene, receptor tyrosine kinase,SRY-box transcription factor 10,Waardenburg syndrome type 2
@@ -3919,14 +3961,14 @@ ENSG00000188026	notch 2 N-terminal like C
 ENSG00000188037	chloride voltage-gated channel 1
 ENSG00000188064	signaling receptor and transporter of retinol STRA6
 ENSG00000188070	zinc finger translocation associated,zinc finger translocation associated
-ENSG00000188095	delta like canonical Notch ligand 3
+ENSG00000188095	T-box transcription factor 6
 ENSG00000188107	S-phase cyclin A associated protein in the ER
 ENSG00000188120	Role in the phenotype of
 ENSG00000188153	Digenic Alport syndrome,X-linked Alport syndrome,X-linked Alport syndrome-diffuse leiomyomatosis
 ENSG00000188157	Postsynaptic congenital myasthenic syndromes,Presynaptic congenital myasthenic syndromes
 ENSG00000188158	Early-onset nuclear cataract,NHS actin remodeling regulator,Total early-onset cataract
 ENSG00000188162	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
-ENSG00000188191	protein kinase cAMP-dependent type I regulatory subunit beta
+ENSG00000188191	protein kinase cAMP-dependent type I regulatory subunit beta,protein kinase cAMP-dependent type I regulatory subunit beta
 ENSG00000188199	BCL6 corepressor,tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon
 ENSG00000188229	ubiquitin specific peptidase 45
 ENSG00000188312	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
@@ -3940,7 +3982,7 @@ ENSG00000188452	S-phase cyclin A associated protein in the ER
 ENSG00000188467	solute carrier family 24 member 5
 ENSG00000188517	collagen type XXV alpha 1 chain,collagen type XXV alpha 1 chain,SCY1 like pseudokinase 2
 ENSG00000188536	erythropoietin,Hb Bart's hydrops fetalis,Hemoglobin H disease,hemoglobin subunit alpha 2,hemoglobin subunit alpha 2
-ENSG00000188603	CLN3 lysosomal/endosomal transmembrane protein, battenin
+ENSG00000188603	Juvenile CLN3 disease,Protracted juvenile CLN3 disease
 ENSG00000188613	sperm associated antigen 17
 ENSG00000188641	dihydropyrimidine dehydrogenase,dihydropyrimidine dehydrogenase
 ENSG00000188672	Rh blood group CcEe antigens
@@ -3965,12 +4007,12 @@ ENSG00000189433	gap junction protein alpha 1
 ENSG00000196091	myosin binding protein C1,phosphatidylinositol-4-phosphate 5-kinase type 1 gamma,sodium leak channel, non-selective
 ENSG00000196092	B-lymphoblastic leukemia/lymphoma with t(7;9)(q11.2;p13.2)
 ENSG00000196110	zinc finger MIZ-type containing 1
-ENSG00000196126	B cell scaffold protein with ankyrin repeats 1,BCL2 apoptosis regulator,butyrophilin like 2,Diffuse cutaneous systemic sclerosis,hypocretin neuropeptide precursor,hypocretin neuropeptide precursor,Limited cutaneous systemic sclerosis,Limited systemic sclerosis,major histocompatibility complex, class II, DQ beta 1,major histocompatibility complex, class II, DR beta 1,major histocompatibility complex, class II, DR beta 1,major histocompatibility complex, class II, DR beta 1,protein tyrosine phosphatase non-receptor type 22
+ENSG00000196126	B cell scaffold protein with ankyrin repeats 1,BCL2 apoptosis regulator,butyrophilin like 2,Diffuse cutaneous systemic sclerosis,hypocretin neuropeptide precursor,hypocretin neuropeptide precursor,Limited cutaneous systemic sclerosis,Limited systemic sclerosis,major histocompatibility complex, class II, DQ beta 1,major histocompatibility complex, class II, DR beta 1,major histocompatibility complex, class II, DR beta 1,major histocompatibility complex, class II, DR beta 1,major histocompatibility complex, class II, DR beta 1,protein tyrosine phosphatase non-receptor type 22
 ENSG00000196155	pleckstrin homology and RhoGEF domain containing G4
 ENSG00000196159	collagen and calcium binding EGF domains 1,dachsous cadherin-related 1
 ENSG00000196177	acyl-CoA dehydrogenase short/branched chain
 ENSG00000196189	bone morphogenetic protein receptor type 1A,retinitis pigmentosa GTPase regulator,S-phase cyclin A associated protein in the ER
-ENSG00000196218	calcium voltage-gated channel subunit alpha1 S,Congenital multicore myopathy with external ophthalmoplegia,Moderate multiminicore disease with hand involvement,nebulin,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,titin
+ENSG00000196218	calcium voltage-gated channel subunit alpha1 S,Congenital multicore myopathy with external ophthalmoplegia,Moderate multiminicore disease with hand involvement,nebulin,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,ryanodine receptor 1,titin
 ENSG00000196220	Pilomyxoid astrocytoma
 ENSG00000196230	microtubule associated protein RP/EB family member 2
 ENSG00000196236	Late-onset nephronophthisis
@@ -3982,7 +4024,7 @@ ENSG00000196352	CD55 molecule (Cromer blood group)
 ENSG00000196358	zinc finger MIZ-type containing 1
 ENSG00000196365	lon peptidase 1, mitochondrial,lon peptidase 1, mitochondrial,Pyruvate dehydrogenase E1-alpha deficiency
 ENSG00000196367	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
-ENSG00000196411	EPH receptor B4,EPH receptor B4,EPH receptor B4,RAS p21 protein activator 1
+ENSG00000196411	EPH receptor B4,EPH receptor B4,EPH receptor B4,EPH receptor B4
 ENSG00000196415	major histocompatibility complex, class II, DP alpha 1
 ENSG00000196431	crystallin alpha A,Early-onset lamellar cataract
 ENSG00000196449	O-sialoglycoprotein endopeptidase
@@ -4016,7 +4058,7 @@ ENSG00000196876	actin like 6B,Autosomal dominant non-syndromic intellectual disa
 ENSG00000196878	collagen type XVII alpha 1 chain,Hypoplastic amelogenesis imperfecta,laminin subunit beta 3
 ENSG00000196924	filamin A,filamin A,filamin A,filamin A,filamin A,filamin A,filamin A,filamin A,mitogen-activated protein kinase kinase kinase 7,Neuronal intestinal pseudoobstruction,Periventricular nodular heterotopia
 ENSG00000196976	O-sialoglycoprotein endopeptidase
-ENSG00000196998	neurotrophic receptor tyrosine kinase 2,WD repeat domain 45
+ENSG00000196998	sodium voltage-gated channel alpha subunit 2,WD repeat domain 45
 ENSG00000197061	zinc finger MIZ-type containing 1
 ENSG00000197102	Autosomal dominant non-syndromic intellectual disability,DYNC1H1-related autosomal dominant childhood-onset proximal spinal muscular atrophy,dynein cytoplasmic 1 heavy chain 1
 ENSG00000197106	solute carrier family 6 member 17
@@ -4024,11 +4066,11 @@ ENSG00000197121	Autosomal recessive non-syndromic intellectual disability,post-G
 ENSG00000197122	SRC proto-oncogene, non-receptor tyrosine kinase
 ENSG00000197170	bromodomain PHD finger transcription factor,Disorder-associated locus
 ENSG00000197249	serpin family A member 1,serpin family A member 1,serpin family A member 1
-ENSG00000197256	KN motif and ankyrin repeat domains 2
+ENSG00000197256	KN motif and ankyrin repeat domains 2,membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000197265	M-phase specific PLK1 interacting protein
 ENSG00000197283	actin like 6B,solute carrier family 2 member 1,synaptic Ras GTPase activating protein 1
 ENSG00000197299	BLM RecQ like helicase
-ENSG00000197323	B-Raf proto-oncogene, serine/threonine kinase
+ENSG00000197323	B-Raf proto-oncogene, serine/threonine kinase,tripartite motif containing 33
 ENSG00000197375	solute carrier family 22 member 5
 ENSG00000197386	huntingtin,huntingtin,zinc finger MIZ-type containing 1
 ENSG00000197417	sedoheptulokinase
@@ -4046,7 +4088,7 @@ ENSG00000197603	centrosomal protein 120,ciliogenesis and planar polarity effecto
 ENSG00000197614	forkhead box E3
 ENSG00000197616	Atrial septal defect, ostium secundum type,sodium voltage-gated channel alpha subunit 5,TATA-box binding protein associated factor, RNA polymerase I subunit A
 ENSG00000197653	Male infertility due to large-headed multiflagellar polyploid spermatozoa,sperm associated antigen 17
-ENSG00000197694	neurotrophic receptor tyrosine kinase 2
+ENSG00000197694	sodium voltage-gated channel alpha subunit 2
 ENSG00000197728	ribosomal protein L18
 ENSG00000197746	Atypical Gaucher disease due to saposin C deficiency,Infantile Krabbe disease,Metachromatic leukodystrophy, adult form,Metachromatic leukodystrophy, juvenile form,Metachromatic leukodystrophy, late infantile form,prosaposin
 ENSG00000197748	cilia and flagella associated protein 251
@@ -4063,7 +4105,7 @@ ENSG00000197891	solute carrier family 22 member 12
 ENSG00000197912	SPG7 matrix AAA peptidase subunit, paraplegin,SPG7 matrix AAA peptidase subunit, paraplegin
 ENSG00000197943	phospholipase C gamma 2,phospholipase C gamma 2
 ENSG00000197969	vacuolar protein sorting 13 homolog A
-ENSG00000198001	interleukin 1 receptor associated kinase 4
+ENSG00000198001	MYD88 innate immune signal transduction adaptor
 ENSG00000198003	NME/NM23 family member 5
 ENSG00000198026	zinc finger protein 335
 ENSG00000198087	membrane associated guanylate kinase, WW and PDZ domain containing 2
@@ -4105,6 +4147,7 @@ ENSG00000198712	cytochrome c oxidase assembly factor heme A:farnesyltransferase 
 ENSG00000198718	centrosomal protein 120
 ENSG00000198719	Alobar holoprosencephaly,Autosomal dominant non-syndromic intellectual disability,fibroblast growth factor receptor 1,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000198727	BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone,mitochondrially encoded cytochrome b,NADH:ubiquinone oxidoreductase core subunit S2
+ENSG00000198730	BRCA2 DNA repair associated,zinc finger MIZ-type containing 1
 ENSG00000198732	SPARC related modular calcium binding 1
 ENSG00000198734	coagulation factor II, thrombin,coagulation factor V,coagulation factor V,East Texas bleeding disorder,Factor V Amsterdam bleeding disorder,Factor V Atlanta bleeding disorder
 ENSG00000198758	EPS8 signaling adaptor L3
@@ -4117,8 +4160,8 @@ ENSG00000198805	purine nucleoside phosphorylase
 ENSG00000198807	small ubiquitin like modifier 1
 ENSG00000198814	Glycerol kinase deficiency, adult form,Glycerol kinase deficiency, juvenile form
 ENSG00000198821	CD3 delta subunit of T-cell receptor complex,protein tyrosine phosphatase non-receptor type 22,protein tyrosine phosphatase non-receptor type 22
-ENSG00000198824	Autosomal dominant non-syndromic intellectual disability
-ENSG00000198835	angiopoietin 2,gap junction protein gamma 2,Pelizaeus-Merzbacher-like disease due to GJC2 mutation
+ENSG00000198824	chromosome alignment maintaining phosphoprotein 1
+ENSG00000198835	gap junction protein gamma 2,gap junction protein gamma 2,Pelizaeus-Merzbacher-like disease due to GJC2 mutation
 ENSG00000198836	OPA1 mitochondrial dynamin like GTPase,OPA1 mitochondrial dynamin like GTPase,OPA1 mitochondrial dynamin like GTPase
 ENSG00000198840	mitochondrially encoded ATP synthase membrane subunit 6,mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 4,transmembrane protein 126B
 ENSG00000198851	CD3 delta subunit of T-cell receptor complex
@@ -4137,6 +4180,7 @@ ENSG00000198951	Alpha-N-acetylgalactosaminidase deficiency type 1,Alpha-N-acetyl
 ENSG00000198954	kinesin family binding protein
 ENSG00000199158	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000200463	small nucleolar RNA, C/D box 118
+ENSG00000202538	RNA, U4 small nuclear 2
 ENSG00000203485	inverted formin, FH2 and WH2 domain containing,membrane associated guanylate kinase, WW and PDZ domain containing 2
 ENSG00000203618	glycoprotein Ib platelet subunit alpha,glycoprotein Ib platelet subunit alpha,T-box transcription factor 1,tubulin alpha 8
 ENSG00000203667	cytochrome c oxidase assembly factor heme A:farnesyltransferase COX10
@@ -4144,7 +4188,7 @@ ENSG00000203747	Fc fragment of IgG receptor IIIa
 ENSG00000203782	loricrin cornified envelope precursor protein,transient receptor potential cation channel subfamily M member 4
 ENSG00000203859	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase 2
 ENSG00000203867	TATA-box binding protein associated factor, RNA polymerase I subunit A
-ENSG00000203877	delta like canonical Notch ligand 3
+ENSG00000203877	T-box transcription factor 6
 ENSG00000203879	X-linked non-syndromic intellectual disability
 ENSG00000203883	SRY-box transcription factor 18
 ENSG00000203908	Complete hydatidiform mole,Partial hydatidiform mole
@@ -4161,10 +4205,9 @@ ENSG00000204287	major histocompatibility complex, class II, DR alpha
 ENSG00000204290	butyrophilin like 2
 ENSG00000204311	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000204351	SKI3 subunit of superkiller complex
-ENSG00000204370	phosphatase and tensin homolog,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex iron sulfur subunit B,succinate dehydrogenase complex subunit D,succinate dehydrogenase complex subunit D
+ENSG00000204370	Cowden syndrome,solute carrier family 25 member 11,succinate dehydrogenase complex flavoprotein subunit A,succinate dehydrogenase complex iron sulfur subunit B,succinate dehydrogenase complex subunit D,succinate dehydrogenase complex subunit D
 ENSG00000204385	Rare autosomal dominant non-syndromic sensorineural deafness type DFNA
 ENSG00000204386	Congenital sialidosis type 2,Juvenile sialidosis type 2,neuraminidase 1
-ENSG00000204394	valyl-tRNA synthetase 1
 ENSG00000204406	Autosomal dominant non-syndromic intellectual disability,methyl-CpG binding domain protein 5
 ENSG00000204410	sperm associated antigen 17
 ENSG00000204427	abhydrolase domain containing 16A, phospholipase
@@ -4220,7 +4263,7 @@ ENSG00000210151	gap junction protein beta 2,mitochondrially encoded tRNA-Gln (CA
 ENSG00000210156	mitochondrially encoded ATP synthase membrane subunit 6,mitochondrially encoded tRNA-Lys (AAA/G),mitochondrially encoded tRNA-Pro (CCN)
 ENSG00000210176	mitochondrially encoded tRNA-Gln (CAA/G),mitochondrially encoded tRNA-Pro (CCN),Rare mitochondrial non-syndromic sensorineural deafness
 ENSG00000210184	mitochondrially encoded tRNA-Gln (CAA/G),mitochondrially encoded tRNA-Pro (CCN),Usher syndrome type 3
-ENSG00000210191	mitochondrially encoded tRNA-Ser (UCN) 1
+ENSG00000210191	calcium voltage-gated channel subunit alpha1 A,mitochondrially encoded tRNA-Ser (UCN) 1
 ENSG00000210194	mitochondrially encoded tRNA-Glu (GAA/G),tRNA mitochondrial 2-thiouridylase
 ENSG00000210195	mitochondrially encoded tRNA-Thr (ACN)
 ENSG00000210196	mitochondrially encoded tRNA-Pro (CCN)
@@ -4228,14 +4271,14 @@ ENSG00000211459	mitochondrially encoded tRNA-Pro (CCN),Rare mitochondrial non-sy
 ENSG00000211592	immunoglobulin heavy constant gamma 2 (G2m marker)
 ENSG00000211893	immunoglobulin heavy constant gamma 2 (G2m marker)
 ENSG00000211896	B cell scaffold protein with ankyrin repeats 1,purinergic receptor P2X 7
-ENSG00000211899	Autosomal agammaglobulinemia
+ENSG00000211899	Autosomal non-syndromic agammaglobulinemia
 ENSG00000211947	purinergic receptor P2X 7
 ENSG00000211956	immunoglobulin heavy variable 4-34
 ENSG00000212907	NADH:ubiquinone oxidoreductase core subunit S2
 ENSG00000213024	nucleoporin 54
 ENSG00000213139	Early-onset lamellar cataract,Early-onset sutural cataract
 ENSG00000213281	B-Raf proto-oncogene, serine/threonine kinase,HRas proto-oncogene, GTPase,KRAS proto-oncogene, GTPase,mitogen-activated protein kinase kinase 1,RAS related,RAS related,zinc finger E-box binding homeobox 2
-ENSG00000213341	component of inhibitor of nuclear factor kappa B kinase complex
+ENSG00000213341	component of inhibitor of nuclear factor kappa B kinase complex,component of inhibitor of nuclear factor kappa B kinase complex
 ENSG00000213380	component of oligomeric golgi complex 8
 ENSG00000213398	Familial LCAT deficiency,Fish-eye disease
 ENSG00000213614	Tay-Sachs disease, adult form,Tay-Sachs disease, infantile form,Tay-Sachs disease, juvenile form
@@ -4251,7 +4294,7 @@ ENSG00000213918	B cell scaffold protein with ankyrin repeats 1,complement C1q A 
 ENSG00000213930	galactose-1-phosphate uridylyltransferase
 ENSG00000213934	hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta
 ENSG00000213995	NAD(P)HX dehydratase
-ENSG00000214102	WEE2 oocyte meiosis inhibiting kinase
+ENSG00000214102	TLE family member 6, subcortical maternal complex member
 ENSG00000214113	LYR motif containing 4
 ENSG00000214140	S-phase cyclin A associated protein in the ER
 ENSG00000214160	ALG3 alpha-1,3- mannosyltransferase
@@ -4267,25 +4310,27 @@ ENSG00000215417	Feingold syndrome type 2
 ENSG00000215612	H6 family homeobox 1
 ENSG00000215644	glucagon receptor
 ENSG00000215915	ATPase family AAA domain containing 3A
+ENSG00000217128	folliculin interacting protein 1
 ENSG00000217930	presequence translocase associated motor 16
 ENSG00000218336	sonic hedgehog signaling molecule
 ENSG00000221819	B-Raf proto-oncogene, serine/threonine kinase
 ENSG00000221829	RAD51 recombinase
 ENSG00000221838	adaptor related protein complex 4 subunit mu 1
-ENSG00000223609	hemoglobin subunit beta,hemoglobin subunit beta
+ENSG00000223609	hemoglobin subunit beta,hemoglobin subunit beta,Sickle cell S-Lepore disease
 ENSG00000223802	ceramide synthase 1
 ENSG00000223865	major histocompatibility complex, class II, DP alpha 1,major histocompatibility complex, class II, DP beta 1
 ENSG00000223953	C1q and TNF related 5
 ENSG00000224389	B cell scaffold protein with ankyrin repeats 1,complement C2
 ENSG00000224877	transmembrane protein 126B
 ENSG00000225190	T cell immune regulator 1, ATPase H+ transporting V0 subunit a3
+ENSG00000225484	notch 2 N-terminal like C
 ENSG00000225614	zinc finger protein 469
 ENSG00000225830	Cockayne syndrome type 1,Cockayne syndrome type 2,Cockayne syndrome type 3,COFS syndrome,ERCC excision repair 6, chromatin remodeling factor
-ENSG00000227268	N-ribosyldihydronicotinamide:quinone dehydrogenase 2,phosphatase and tensin homolog
+ENSG00000227268	Cowden syndrome,N-ribosyldihydronicotinamide:quinone dehydrogenase 2
 ENSG00000228253	mitochondrially encoded ATP synthase membrane subunit 6,mitochondrially encoded ATP synthase membrane subunit 6,mitochondrially encoded ATP synthase membrane subunit 8
 ENSG00000228570	BCL6 corepressor
 ENSG00000228716	dihydrofolate reductase
-ENSG00000229474	WEE2 oocyte meiosis inhibiting kinase
+ENSG00000229474	TLE family member 6, subcortical maternal complex member
 ENSG00000230223	ataxin 8
 ENSG00000231389	major histocompatibility complex, class II, DP alpha 1
 ENSG00000231672	8-oxoguanine DNA glycosylase,B-Raf proto-oncogene, serine/threonine kinase
@@ -4306,9 +4351,9 @@ ENSG00000236699	Rho GTPase activating protein 29
 ENSG00000237412	membrane frizzled-related protein
 ENSG00000238923	LSM11, U7 small nuclear RNA associated
 ENSG00000239474	actin alpha 1, skeletal muscle,actin alpha 1, skeletal muscle,tropomyosin 2,tropomyosin 3
-ENSG00000239697	CD19 molecule,CD19 molecule
+ENSG00000239697	TNF superfamily member 12
 ENSG00000239900	adenylosuccinate lyase
-ENSG00000240505	CD19 molecule
+ENSG00000240505	TNF receptor superfamily member 13B
 ENSG00000240972	major histocompatibility complex, class II, DR beta 1,serpin family A member 1
 ENSG00000241186	Alobar holoprosencephaly,fibroblast growth factor receptor 1,Lobar holoprosencephaly,Midline interhemispheric variant of holoprosencephaly,Semilobar holoprosencephaly,Septopreoptic holoprosencephaly
 ENSG00000241476	SS18 subunit of BAF chromatin remodeling complex
@@ -4321,21 +4366,21 @@ ENSG00000242110	alpha-methylacyl-CoA racemase
 ENSG00000242419	Disorder-associated locus,Disorder-associated locus
 ENSG00000242802	adaptor related protein complex 5 subunit zeta 1
 ENSG00000242866	cation channel sperm associated 2,Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
-ENSG00000243335	potassium channel tetramerization domain containing 7
+ENSG00000243335	potassium channel tetramerization domain containing 7,potassium channel tetramerization domain containing 7
 ENSG00000243646	interleukin 10
 ENSG00000243649	Atypical hemolytic uremic syndrome with complement gene abnormality
 ENSG00000243989	aminoacylase 1
 ENSG00000244005	LYR motif containing 4
 ENSG00000244038	dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunit
 ENSG00000244040	interleukin 10
-ENSG00000244045	transmembrane protein 199
+ENSG00000244045	vacuolar ATPase assembly factor VMA12
 ENSG00000244165	hypocretin neuropeptide precursor
 ENSG00000244414	C3 glomerulonephritis,Dense deposit disease
 ENSG00000244486	scavenger receptor class F member 2
 ENSG00000244617	sulfotransferase family 2B member 1
 ENSG00000244682	Fc gamma receptor IIc (gene/pseudogene)
 ENSG00000244731	B cell scaffold protein with ankyrin repeats 1,complement C1q A chain,complement C2,interleukin 10
-ENSG00000244734	Beta-thalassemia intermedia,Beta-thalassemia major,Dominant beta-thalassemia,erythropoietin,hemoglobin subunit alpha 2,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta
+ENSG00000244734	Beta-thalassemia intermedia,Beta-thalassemia major,Dominant beta-thalassemia,erythropoietin,hemoglobin subunit alpha 2,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,hemoglobin subunit beta,Sickle cell-beta plus-thalassemia,Sickle cell-beta zero-thalassemia,Sickle cell S-D Punjab disease,Sickle cell S-E disease,Sickle cell S-Lepore disease,Sickle cell S-O Arab disease,Sickle cell S-other specified hemoglobin variant
 ENSG00000244752	Cerulean cataract,crystallin alpha A,Early-onset nuclear cataract,Early-onset posterior subcapsular cataract,Early-onset sutural cataract,Pulverulent cataract,Total early-onset cataract
 ENSG00000245848	CCAAT enhancer binding protein alpha,CCAAT enhancer binding protein alpha,RUNX family transcription factor 1
 ENSG00000247626	methionyl-tRNA synthetase 2, mitochondrial,methionyl-tRNA synthetase 2, mitochondrial
@@ -4365,7 +4410,7 @@ ENSG00000259384	Isolated growth hormone deficiency type IA,Isolated growth hormo
 ENSG00000260230	Autosomal recessive non-syndromic intellectual disability,glutamate ionotropic receptor NMDA type subunit 2A
 ENSG00000260458	calcium voltage-gated channel subunit alpha1 S
 ENSG00000260596	DNA methyltransferase 3 beta
-ENSG00000261456	WEE2 oocyte meiosis inhibiting kinase
+ENSG00000261456	TLE family member 6, subcortical maternal complex member
 ENSG00000261609	gigaxonin
 ENSG00000262179	myomixer, myoblast fusion factor
 ENSG00000262919	cyclin Q
@@ -4381,7 +4426,7 @@ ENSG00000266412	B-Raf proto-oncogene, serine/threonine kinase
 ENSG00000267534	Rare autosomal recessive non-syndromic sensorineural deafness type DFNB
 ENSG00000268104	serpin family A member 1
 ENSG00000268221	opsin 1, medium wave sensitive,opsin 1, medium wave sensitive,retinitis pigmentosa GTPase regulator
-ENSG00000269335	inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,X-linked mendelian susceptibility to mycobacterial diseases due to IKBKG deficiency
+ENSG00000269335	inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma,inhibitor of nuclear factor kappa B kinase regulatory subunit gamma
 ENSG00000269404	interleukin 12 receptor subunit beta 1
 ENSG00000269556	transmembrane protein 185A
 ENSG00000269821	Beckwith-Wiedemann syndrome due to imprinting defect of 11p15,insulin like growth factor 2
@@ -4390,13 +4435,13 @@ ENSG00000270647	cyclin F,trafficking from ER to golgi regulator
 ENSG00000270765	NME/NM23 family member 5
 ENSG00000272047	M-phase specific PLK1 interacting protein
 ENSG00000272333	lysine methyltransferase 2B,zinc finger MIZ-type containing 1
-ENSG00000273079	Autosomal dominant non-syndromic intellectual disability,glutamate ionotropic receptor NMDA type subunit 2B,neurotrophic receptor tyrosine kinase 2
+ENSG00000273079	Autosomal dominant non-syndromic intellectual disability,glutamate ionotropic receptor NMDA type subunit 2B,sodium voltage-gated channel alpha subunit 2
 ENSG00000273540	solute carrier family 4 member 11
 ENSG00000273611	zinc finger HIT-type containing 3
 ENSG00000273706	HNF1 homeobox B
 ENSG00000273820	X-linked non-syndromic intellectual disability
 ENSG00000274286	sterile alpha motif domain containing 12
-ENSG00000275410	Bilateral multicystic dysplastic kidney,cadherin 1,HNF1B-related autosomal dominant tubulointerstitial kidney disease,HNF1 homeobox B,HNF1 homeobox B,Mayer-Rokitansky-Küster-Hauser syndrome type 2,Renal dysplasia, bilateral,Renal dysplasia, unilateral,Unilateral multicystic dysplastic kidney
+ENSG00000275410	Bilateral multicystic dysplastic kidney,cadherin 1,HNF1B-related autosomal dominant tubulointerstitial kidney disease,HNF1 homeobox B,HNF1 homeobox B,Mayer-Rokitansky-KÃ¼ster-Hauser syndrome type 2,Renal dysplasia, bilateral,Renal dysplasia, unilateral,Unilateral multicystic dysplastic kidney
 ENSG00000275896	calcium sensing receptor
 ENSG00000276027	RNA, U12 small nuclear,RNA, U12 small nuclear
 ENSG00000276043	DNA methyltransferase 3 beta
@@ -4405,6 +4450,7 @@ ENSG00000276180	zinc finger MIZ-type containing 1
 ENSG00000276966	zinc finger MIZ-type containing 1
 ENSG00000277027	adenosine deaminase,RNA component of mitochondrial RNA processing endoribonuclease,RNA component of mitochondrial RNA processing endoribonuclease
 ENSG00000277161	phosphatidylinositol glycan anchor biosynthesis class M,phosphatidylinositol glycan anchor biosynthesis class V
+ENSG00000277258	polycomb group ring finger 2
 ENSG00000277399	rhodopsin
 ENSG00000277494	Familial GPIHBP1 deficiency
 ENSG00000277586	neurofilament light chain,neurofilament light chain,neurofilament light chain
@@ -4416,8 +4462,9 @@ ENSG00000280757	DNA methyltransferase 3 beta
 ENSG00000281344	CD46 molecule
 ENSG00000283122	ATP binding cassette subfamily C member 8,hydatidiform mole associated and imprinted
 ENSG00000283654	ankyrin repeat and sterile alpha motif domain containing 3,polycystin 1 like 1, transient receptor potential channel interacting
-ENSG00000284194	synthesis of cytochrome C oxidase 1,synthesis of cytochrome C oxidase 2,synthesis of cytochrome C oxidase 2
+ENSG00000284194	solute carrier family 39 member 5,synthesis of cytochrome C oxidase 1,synthesis of cytochrome C oxidase 2
 ENSG00000284395	epithelial cell adhesion molecule
 ENSG00000284770	Autosomal recessive Kenny-Caffey syndrome,tubulin folding cofactor E,tubulin folding cofactor E
 ENSG00000284862	NME/NM23 family member 5
-ENSG00000286219,notch 2 N-terminal like C,notch 2 N-terminal like C
+ENSG00000286219	notch 2 N-terminal like C,notch 2 N-terminal like C
+ENSG00000288330,ataxin 8

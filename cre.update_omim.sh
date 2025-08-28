@@ -16,7 +16,7 @@
 DATE=`date +%Y-%m-%d`
 HGNC="hgnc_${DATE}.txt"
 OMIM_PREFIX="OMIM"
-CRE_DIR=~/cre
+CRE_DIR=$1
 
 # get latest mappings from hgnc
 # http params include default checkboxes, gene aliases, with ensembl gene id from hgnc, and ncbi gene id

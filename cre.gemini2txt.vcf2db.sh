@@ -50,9 +50,7 @@ then
             tf_binding_sites as TF_binding_sites,
             GreenDB_variant_type as GreenDB_variant_type,
             GreenDB_closest_gene as GreenDB_closest_gene,
-            GreenDB_controlled_gene as GreenDB_controlled_gene,
-            c4r_wgs_counts as C4R_WGS_counts,
-            c4r_wgs_samples as C4R_WGS_samples"
+            GreenDB_controlled_gene as GreenDB_controlled_gene"
     noncoding_scores="ncER as ncER_score, ReMM as ReMM_score, LinSight_Score as LINSIGHT_score"
 else
     noncoding_anno="00 as noncoding"
@@ -100,8 +98,6 @@ sQuery="select \
         COALESCE(spliceai_score, '') as SpliceAI_score, \
         uce_100bp as UCE_100bp, uce_200bp as UCE_200bp, \
         $noncoding_anno, \
-        c4r_wes_counts as C4R_WES_counts, \
-        c4r_wes_samples as C4R_WES_samples, \
         CMP_samples as CMP_samples, \
         CMP_samples_counts as CMP_samples_counts, \
         gts,"

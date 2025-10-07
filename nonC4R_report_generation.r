@@ -380,7 +380,7 @@ select_and_write2 <- function(variants, samples, prefix, type){
     variants <- variants[order(variants$Position),]
 
     if (type == 'denovo'){
-        variants <- variants[variants$C4R_WGS_counts < 10,]
+        variants <- variants[variants$CMP_samples_counts < 10,]
     }
     
     write.csv(variants, paste0(prefix,".csv"), row.names = F)

@@ -11,7 +11,7 @@ add_placeholder <- function(variants, column_name, placeholder){
 }
 
 get_variants_from_file <- function (filename){
-    variants <- read.delim(filename, stringsAsFactors = F)
+    variants <- read.delim(filename, stringsAsFactors=FALSE, colClasses = c("character"))
     return(variants)
 }
 
@@ -50,6 +50,26 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth, type){
         }else result <- genotype_str
     }
     return(result)
+}
+
+# when no variants are made into report when running WES mosaic-panel pipeline
+check_empty <- function(family, type){
+    file <- paste0(family, ".variants.txt")
+    variants <- get_variants_from_file(file)
+    
+    if (nrow(variants) == 0){
+        variants = data.frame()
+        variants[1,1] = paste0("No variants are reported for ", family)
+    
+        write.csv(variants, paste0(family,".wes.regular.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".wes.mosaic.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".clinical.wes.regular.", datetime, ".csv"), row.names = F)
+        write.csv(variants, paste0(family,".clinical.wes.mosaic.", datetime, ".csv"), row.names = F)
+
+    } else{
+        message("Go ahead to create report with at least 1 variant")
+    }
+        
 }
 
 # output : family.ensemble.txt
@@ -296,7 +316,7 @@ create_report <- function(family, samples, type){
     variants <- add_placeholder(variants, "SpliceAI_impact", "")
     for (i in 1:nrow(variants)){
         print(i)
-        if (variants[i,"SpliceAI_score"] == ""){
+        if (is.na(variants[i,"SpliceAI_score"])){
             variants[i, "SpliceAI_impact"] <- "NA|NA|NA"
             variants[i, "SpliceAI_score"] <- 0
         } else {
@@ -352,7 +372,7 @@ create_report <- function(family, samples, type){
     # Column44 = cadd
     # Column45 = vest3
     for (i in 1:nrow(variants)){
-        v_vest <- strsplit(variants[i,"Vest3_score"], ",", fixed = T)[[1]]
+        v_vest <- strsplit(as.character(variants[i,"Vest3_score"]), ",", fixed = T)[[1]]
         variants[i, "Vest3_score"] <- max(v_vest)
     }
     
@@ -467,6 +487,7 @@ select_and_write2 <- function(variants, samples, prefix, type)
                            noncoding_cols)]
   
     variants <- variants[order(variants$Position),]
+    #print(paste0("In select_and_write2, Alt is ", variants$Alt))
 
     if (type == 'denovo'){
         variants <- variants[variants$C4R_WGS_counts < 10,]
@@ -499,7 +520,7 @@ replace_zero_cov <- function(trio_coverage) {
 # merges ensembl, gatk-haplotype reports
 merge_reports <- function(family, samples, type){
     ensemble_file <- paste0(family, ".create_report.csv")
-    ensemble <- read.csv(ensemble_file, stringsAsFactors = F)
+    ensemble <- read.csv(ensemble_file, stringsAsFactors = F, colClasses = c("character"))
     ensemble$superindex <- with(ensemble, paste(Position, Ref, Alt, sep = '-'))
     
     for (i in 1:nrow(ensemble)){
@@ -515,7 +536,7 @@ merge_reports <- function(family, samples, type){
     
     ensemble_table_file <- paste0(family, ".table")
     if (file.exists(ensemble_table_file)){
-        ensemble_table <- read.delim(ensemble_table_file, stringsAsFactors = F)
+        ensemble_table <- read.delim(ensemble_table_file, stringsAsFactors = F, colClasses = c("character"))
         ensemble_table$superindex <- with(ensemble_table, paste(paste0(CHROM,":",POS), REF, ALT, sep = '-'))
         ensemble_table[c("CHROM", "POS", "REF", "ALT")] <- NULL
         for (i in 1:nrow(ensemble_table)){
@@ -760,8 +781,7 @@ parse_ad <- function(ad_cell) {
 }
 
 annotate_w_care4rare <- function(family,samples,type){
-    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F)
-  
+    variants <- read.csv(paste0(family, ".merge_reports.csv"), stringsAsFactors = F, colClasses = c("character"))
     variants$superindex <- with(variants, paste(Position, Ref, Alt, sep='-'))
     
     if(exists("seen_in_c4r_counts")){
@@ -928,6 +948,8 @@ samples <- gsub("-", ".", samples)
 
 print("Loading tables")
 load_tables(debug)
+print("Check empty tables")
+check_empty(family)
 print("Creating report")
 create_report(family,samples,type)
 print("Merging reports")

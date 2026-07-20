@@ -25,7 +25,12 @@ genotype2zygocity <- function (genotype_str, ref, alt_depth){
     # genotype_str = "A/A"
     # greedy
     genotype_str <- gsub("|", "/", genotype_str, fixed = T)
-    genotype_str <- gsub("./.", "Insufficient_coverage", genotype_str, fixed = T)
+    if(type == "wes.mosaic"){
+        # because Mutect2 doesn't perform joint-genotyping here, assume missing gts are hom ref (not ideal, but makes report more readable)
+        genotype_str <- gsub("./.", "-", genotype_str, fixed = T)
+    }
+    else
+        genotype_str <- gsub("./.", "Insufficient_coverage", genotype_str, fixed = T)
     #genotype_str <- gsub("/.","NO_CALL",genotype_str,fixed=T)
       
     if(grepl("Insufficient_coverage", genotype_str)){
@@ -288,7 +293,7 @@ create_report <- function(family, samples, type){
 
     # Column38 = Gnomad_ac
     # Column39 = Gnomad_hom
-    for (field in c("Gnomad_ac","Gnomad_hom")){
+    for (field in c("Gnomad_ac","Gnomad_hom", "C4R_WES_counts")){
         variants[,field] <- with(variants,gsub("-1", "0", get(field), fixed = T))
         variants[,field] <- with(variants,gsub("None", "0", get(field), fixed = T))
     }
